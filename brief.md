@@ -12,7 +12,7 @@ El punto de inicio será la estructura vacía del proyecto.
 
 - La idea de la homepage comienza aquí: 
     
-    ![]("home-page.gif")
+    <img src="home-page.gif">
 
 Web de referencia: https://www.dn.no/d2/ledestjerner/ledestjerne/2022/ledestjerner-2022-30-under-30/7-1-kerobndgm6
 
