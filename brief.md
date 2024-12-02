@@ -2,7 +2,7 @@
 
 - Queremos hacer un homenaje a "L'espai de les oportunitats de Sta Coloma de Gramanet". Para ello vamos a construir **Viatge a L'Espai**, un proyecto de web interactiva que presentará las acciones que ha llevado a cabo "L'espai de les Oportunitats" así como testimonios de personas que han pasado por aquí. 
 
-El punto de partida será una esfera de imágenes que enlazarán a escenarios 3d diferentes, de dos temáticas diferentes:
+El punto de partida será una esfera de imágenes que enlazarán a escenarios 3d, de dos temáticas diferentes:
 - Unos contarán con un avatar que nos represente y que contará quienes somos y que hemos obtenido de l'espai durante el tiempo que hemos compartido.
 - Otros tendrán escenas que simbolicen alguna de las acciones que ha llevado a cabo l'espai o, en su defecto, el Servei de Convivència, Desenvolupament Comunitari i Civisme.
 
