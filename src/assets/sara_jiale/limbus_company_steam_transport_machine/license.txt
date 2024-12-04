@@ -1,0 +1,11 @@
+Model Information:
+* title:	[Limbus Company] Steam Transport Machine
+* source:	https://sketchfab.com/3d-models/limbus-company-steam-transport-machine-94b06d2550d0482b885925f18d3cab59
+* author:	Chavafei (https://sketchfab.com/Chavafei)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "[Limbus Company] Steam Transport Machine" (https://sketchfab.com/3d-models/limbus-company-steam-transport-machine-94b06d2550d0482b885925f18d3cab59) by Chavafei (https://sketchfab.com/Chavafei) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
