@@ -3,19 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.2/dist/aframe-extras.min.js"></script>
     <script src="/src/js/sala_jiale.js"></script>
     <title>Document</title>
     
 </head>
 <body>
     <a-scene>
-      <a-asset id="transport_machine" src="../assets/sala_jiale/limbus_company//"></a-asset>
-        <a-plane id="plane" ></a-plane>
+        <a-assets>
+      <a-asset-item id="transport_machine" src="../assets/sala_jiale/limbus_company/limbus_company.gltf"></a-asset-item>
+      <a-asset-item id="estructura" src="../assets/sala_jiale/estructura/estructura.gltf"></a-asset-item>
+      <a-asset-item id="tuvos" src="../assets/sala_jiale/tevos/tuvos.gltf"></a-asset-item>
+      <a-asset-item id="lus" src="../assets/sala_jiale/lus/lus.gltf"></a-asset-item>
+    </a-assets>
+      <a-box src="../assets/sala_jiale/imagen/ParedyPiso_baseColor_pader.png" scale="10 25 1" position=" 10 5 0 " metalness="0.5"></a-box>
+      <a-box src="../assets/sala_jiale/imagen/ParedyPiso_baseColor_pader.png" scale="10 25 1" position=" -10 5 0 " metalness="0.5"></a-box>
+    <a-plane src="../assets/sala_jiale/imagen/ParedyPiso_baseColor.png" material="color: #FFFFFF" scale="35 40 25" rotation="-90 0 0" postion="0 0 0"></a-plane>
 
+        <a-plane src="../assets/sala_jiale/imagen/ParedyPiso_baseColor_pader.png"  scale="50 40 50" rotation="90 0 0" position="0 15 0" metalness="3"></a-plane> 
+    
+        <a-plane src="../assets/sala_jiale/imagen/Steam_Transport_Machine-map.jpeg" material="color: #FFFFFF" scale="50 15 50" rotation="0 0 0" position="0 7.5 -20" ></a-plane>
+    
+        <a-plane src="#piso"  scale="50 15 50" rotation="0 -180 0" position="0 7.5 -20" ></a-plane>
+    
+        <a-plane src="../assets/sala_jiale/imagen/ParedyPiso_baseColor_pader.png" material="color: #FFFFFF" scale="50 15 50" rotation="0 -180 0" position="0 7.5 20" metalness="1"></a-plane>
+    
+        <a-plane src="#piso"  scale="50 15 50" rotation="0 0 0" position="0 7.5 20" ></a-plane>
+    
+        <a-plane src="../assets/sala_jiale/imagen/Steam_Transport_Machine-map.jpeg" material="color: #FFFFFF" scale="40 15 50" rotation="0 -90 0" position="15 7.5 0" ></a-plane>
 
-       <a-entity gltf-model="#transport_machine" rotation="0 0 0" animation-mixer></a-entity>
+        <a-plane src="../assets/sala_jiale/imagen/ParedyPiso_baseColor_pader.png" material="color: #FFFFFF" scale="20 15 50" rotation="0 -90 0" position="14 7.5 10" metalness="1"></a-plane>
+    
+        <a-plane src="../assets/sala_jiale/imagen/Steam_Transport_Machine-map.jpeg" material="color: #FFFFFF"  scale="40 15 50" rotation="0 90 0" position="-15 7.5 0" ></a-plane>
+
+        <a-plane src="../assets/sala_jiale/imagen/ParedyPiso_baseColor_pader.png" material="color: #FFFFFF"  scale="20 15 50" rotation="0 90 0" position="-14 7.5 10" metalness="1"></a-plane>
+    
+        <a-plane src="#piso"  scale="40 15 50" rotation="0 -90 0" position="-25 7.5 0" ></a-plane>
+    
+    <a-entity gltf-model="#transport_machine" position="0 -0.02 -7" scale="2 2 2" animation-mixer></a-entity>
+    <a-entity gltf-model="#estructura" rotation="0 90 0" position="0 0 -18"  scale="2 1.5 1.5" ></a-entity>
+    <a-entity gltf-model="#tuvos" rotation="0 90 0" position="-1 0 9" scale="1 1.5 1.5"></a-entity>
+    <a-entity gltf-model="#lus" rotation="0 -90 0" position="-2 4 -9.5"></a-entity>
+    <a-entity gltf-model="#lus" rotation="0 -90 0" position="13 4 -9.5"></a-entity>
     </a-scene>
 <script src="../css/sala_jiale.css"></script>
 </body>
