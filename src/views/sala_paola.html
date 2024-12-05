@@ -10,15 +10,40 @@
 </head>
 <body>
     <div id="app">
-        <a-scene background="color: #FAFAFA">
-            
+        <a-scene>
+            <a-camera look-controls position="-1.717 21 20"></a-camera>
+
              <!-- FONDO -->
-    <a-sky src=""></a-sky>
+             <a-sky id="fondo" src="../assets/sala_paola/uhd_img3219pv2_cc_eq.jpg"></a-sky>
+            
 
+              <!-- <a-entity position="0 1.5 -2">
+                <a-text value="Welcome to Lola's world!" color="#FFF" align="center" 
+                        animation="property: position; to: 0 2 0; dur: 2000; easing: easeInOutQuad"
+                        animation__scale="property: scale; to: 2 2 2; dur: 2000; easing: easeInOutQuad"></a-text>
+            </a-entity> -->
 
+            <a-image id="banner-welcome" src="../assets/sala_paola/banner-welcome.png" position="0.5 22 14"  scale="0 0 0" height="12" width="10"
+            animation__scale="property: scale; to: 1 1 1; dur: 10000; easing: easeInOutQuad"> </a-image>
 
-    <script type="module" src="/src/js/sala_paola.js"></script>
-        </a-scene>
-    </div>
+            <a-assets>
+                <a-asset-item id="petit-prince" src="../assets/sala_paola/le_petit_prince/"></a-asset-item>
+                <a-asset-item id ="doby" src="../assets/sala_paola/dobby_the_free_house_elf_-_harry_potter/scene.gltf"></a-asset-item>
+                <a-asset-item id="sombrero" src="../assets/sala_paola/sombrero.glb"></a-asset-item>
+                <a-asset-item id="bandera-brasil" src="../assets/sala_paola/bandeira_do_brasil/" > </a-asset-item>
+                <img id="descripcion" src="../assets/sala_paola/descripcion.png">
+            </a-assets>
+            
+            <a-entity gltf-model="#sombrero" position="20 22 20" scale="4 4 4"> 
+            </a-entity>
+
+            <a-entity src="#descripcion" position="25 22 20"></a-entity>
+            
+             
+     
+
+            </a-scene>
+        </div>
+    <script type="module" src="../js/sala_paola.js"></script>
 </body>
 </html>
