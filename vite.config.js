@@ -6,6 +6,11 @@ export default defineConfig({
     build: {
         outDir: "../docs",
         emptyOutDir: true,
+        rollupOptions:{
+            input:{
+            index: "/index.html",
+            sala_juan: "/views/sala_juan.html"
+        }}
 
     }
 });
