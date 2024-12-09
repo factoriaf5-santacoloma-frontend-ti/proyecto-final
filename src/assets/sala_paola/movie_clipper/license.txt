@@ -1,0 +1,11 @@
+Model Information:
+* title:	Movie clipper
+* source:	https://sketchfab.com/3d-models/movie-clipper-1eff2795228f4126a5f5cfaa25e65c2e
+* author:	skalson (https://sketchfab.com/skalson)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Movie clipper" (https://sketchfab.com/3d-models/movie-clipper-1eff2795228f4126a5f5cfaa25e65c2e) by skalson (https://sketchfab.com/skalson) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
