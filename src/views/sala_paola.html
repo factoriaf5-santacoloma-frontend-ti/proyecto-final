@@ -27,40 +27,61 @@
             animation__scale="property: scale; to: 1 1 1; dur: 10000; easing: easeInOutQuad"> </a-image>
 
             <a-assets>
-                <a-asset-item id="petit-prince" src="../assets/sala_paola/le_petit_prince/"></a-asset-item>
                 <a-asset-item id ="doby" src="../assets/sala_paola/dobby_the_free_house_elf_-_harry_potter/scene.gltf"></a-asset-item>
                 <a-asset-item id="sombrero" src="../assets/sala_paola/sombrero.glb"></a-asset-item>
-                <a-asset-item id="bandera-brasil" src="../assets/sala_paola/bandeira_do_brasil/" > </a-asset-item>
+                <a-asset-item id="bandera-brasil" src="../assets/sala_paola/bandeira_do_brasil/scene.gltf" > </a-asset-item>
                 
             </a-assets>
             
             <a-entity
-            a-gltf-model="#petit-prince" 
-            position="-25 6 14" 
-            scale="1 1 1"
-        
+            gltf-model="#bandera-brasil" 
+            position="-40 22 35" 
+            scale="0.02 0.02 0.02"
+            rotation="0 -90 0"
+         
             ></a-entity>
 
 
-            <a-entity gltf-model="#sombrero" position="20 22 20" scale="4 4 4" 
-            text="value: Lord Bastori le dedico mucho amor a sus obras. Se le olvidaba comer, cuidar su salud y ordenar su habitacion solo por alcanzar la perfeccion...; align: center; color: #FFFFFF; width: 30"
-            class="clickable"
-            event-set__enter="_event: mouseenter; _target: #ghost-don-text; visible: true"
-            event-set__leave="_event: mouseleave; _target: #ghost-don-text; visible: false"
-            onclick="document.getElementById('sombrero').setAttribute('visible', 'true');"> 
-            </a-entity>
-
-            <a-entity
-            id="sombrero"
-            text="value: Lord Bastori le dedico mucho amor a sus obras. Se le olvidaba comer, cuidar su salud y ordenar su habitacion solo por alcanzar la perfeccion...; align: center; color: #FFFFFF; width: 30"
-            position="64.42059 -234.8655 -168.50724"
-            visible="false"
-            rotation="-3.12491181464351 -40.87538206242806 1.925711149434697"></a-entity>
-
-            <a-entity src="#descripcion" position="25 22 20"></a-entity>
+            <a-entity > 
+            </a-entity>   
             
+            <a-entity 
+            id="clickable-sombrero" 
+            gltf-model="#sombrero" 
+            position="20 22 35" 
+            scale="10 10 10" 
+            rotation="0 -95 0"
+            class="clickable">
+          </a-entity>
+          
+          
+          <a-entity 
+            id="info-container" 
+            position="20 22 30"
+            visible="false">
+
+            <a-plane 
+              id="info-box" 
+              height="0.8" 
+              width="1.5" 
+              color="#D3D3D3" 
+              opacity="0.6">
+            </a-plane>
+
+            <a-text 
+              id="info-text" 
+              value=" Soy Paola, una brasileña de 26 años apasionada por la tecnología y el aprendizaje. Actualmente estoy finalizando un bootcamp de front-end, un paso clave en mi transición hacia una carrera en un campo que me emociona y al que ahora puedo dedicarme.
+              A lo largo de mi trayectoria profesional he trabajado en diversos sectores, ahora, en el mundo tecnológico, siento que he encontrado mi lugar, un espacio donde mi curiosidad y entusiasmo por aprender se alinean con mis objetivos.
+              Mis valores fundamentales son la justicia, el feminismo y la igualdad. Creo firmemente en construir un mundo más equitativo y en la importancia de llevar esos principios a mi vida personal y profesional. " 
+              position="20 22 30" 
+              align="center" 
+              color="black"
+              scale="1 1 1"
+              width="2">
+            </a-text>
+
+          </a-entity>
                      
-     
 
             </a-scene>
         </div>
