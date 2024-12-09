@@ -1,7 +1,14 @@
-// import AFRAME from 'aframe;
+document.querySelector('a-scene').addEventListener('loaded', function () {
+    const sombrero = document.querySelector('#clickable-sombrero');
+    const infoContainer = document.querySelector('#info-container');
+    
+    let isInfoVisible = false;
 
-// document.querySelector('a-scene').addEventListener('loaded', function () {
-//     // Inicia la animación del banner
-//     const banner = document.querySelector('#banner-welcome');
-//     banner.setAttribute('animation', 'property: position; to: 0 1 20; dur: 2000; easing: easeInOutQuad');
-// });
+    // Agregar un evento de clic al sombrero
+    sombrero.addEventListener('click', function() {
+      // Alternar la visibilidad
+      isInfoVisible = !isInfoVisible;
+      infoContainer.setAttribute('visible', isInfoVisible.toString()); // Convertir a cadena 'true' o 'false'
+    });
+  });
+  
