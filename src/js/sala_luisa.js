@@ -1,3 +1,6 @@
+import AFRAME from "aframe";
+import 'aframe-extras';
+
 const scene = document.querySelector('a-scene');
 const plane = document.querySelector('a-plane');
 const occupiedPositions = [];
