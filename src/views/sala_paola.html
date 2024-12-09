@@ -31,15 +31,35 @@
                 <a-asset-item id ="doby" src="../assets/sala_paola/dobby_the_free_house_elf_-_harry_potter/scene.gltf"></a-asset-item>
                 <a-asset-item id="sombrero" src="../assets/sala_paola/sombrero.glb"></a-asset-item>
                 <a-asset-item id="bandera-brasil" src="../assets/sala_paola/bandeira_do_brasil/" > </a-asset-item>
-                <img id="descripcion" src="../assets/sala_paola/descripcion.png">
+                
             </a-assets>
             
-            <a-entity gltf-model="#sombrero" position="20 22 20" scale="4 4 4"> 
+            <a-entity
+            a-gltf-model="#petit-prince" 
+            position="-25 6 14" 
+            scale="1 1 1"
+        
+            ></a-entity>
+
+
+            <a-entity gltf-model="#sombrero" position="20 22 20" scale="4 4 4" 
+            text="value: Lord Bastori le dedico mucho amor a sus obras. Se le olvidaba comer, cuidar su salud y ordenar su habitacion solo por alcanzar la perfeccion...; align: center; color: #FFFFFF; width: 30"
+            class="clickable"
+            event-set__enter="_event: mouseenter; _target: #ghost-don-text; visible: true"
+            event-set__leave="_event: mouseleave; _target: #ghost-don-text; visible: false"
+            onclick="document.getElementById('sombrero').setAttribute('visible', 'true');"> 
             </a-entity>
+
+            <a-entity
+            id="sombrero"
+            text="value: Lord Bastori le dedico mucho amor a sus obras. Se le olvidaba comer, cuidar su salud y ordenar su habitacion solo por alcanzar la perfeccion...; align: center; color: #FFFFFF; width: 30"
+            position="64.42059 -234.8655 -168.50724"
+            visible="false"
+            rotation="-3.12491181464351 -40.87538206242806 1.925711149434697"></a-entity>
 
             <a-entity src="#descripcion" position="25 22 20"></a-entity>
             
-             
+                     
      
 
             </a-scene>
