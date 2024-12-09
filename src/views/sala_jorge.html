@@ -100,8 +100,10 @@
    class="clickable"
   event-set__enter="_event: mouseenter; _target: #tophat-text; visible: true"
   event-set__leave="_event: mouseleave; _target: #tophat-text; visible: false"
-  
+  event-set__enter="_event: raycaster-intersected; _target: #tophat-response; visible: true"
+  event-set__leave="_event: raycaster-intersected-cleared; _target: #tophat-response; visible: false"
   onclick="document.getElementById('tophat-response').setAttribute('visible', 'true');">
+  
 
  </a-entity>
 
@@ -160,7 +162,9 @@ rotation="0 -1 0"
 class="clickable"
 event-set__enter="_event: mouseenter; _target: #ghost-text; visible: true"
 event-set__leave="_event: mouseleave; _target: #ghost-text; visible: false"
-onclick="document.getElementById('ghost-response').setAttribute('visible', 'true');">
+onclick="document.getElementById('ghost-response').setAttribute('visible', 'true');"
+event-set__enter="_event: raycaster-intersected; _target: #ghost-response; visible: true"
+  event-set__leave="_event: raycaster-intersected-cleared; _target: #ghost-response; visible: false">
 </a-entity>
 <!-- TEXTO DEL GHOST-->
 <a-entity
@@ -204,6 +208,9 @@ rotation="0 -1 0"></a-entity>
   class="clickable"
   event-set__enter="_event: mouseenter; _target: #ghost-don-text; visible: true"
   event-set__leave="_event: mouseleave; _target: #ghost-don-text; visible: false"
+  onclick="document.getElementById('ghost-don-response').setAttribute('visible', 'true');"
+  event-set__enter="_event: raycaster-intersected; _target: #ghost-don-response; visible: true"
+  event-set__leave="_event: raycaster-intersected-cleared; _target: #ghost-don-response; visible: false"
   onclick="document.getElementById('ghost-don-response').setAttribute('visible', 'true');">
 </a-entity>
 
@@ -253,7 +260,9 @@ position="22.3894 -249.6403 -169.69253" scale="7.85345 6.25159 9.02346" rotation
   rotation="0 158.78780446917096 0"
   animation="property: position; dir: alternate; dur: 5000; loop: true; to: 30 -270.93025 88.30115" 
   class="clickable"
-  onclick="document.getElementById('cute-ghost-text').setAttribute('visible', 'true');">
+  onclick="document.getElementById('cute-ghost-text').setAttribute('visible', 'true');"
+  event-set__enter="_event: raycaster-intersected; _target: #cute-ghost-text; visible: true"
+  event-set__leave="_event: raycaster-intersected-cleared; _target: #cute-ghost-text; visible: false">
 </a-entity>
 
 <!-- Texto para el nuevo fantasma -->
