@@ -442,7 +442,9 @@
         <!-- Cámara con cursor -->
         <a-entity id="cameraEntity" position="-40 7 0" rotation="0 -90 0">
             <a-camera>
-                <a-cursor color="black"></a-cursor>
+                <a-entity laser-controls="hand: left"></a-entity>
+                <a-entity laser-controls="hand: right"></a-entity>
+                
             </a-camera>
         </a-entity>
 
