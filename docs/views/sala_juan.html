@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <!-- Configuración básica del documento -->
     <meta charset="UTF-8">
@@ -21,6 +21,7 @@
             <img id="piedra-caliza" src="../assets/textura/fondo-textura-muro-hormigon-piedra_890365-140.avif" alt="textura de piedra caliza">
             <img id="piso" src="../assets/textura/piso4.jpg" alt="piso de piedra caliza">
             <img id="peru" src="../assets/textura/peru.png" alt="orgullosa bandera peruana">
+            <img id="piso-peru" src="/proyecto-final/assets/piso-peru-ClFmxizY.jpg" alt="meme de peru">
 
             <a-asset-item id="creador" src="../assets/textura/juan-creador.glb" alt="una persona en 3d"></a-asset-item>
             <a-asset-item id="jorge" src="../assets/textura/jorge.glb" alt="una persona en 3d"></a-asset-item>
@@ -44,13 +45,19 @@
             <a-asset-item id="puerta" src="../assets/textura/puerta.glb" alt="puerta"></a-asset-item>
 
             <audio id="background-music" src="../assets/textura/_Sudemos la camiseta_ version completa [-f0Jgpom9YU].mp3" alt="musica de peru"  loop></audio>
-
             
         </a-assets>
         
         
         <a-sky src="#espacio1" rotation="0 -90 0" ></a-sky>
-
+        
+        <a-entity id="cameraEntity" position="-60 7 0" rotation="0 -90 0">
+            <a-camera>
+                <a-entity laser-controls="hand: left"></a-entity>
+                <a-entity laser-controls="hand: right"></a-entity>
+                <a-cursor scale="2 2 2"></a-cursor>
+            </a-camera>
+        </a-entity>
 
         
         <a-plane src="#piso" material="color: #FFFFFF" scale="50 40 50" rotation="-90 0 0" postion="0 0 0"></a-plane>
@@ -71,6 +78,9 @@
         
         <a-plane src="#peru" scale="17 8 17" position="24.9 10 0"  rotation="0 -90 0"></a-plane>
         
+        <a-plane src="#piso-peru" scale="20 30 10" position="-40 0 0"  rotation="-90 -90 0"></a-plane>
+        <a-plane src="" scale="20 10 10" position="-60 0 0" color="black"  rotation="-90 -90 0"></a-plane>
+
 
 
 
@@ -427,12 +437,12 @@
 
 
         <a-box class="burbuja" scale="3 0.7 0.1" position="-24.8 12.5 0" rotation="0 90 0"  color="#ffff" event-set__click="_event: click; color: red"
-           onclick="window.location.href='index2.html'">
+           onclick="window.location.href='index.html'">
             <a-text value="volver al inicio" scale="0.7 2 1" position="-0.5 0 0.5" color="#555555"></a-text>     
         </a-box>
 
         <a-box class="burbuja" scale="3 0.7 0.1" position="-25 12.5 0" rotation="0 -90 0"  color="#ffff" event-set__click="_event: click; color: red"
-        onclick="window.location.href='index2.html'">
+        onclick="window.location.href='index.html'">
          <a-text value="volver al inicio" scale="0.7 2 1" position="-0.5 0 0.5" color="#555555"></a-text>     
      </a-box>
 
@@ -440,14 +450,6 @@
 
         
 
-        <!-- Cámara con cursor -->
-        <a-entity id="cameraEntity" position="-40 7 0" rotation="0 -90 0">
-            <a-camera>
-                <a-entity laser-controls="hand: left"></a-entity>
-                <a-entity laser-controls="hand: right"></a-entity>
-                
-            </a-camera>
-        </a-entity>
 
 
     </a-scene>
