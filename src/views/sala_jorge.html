@@ -21,7 +21,9 @@
       <a-asset-item id="picture" src="../assets/jorge/picture.glb"></a-asset-item>
       <a-asset-item id="libreria" src="../assets/jorge/libreria.glb"></a-asset-item>
       <a-asset-item id="ghost-don" src="../assets/jorge/ghost_don.glb"></a-asset-item>
-      <a-asset-item id="cute-ghost" src="../assets/jorge/a_cute_ghost.glb"></a-asset-item> 
+      <a-asset-item id="cute-ghost" src="../assets/jorge/a_cute_ghost.glb"></a-asset-item>
+      <a-asset-item id="leftHandModel" src="../assets/jorge/leftHandLow.glb"></a-asset-item>
+  <a-asset-item id="rightHandModel" src="../assets/jorge/rightHandLow.glb"></a-asset-item>
 
        <!-- Imágenes -->
        <img id="slashermovies" src="../assets/jorge/slashermovies.png" crossorigin="anonymous">
@@ -35,6 +37,10 @@
     <a-camera position="50 -1 2" wasd-controls-enabled="true">
     <a-cursor raycaster="objects: .clickable"></a-cursor>
     </a-camera>
+    <a-entity id="leftHand" gltf-model="#leftHandModel" hand-controls="hand: left; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
+<a-entity id="rightHand" gltf-model="#rightHandModel" hand-controls="hand: right; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
+<a-entity vive-controls="hand: left"></a-entity>
+<a-entity vive-controls="hand: right"></a-entity>
       <!-- Cielo -->
       <img id="sky" src="../assets/jorge/redsky.jpg">
       
@@ -278,31 +284,7 @@ position="22.22524 3.04802 -169.87554" scale="8.14487 6.25159 8.44171" rotation=
     <a-sky src="#sky" scale="6 6 6"></a-sky>
 
   </a-scene>
-  <script>
-    // Configuración de rotación con el joystick derecho
-    AFRAME.registerComponent('joystick-rotation', {
-      tick: function () {
-        const rightHand = document.querySelector('[oculus-touch-controls="hand: right"]');
-        if (!rightHand || !rightHand.components['tracked-controls']) return;
-
-        const axes = rightHand.components['tracked-controls'].controller.axes;
-        if (axes[2] !== 0) {
-          this.el.object3D.rotation.y -= axes[2] * 0.05;
-        }
-      }
-    });
-
-    // Añadir el componente de rotación al rig
-    document.getElementById('rig').setAttribute('joystick-rotation', '');
-
-    // Manejo de clics con gatillos
-    document.querySelector('[oculus-touch-controls="hand: right"]').addEventListener('triggerdown', (evt) => {
-      const intersectedEl = document.querySelector('[raycaster]').components.raycaster.getIntersection(document.querySelector('.clickable'));
-      if (intersectedEl) {
-        intersectedEl.el.emit('click');
-      }
-    });
-  </script>
+  
   <script type="module" src="../js/sala_jorge.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
 
