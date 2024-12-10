@@ -55,26 +55,36 @@
 
     <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
 <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
-
+<!-- Cámara con controles de movimiento -->
+<a-entity 
+  oculus-go-controls 
+  oculus-touch-controls 
+  movement-controls="speed: 0.5; acceleration: 100; fly: true" 
+  wasd-controls="acceleration: 100; fly: true" 
+  camera 
+  look-controls="pointerLockEnabled: true; pointerLockElement: #cursor">
+  <a-camera>
+    <!-- Cursor personalizado -->
+<a-entity 
+id="cursor" 
+geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.02" 
+material="color: #FFFFFF; shader: flat" 
+position="0 0 -1" 
+rotation="0 0 0">
+</a-entity>
+</a-entity>
 
     <!-- Cámara -->
     <a-camera universal-controls="movementEnabled: true" position="60 0 100" wasd-controls="acceleration: 190">
         <a-cursor raycaster="objects: .clickable" fuse="true" fuse-timeout="1500"
-        material="color: white; shader: flat; opacity: 0.75">
+        material="color: white; shader: flat; opacity: 0.75"
+        >
       </a-cursor>
       <!-- Añadir cursor -->
       <a-cursor raycaster="objects: .clickable" fuse="true" fuse-timeout="1500"
         material="color: white; shader: flat; opacity: 0.75">
       </a-cursor>
     </a-camera>
- <!-- Rig con movimiento y controles -->
- <a-entity id="rig" movement-controls="speed: 0.1">
-  <a-camera>
-    <a-cursor></a-cursor>
-  </a-camera>
-  <a-entity oculus-touch-controls="hand: left"></a-entity>
-  <a-entity oculus-touch-controls="hand: right"></a-entity>
-</a-entity>
 
     <!-- MANSION -->
     <a-entity 
@@ -294,33 +304,10 @@ position="22.22524 3.04802 -169.87554" scale="8.14487 6.25159 8.44171" rotation=
 
   </a-scene>
   
+  <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-teleport-controls@1.2.0/dist/aframe-teleport-controls.min.js"></script>
+  <script src="https://unpkg.com/aframe-movement-controls-component@0.5.0/dist/aframe-movement-controls-component.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
   
-  <script>
-    // Configuración de rotación con el joystick derecho
-    AFRAME.registerComponent('joystick-rotation', {
-      tick: function () {
-        const rightHand = document.querySelector('[oculus-touch-controls="hand: right"]');
-        if (!rightHand || !rightHand.components['tracked-controls']) return;
-
-        const axes = rightHand.components['tracked-controls'].controller.axes;
-        if (axes[2] !== 0) {
-          this.el.object3D.rotation.y -= axes[2] * 0.05;
-        }
-      }
-    });
-
-    // Añadir el componente de rotación al rig
-    document.getElementById('rig').setAttribute('joystick-rotation', '');
-
-    // Manejo de clics con gatillos
-    document.querySelector('[oculus-touch-controls="hand: right"]').addEventListener('triggerdown', (evt) => {
-      const intersectedEl = document.querySelector('[raycaster]').components.raycaster.getIntersection(document.querySelector('.clickable'));
-      if (intersectedEl) {
-        intersectedEl.el.emit('click');
-      }
-    });
-  </script>
 
 </body>
 </html>
