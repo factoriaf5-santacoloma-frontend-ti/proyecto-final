@@ -52,6 +52,14 @@
 </a-entity>
     </a-assets>
 
+    <a-entity oculus-touch-controls="hand: left"></a-entity>
+<a-entity oculus-touch-controls="hand: right"></a-entity>
+<a-entity id="rig" movement-controls>
+  <a-camera></a-camera>
+  <a-entity oculus-touch-controls="hand: left"></a-entity>
+  <a-entity oculus-touch-controls="hand: right"></a-entity>
+</a-entity>
+
     <!-- Cámara -->
     <a-camera universal-controls="movementEnabled: true" position="60 0 100" wasd-controls="acceleration: 190">
         <a-cursor raycaster="objects: .clickable" fuse="true" fuse-timeout="1500"
