@@ -35,4 +35,3 @@ Tiempo: 2 semanas.
 Involucraremos a los educadores como stakeholders para alimentar las secciones propuestas. 
 
 Si fuera posible haríamos versión ar para móvil.
-
