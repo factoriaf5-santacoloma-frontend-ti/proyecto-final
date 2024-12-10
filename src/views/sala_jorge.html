@@ -54,30 +54,12 @@
 
     <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
 <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
-<!-- Cámara con controles de movimiento -->
-<a-entity 
-  oculus-go-controls 
-  oculus-touch-controls 
-  movement-controls="speed: 0.5; acceleration: 100; fly: true" 
-  wasd-controls="acceleration: 100; fly: true" 
-  camera 
-  look-controls="pointerLockEnabled: true; pointerLockElement: #cursor">
-  <a-camera>
-    <!-- Cursor personalizado -->
-<a-entity 
-id="cursor" 
-geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.02" 
-material="color: #FFFFFF; shader: flat" 
-position="0 0 -1" 
-rotation="0 0 0">
-</a-entity>
-</a-entity>
+
 
     <!-- Cámara -->
     <a-camera universal-controls="movementEnabled: true" position="60 0 100" wasd-controls="acceleration: 190">
         <a-cursor raycaster="objects: .clickable" fuse="true" fuse-timeout="1500"
-        material="color: white; shader: flat; opacity: 0.75"
-        >
+        material="color: white; shader: flat; opacity: 0.75">
       </a-cursor>
       <!-- Añadir cursor -->
       <a-cursor raycaster="objects: .clickable" fuse="true" fuse-timeout="1500"
