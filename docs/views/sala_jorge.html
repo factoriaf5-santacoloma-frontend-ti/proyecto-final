@@ -26,16 +26,20 @@
 
        <!-- Imágenes -->
        <img id="slashermovies" src="../assets/jorge/slashermovies.png" crossorigin="anonymous">
-      <img id="dindom" src="../assets/jorge/dindom.png" alt="Dindom Image">
-      <img id="bubbles" src="../assets/jorge/bubbles.png" alt="Bubbles Image">
+       <img id="dindom" src="../assets/jorge/dindom.png" alt="Dindom Image">
+       <img id="bubbles" src="../assets/jorge/bubbles.png" alt="Bubbles Image">
+ 
 
       
      <!-- Controles metaquest3 -->
-     <a-entity laser-controls="hand: left"></a-entity>
-     <a-entity laser-controls="hand: right"></a-entity>
-     <a-entity hand-tracking-controls="hand: left"></a-entity>
-    <a-entity hand-tracking-controls="hand: right"></a-entity>
-    <a-camera position="50 -250 2" wasd-controls-enabled="true">
+     <a-entity id="cameraEntity" position="-50 -1 2" rotation="0 -90 0">
+      <a-camera>
+          <a-entity laser-controls="hand: left"></a-entity>
+          <a-entity laser-controls="hand: right"></a-entity>
+          <a-cursor scale="2 2 2"></a-cursor>
+      </a-camera>
+  </a-entity>
+    <a-camera position="50 -1 2" wasd-controls-enabled="true">
     <a-cursor raycaster="objects: .clickable"></a-cursor>
     </a-camera>
       <!-- Cielo -->
@@ -50,7 +54,7 @@
     </a-assets>
 
     <!-- Cámara -->
-    <a-camera universal-controls="movementEnabled: true" position="50 -250 2" wasd-controls="acceleration: 190">
+    <a-camera universal-controls="movementEnabled: true" position="60 0 100" wasd-controls="acceleration: 190">
         <a-cursor raycaster="objects: .clickable" fuse="true" fuse-timeout="1500"
         material="color: white; shader: flat; opacity: 0.75">
       </a-cursor>
@@ -63,12 +67,12 @@
     <!-- MANSION -->
     <a-entity 
       gltf-model="#mansion"
-      position="0 -220 -200"
+      position="0 33.74742 -200"
       scale="0.3 0.3 0.3">
     </a-entity>
 
     <a-entity 
-      sound="src: #background-music; autoplay: true; loop: true; volume: 50">
+      sound="src: #background-music; autoplay: true; loop: true; volume: 1">
     </a-entity>
     
 
@@ -83,7 +87,7 @@
     <a-entity 
       gltf-model="#book-stand"
       animation-mixer
-      position="110 -270 20"
+      position="110 -14.88605 20"
       scale="10 10 10"
       rotation="0 70 0">
     </a-entity>
@@ -94,10 +98,10 @@
    gltf-model="#ghost-tophat"
    class="clickable"
    animation-mixer
-   position="120 -260 25"
+   position="120 -2.98681 25"
    scale="5 5 5"
    rotation="0 -90 0"
-   animation="property: position; dir: alternate; dur: 3000; loop: true; to: 120 -255 25"
+   animation="property: position; dir: alternate; dur: 2000; loop: true; to: 120 0 25"
    class="clickable"
   event-set__enter="_event: mouseenter; _target: #tophat-text; visible: true"
   event-set__leave="_event: mouseleave; _target: #tophat-text; visible: false"
@@ -112,7 +116,7 @@
  <a-entity
    id="tophat-response"
    text="value: Vaya! Otra alma en pena, parece que estas en la lista de invitados de esta noche. Por favor, pasa. ; align: center; color: #FFFFFF; width: 40"
-   position="120 -240 25" 
+   position="120 19.61249 25" 
    visible="false"
    rotation="0 -90 0"></a-entity> <!-- Inicialmente oculto -->
    
@@ -122,7 +126,7 @@
     <a-entity 
       gltf-model="#enchanted"
       animation-mixer="clip: *"
-      position="-150 -299 -1"
+      position="-150 -45.21382 -1"
       scale="50 50 50"
       rotation="0 100 0">
     </a-entity>
@@ -132,10 +136,10 @@
   id="cat" 
   gltf-model="#cat"
   animation-mixer="clip: *"
-  position="-120 -270 50" 
+  position="-120.45 -3 50" 
   scale="40 40 40"
   rotation="0 -80 0"
-  animation="property: position; dir: alternate; dur: 2000; loop: true; to: -120 -265 50"
+  animation="property: position; dir: alternate; dur: 4000; loop: true; to: -120 -15 50"
   onclick="document.getElementById('cat-response').setAttribute('visible', 'true');">
 </a-entity>
 
@@ -157,7 +161,7 @@
 id="ghost-boy"
 gltf-model="#ghost-boy"
 animation-mixer="clip: *"
-position="50 -263 -90"
+position="50 -9.74 -90"
 scale="5 5 5"
 rotation="0 -1 0"
 class="clickable"
@@ -171,7 +175,7 @@ event-set__enter="_event: raycaster-intersected; _target: #ghost-response; visib
 <a-entity
 id="ghost-response"
 text="value: Por fin, te he estado esperando! Este bootcamp a matado mi existencia, pero mis proyectos siguen en vigencia! echales un vistazo!; align: center; color: #FFFFFF; width: 50"
-position="50 -240 -90" 
+position="50.02 8.18 -90" 
 visible="false"
 rotation="0 -1 0"></a-entity>
  
@@ -179,33 +183,33 @@ rotation="0 -1 0"></a-entity>
 <!-- CUADRO 1-->
 <a-entity 
   gltf-model="#picture"
-  position="22.42456 -239.1241 -159.26777" scale="13 3.80905 10.26215" rotation="0.505 1.693 0.357">
+  position="22.425 14.67829 -159.268" scale="13 3.80905 10.26215" rotation="0.505 1.693 0.357">
 </a-entity>
 
 <!-- CUADRO 2 central -->
 <a-entity 
   gltf-model="#picture"
-  position="22.01821 -238.73019 -180.40996" scale="15.01 4.56 10.985" rotation="0.505 1.693 0.357">
+  position="22.01821 15.13885 -180.40996" scale="15.01 4.56 10.985" rotation="0.505 1.693 0.357">
 </a-entity>
 
 <!-- CUADRO 3 -->
 <a-entity 
   gltf-model="#picture"
-  position="22.21145 -249.73478 -169.86067" scale="13 4.40541 10.44062" rotation="0.505 1.693 0.357">
+  position="22.21145 3.05965 -169.86067" scale="13 4.40541 10.44062" rotation="0.505 1.693 0.357">
 </a-entity>
 
-<!-- Modelo de la librería cerca de los modelos de imagen -->
+<!-- Modelo de la librería -->
 <a-entity 
   gltf-model="#libreria"
-  position="52.48596 -264.494 -181.10516" scale="0.03 0.04 0.042" rotation="-0.26 -88.797 0.076">
+  position="52.48596 -10.52 -181.10516" scale="0.03 0.04 0.042" rotation="-0.26 -88.797 0.076">
 </a-entity>
 <!-- Modelo de ghost_don -->
 <a-entity 
   gltf-model="#ghost-don"
-  position="65.59099 -252.28461 -171.02962"  
+  position="65.59099 3 -171.02962"  
   scale="1 1 1"
   rotation="-1.4661989977397767 -38.91815823426117 2.9759427879094957" 
-  animation="property: position; to: 65.59099 -250.08461 -171.02962; dir: alternate; dur: 2000; loop: true" 
+  animation="property: position; to: 65.59099 0 -171.02962; dir: alternate; dur: 3000; loop: true" 
   class="clickable"
   event-set__enter="_event: mouseenter; _target: #ghost-don-text; visible: true"
   event-set__leave="_event: mouseleave; _target: #ghost-don-text; visible: false"
@@ -219,9 +223,9 @@ rotation="0 -1 0"></a-entity>
 <a-entity
   id="ghost-don-response"
   text="value: Lord Bastori le dedico mucho amor a sus obras. Se le olvidaba comer, cuidar su salud y ordenar su habitacion solo por alcanzar la perfeccion...; align: center; color: #FFFFFF; width: 30"
-  position="64.42059 -234.8655 -168.50724" 
+  position="65.591 17.74 -171.03" 
   visible="false"
-  rotation="-3.12491181464351 -40.87538206242806 1.925711149434697"></a-entity>
+  rotation="-3.12491181464351 -42.869275189483325 1.9262841072298276"></a-entity>
 
 <!-- PROYECTOS  -->
 <!-- Imagen de Slashermovies como plano -->
@@ -229,7 +233,7 @@ rotation="0 -1 0"></a-entity>
       id="plane-slashermovies"
       geometry="primitive: plane; width: 1.5; height: 1" 
       material="src: #slashermovies; transparent: true" 
-      position="22.58589 -239.13731 -159.29297" 
+      position="22.50693 14.58608 -159.29297" 
       rotation="0 93.147 0" 
       scale="7.74908 5.50886 1.37839">
     </a-entity>
@@ -239,9 +243,8 @@ rotation="0 -1 0"></a-entity>
 id="plane-dindom"
 geometry="primitive: plane; width: 1.5; height: 1" 
 material="src: #dindom; transparent: true" 
-position="22.21324 -238.746 -180.40771" 
-rotation="0 93.147 0" 
-scale="7.74908 5.50886 1.37839">
+position="22.213 14.9812 -180.408" rotation="0 92.143072612939 0" scale="8.40839 7.42806 1.53038">
+
 </a-entity>
 
 <!-- Imagen de bubbles como plano -->
@@ -249,17 +252,18 @@ scale="7.74908 5.50886 1.37839">
 id="plane-bubbles"
 geometry="primitive: plane; width: 1.5; height: 1" 
 material="src: #bubbles; transparent: true" 
-position="22.3894 -249.6403 -169.69253" scale="7.85345 6.25159 9.02346" rotation="0.5047758175102552 92.84379999638399 0.3569527063665029">
+position="22.22524 3.04802 -169.87554" scale="8.14487 6.25159 8.44171" rotation="0.5047758175102552 92.84379999638399 0.3569527063665029">
+
 </a-entity>
 
 <!-- CUTE GHOST-->
 <a-entity 
   id="cute-ghost"
   gltf-model="#cute-ghost"
-  position="30 -276.41258 88.301" 
+  position="140.70749 -16.627 -71.0435" 
   scale="6 6 6"
-  rotation="0 158.78780446917096 0"
-  animation="property: position; dir: alternate; dur: 5000; loop: true; to: 30 -270.93025 88.30115" 
+  rotation="0 -50.054738898218986 0"
+  animation="property: position; dir: alternate; dur: 5000; loop: true; to: 140.70749 -10.627 -71.0435" 
   class="clickable"
   onclick="document.getElementById('cute-ghost-text').setAttribute('visible', 'true');"
   event-set__enter="_event: raycaster-intersected; _target: #cute-ghost-text; visible: true"
@@ -269,10 +273,10 @@ position="22.3894 -249.6403 -169.69253" scale="7.85345 6.25159 9.02346" rotation
 <!-- Texto para el nuevo fantasma -->
 <a-entity
  id="cute-ghost-text"
- text="value: Asi que tu tambien vienes de muy lejos para ver las obras de Jorge Bastori? Eh?; align: center; color: #FFFFFF; width: 50"
- position="30 -242.8775 93.49268" 
+ text="value: Eh? Y yo que hago aca? Lo ultimo que recuerdo es haber caminado la subidita para llegar al Espai de les oportunitats, pues vaya oportunidad de morir, no?; align: center; color: #FFFFFF; width: 50"
+ position="140.70749 15 -71.0435" 
  visible="false"
- rotation="2.148018773945457 169.33137381516838 0.3380450991271857"></a-entity>
+ rotation="0 -50.054738898218986 0"></a-entity>
     <!-- Cielo -->
     <a-sky src="#sky" scale="6 6 6"></a-sky>
 
