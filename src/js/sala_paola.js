@@ -1,3 +1,7 @@
+import AFRAME from 'aframe';
+import 'aframe-extras';
+import 'aframe-effects';
+
 document.querySelector('a-scene').addEventListener('loaded', function () {
     const sombrero = document.querySelector('#clickable-sombrero');
     const infoContainer = document.querySelector('#info-container');
@@ -31,3 +35,5 @@ document.querySelector('a-scene').addEventListener('loaded', function () {
       });
     },
   });
+
+ 
