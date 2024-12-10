@@ -10,7 +10,7 @@
   </head>
   
   <body> 
-    <a-scene  >
+    <a-scene cursor="rayOrigin: mouse" vr-mode-ui="enabled: true" xrwebgl="enabled: true"  >
       <a-assets >
         <!-- Assets -->
          <audio id="car-sound" src="../assets/assets-hassan/sound/lambo-rev-87832.mp3"></audio>
@@ -19,11 +19,16 @@
         <a-asset-item id="ged3" src="../assets/assets-hassan/gltf/realistic_hd_date_palm_1378.glb"></a-asset-item>
         <a-asset-item id="ged4" src="../assets/assets-hassan/gltf/realistic_hd_date_palm_1378.glb"></a-asset-item>
       </a-assets>
+
+      <a-entity id="camera-rig" position="0 1.6 0" movement-controls="speed: 0.2">
+        <a-entity camera look-controls></a-entity>
+        <!-- Controladores VR (Meta Quest) -->
+        <a-entity oculus-touch-controls="hand: left"></a-entity>
+        <a-entity oculus-touch-controls="hand: right"></a-entity>
+    </a-entity>
       
       <a-entity id="cameraRig" position="0 1.6 0">
         <a-camera wasd-controls="acceleration: 50">
-          <a-cursor color="black" raycaster="objects: .clickable"></a-cursor>
-
         </a-camera>
       </a-entity>
 
