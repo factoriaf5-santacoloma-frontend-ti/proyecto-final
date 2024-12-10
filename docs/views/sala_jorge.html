@@ -3,49 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jorge's House</title>
+  <title>sala_jorge's House</title>
   
   
-  <script type="module" crossorigin src="/proyecto-final/assets/sala_jorge-DGGXb_Cm.js"></script>
+  <script type="module" crossorigin src="/proyecto-final/assets/aframe-master-BqMUpO3Y.js"></script>
+  <script type="module" crossorigin src="/proyecto-final/assets/index-D66LEcnl.js"></script>
 </head>
 <body>
   <a-scene>
     <!-- Assets -->
     <a-assets>
       <!-- Modelos -->
-      <a-asset-item id="mansion" src="../assets/jorge/spookymansion.glb"></a-asset-item>
-      <a-asset-item id="book-stand" src="../assets/jorge/stylized_magic_book_stand.glb"></a-asset-item>
-      <a-asset-item id="ghost-tophat" src="../assets/jorge/ghost_w_tophat.glb"></a-asset-item>
-      <a-asset-item id="enchanted" src="../assets/jorge/the_enchanted.glb"></a-asset-item>
-      <a-asset-item id="cat" src="../assets/jorge/cute_spooky_cat.glb"></a-asset-item>
-      <a-asset-item id="ghost-boy" src="../assets/jorge/ghost_boy.glb"></a-asset-item>
-      <a-asset-item id="picture" src="../assets/jorge/picture.glb"></a-asset-item>
-      <a-asset-item id="libreria" src="../assets/jorge/libreria.glb"></a-asset-item>
-      <a-asset-item id="ghost-don" src="../assets/jorge/ghost_don.glb"></a-asset-item>
-      <a-asset-item id="cute-ghost" src="../assets/jorge/a_cute_ghost.glb"></a-asset-item>
-      <a-asset-item id="leftHandModel" src="../assets/jorge/leftHandLow.glb"></a-asset-item>
-  <a-asset-item id="rightHandModel" src="../assets/jorge/rightHandLow.glb"></a-asset-item>
+      <a-asset-item id="mansion" src="../assets/sala_jorge/spookymansion.glb"></a-asset-item>
+      <a-asset-item id="book-stand" src="../assets/sala_jorge/stylized_magic_book_stand.glb"></a-asset-item>
+      <a-asset-item id="ghost-tophat" src="../assets/sala_jorge/ghost_w_tophat.glb"></a-asset-item>
+      <a-asset-item id="enchanted" src="../assets/sala_jorge/the_enchanted.glb"></a-asset-item>
+      <a-asset-item id="cat" src="../assets/sala_jorge/cute_spooky_cat.glb"></a-asset-item>
+      <a-asset-item id="ghost-boy" src="../assets/sala_jorge/ghost_boy.glb"></a-asset-item>
+      <a-asset-item id="picture" src="../assets/sala_jorge/picture.glb"></a-asset-item>
+      <a-asset-item id="libreria" src="../assets/sala_jorge/libreria.glb"></a-asset-item>
+      <a-asset-item id="ghost-don" src="../assets/sala_jorge/ghost_don.glb"></a-asset-item>
+      <a-asset-item id="cute-ghost" src="../assets/sala_jorge/a_cute_ghost.glb"></a-asset-item>
+      <a-asset-item id="leftHandModel" src="../assets/sala_jorge/leftHandLow.glb"></a-asset-item>
+  <a-asset-item id="rightHandModel" src="../assets/sala_jorge/rightHandLow.glb"></a-asset-item>
 
        <!-- Imágenes -->
-       <img id="slashermovies" src="../assets/jorge/slashermovies.png" crossorigin="anonymous">
-       <img id="dindom" src="../assets/jorge/dindom.png" alt="Dindom Image">
-       <img id="bubbles" src="../assets/jorge/bubbles.png" alt="Bubbles Image">
- 
+       <img id="slashermovies" src="../assets/sala_jorge/slashermovies.png" crossorigin="anonymous">
+       <img id="dindom" src="../assets/sala_jorge/dindom.png" alt="Dindom Image">
+       <img id="bubbles" src="../assets/sala_jorge/bubbles.png" alt="Bubbles Image">
 
-      
     
-  </a-entity>
+    </a-assets>
     <a-camera position="50 -1 2" wasd-controls-enabled="true">
     <a-cursor raycaster="objects: .clickable"></a-cursor>
     </a-camera>
     <a-entity id="leftHand" gltf-model="#leftHandModel" hand-controls="hand: left; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
 <a-entity id="rightHand" gltf-model="#rightHandModel" hand-controls="hand: right; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
       <!-- Cielo -->
-      <img id="sky" src="../assets/jorge/redsky.jpg">
+      <img id="sky" src="../assets/sala_jorge/redsky.jpg">
       
       <!-- Música -->
       <a-entity 
-  sound="src: url(../assets/jorge/themeoutside.mp3); autoplay: true; loop: true; volume: 50">
+  sound="src: url(../assets/sala_jorge/themeoutside.mp3); autoplay: true; loop: true; volume: 50">
 
   
 </a-entity>
@@ -283,7 +282,7 @@ position="22.22524 3.04802 -169.87554" scale="8.14487 6.25159 8.44171" rotation=
     <a-sky src="#sky" scale="6 6 6"></a-sky>
 
   </a-scene>
-  
+  
   <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
 
 </body>
