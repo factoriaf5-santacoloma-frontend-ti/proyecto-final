@@ -66,6 +66,14 @@
         material="color: white; shader: flat; opacity: 0.75">
       </a-cursor>
     </a-camera>
+ <!-- Rig con movimiento y controles -->
+ <a-entity id="rig" movement-controls="speed: 0.1">
+  <a-camera>
+    <a-cursor></a-cursor>
+  </a-camera>
+  <a-entity oculus-touch-controls="hand: left"></a-entity>
+  <a-entity oculus-touch-controls="hand: right"></a-entity>
+</a-entity>
 
     <!-- MANSION -->
     <a-entity 
@@ -287,6 +295,32 @@ position="22.22524 3.04802 -169.87554" scale="8.14487 6.25159 8.44171" rotation=
   
   <script type="module" src="../js/sala_jorge.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
+  
+  <script>
+    // Configuración de rotación con el joystick derecho
+    AFRAME.registerComponent('joystick-rotation', {
+      tick: function () {
+        const rightHand = document.querySelector('[oculus-touch-controls="hand: right"]');
+        if (!rightHand || !rightHand.components['tracked-controls']) return;
+
+        const axes = rightHand.components['tracked-controls'].controller.axes;
+        if (axes[2] !== 0) {
+          this.el.object3D.rotation.y -= axes[2] * 0.05;
+        }
+      }
+    });
+
+    // Añadir el componente de rotación al rig
+    document.getElementById('rig').setAttribute('joystick-rotation', '');
+
+    // Manejo de clics con gatillos
+    document.querySelector('[oculus-touch-controls="hand: right"]').addEventListener('triggerdown', (evt) => {
+      const intersectedEl = document.querySelector('[raycaster]').components.raycaster.getIntersection(document.querySelector('.clickable'));
+      if (intersectedEl) {
+        intersectedEl.el.emit('click');
+      }
+    });
+  </script>
 
 </body>
 </html>
