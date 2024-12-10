@@ -22,7 +22,8 @@
       
       <a-entity id="cameraRig" position="0 1.6 0">
         <a-camera wasd-controls="acceleration: 50">
-          <a-cursor ></a-cursor>
+          <a-cursor color="black" raycaster="objects: .clickable"></a-cursor>
+
         </a-camera>
       </a-entity>
 
@@ -56,7 +57,8 @@
       <a-entity  gltf-model="../assets/assets-hassan/gltf/ImageToStl.com_model.glb"  position="7.77905 -2.19622 -12.39519"  rotation="0 -180 10"  width="2.5"  height="3"></a-entity>
 
       <a-entity  gltf-model="../assets/assets-hassan/gltf/white_modern_mansion.glb"  position="23.09545 -3.32958 24.09823"  rotation="-1.74 0.79 0.30"> </a-entity>
-   </a-scene>
+   
+    </a-scene>
 
     <!-- Custom Script -->
     <script type="module" src="../js/sala_hassan.js"></script>
