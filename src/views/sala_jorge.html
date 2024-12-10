@@ -1,11 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jorge's House</title>
+  
+  <script src="../js/sala_jorge.js"></script> <!-- Tu script personalizado -->
 </head>
 <body>
+  <a-scene>
+    <!-- Assets -->
+    <a-assets>
+      <!-- Modelos -->
+      <a-asset-item id="mansion" src="../assets/jorge/spookymansion.glb"></a-asset-item>
+      <a-asset-item id="book-stand" src="../assets/jorge/stylized_magic_book_stand.glb"></a-asset-item>
+      <a-asset-item id="ghost-tophat" src="../assets/jorge/ghost_w_tophat.glb"></a-asset-item>
+      <a-asset-item id="enchanted" src="../assets/jorge/the_enchanted.glb"></a-asset-item>
+      <a-asset-item id="cat" src="../assets/jorge/cute_spooky_cat.glb"></a-asset-item>
+      <a-asset-item id="ghost-boy" src="../assets/jorge/ghost_boy.glb"></a-asset-item>
+      <a-asset-item id="picture" src="../assets/jorge/picture.glb"></a-asset-item>
+      <a-asset-item id="libreria" src="../assets/jorge/libreria.glb"></a-asset-item>
+      <a-asset-item id="ghost-don" src="../assets/jorge/ghost_don.glb"></a-asset-item>
+      <a-asset-item id="cute-ghost" src="../assets/jorge/a_cute_ghost.glb"></a-asset-item> 
+
+       <!-- Imágenes -->
+       <img id="slashermovies" src="../assets/jorge/slashermovies.png" crossorigin="anonymous">
+      <img id="dindom" src="../assets/jorge/dindom.png" alt="Dindom Image">
+      <img id="bubbles" src="../assets/jorge/bubbles.png" alt="Bubbles Image">
+
+      
+     <!-- Controles metaquest3 -->
+     <a-entity laser-controls="hand: left"></a-entity>
+     <a-entity laser-controls="hand: right"></a-entity>
+     <a-entity hand-tracking-controls="hand: left"></a-entity>
+    <a-entity hand-tracking-controls="hand: right"></a-entity>
+    <a-camera position="50 -250 2" wasd-controls-enabled="true">
+    <a-cursor raycaster="objects: .clickable"></a-cursor>
+    </a-camera>
+      <!-- Cielo -->
+      <img id="sky" src="../assets/jorge/redsky.jpg">
+      
+      <!-- Música -->
+      <a-entity 
+  sound="src: url(../assets/jorge/themeoutside.mp3); autoplay: true; loop: true; volume: 50">
+
+  
+</a-entity>
+    </a-assets>
+
+    <!-- Cámara -->
+    <a-camera universal-controls="movementEnabled: true" position="50 -250 2" wasd-controls="acceleration: 190">
+        <a-cursor raycaster="objects: .clickable" fuse="true" fuse-timeout="1500"
+        material="color: white; shader: flat; opacity: 0.75">
+      </a-cursor>
+      <!-- Añadir cursor -->
+      <a-cursor raycaster="objects: .clickable" fuse="true" fuse-timeout="1500"
+        material="color: white; shader: flat; opacity: 0.75">
+      </a-cursor>
+    </a-camera>
+
+    <!-- MANSION -->
+    <a-entity 
+      gltf-model="#mansion"
+      position="0 -220 -200"
+      scale="0.3 0.3 0.3">
+    </a-entity>
+
+    <a-entity 
+      sound="src: #background-music; autoplay: true; loop: true; volume: 50">
+    </a-entity>
     
+
+    <!-- Luces -->
+    <a-light type="directional" color="#FF0000" intensity="2" position="0 -100 0" target="#scene-center"></a-light>
+    <a-light type="ambient" color="#e8ccff" intensity="0.5"></a-light>
+
+    <!-- Marcador del centro de la escena -->
+    <a-entity id="scene-center" position="0 400 -200"></a-entity>
+
+    <!-- ESTANTERIA-->
+    <a-entity 
+      gltf-model="#book-stand"
+      animation-mixer
+      position="110 -270 20"
+      scale="10 10 10"
+      rotation="0 70 0">
+    </a-entity>
+
+   <!-- Fantasma con sombrero -->
+   <a-entity 
+   id="ghost-tophat"
+   gltf-model="#ghost-tophat"
+   class="clickable"
+   animation-mixer
+   position="120 -260 25"
+   scale="5 5 5"
+   rotation="0 -90 0"
+   animation="property: position; dir: alternate; dur: 3000; loop: true; to: 120 -255 25"
+   class="clickable"
+  event-set__enter="_event: mouseenter; _target: #tophat-text; visible: true"
+  event-set__leave="_event: mouseleave; _target: #tophat-text; visible: false"
+  
+  onclick="document.getElementById('tophat-response').setAttribute('visible', 'true');">
+
+ </a-entity>
+
+ <!-- Texto dinámico -->
+ <a-entity
+   id="tophat-response"
+   text="value: Vaya! Otra alma en pena, parece que estas en la lista de invitados de esta noche. Por favor, pasa. ; align: center; color: #FFFFFF; width: 40"
+   position="120 -240 25" 
+   visible="false"
+   rotation="0 -90 0"></a-entity> <!-- Inicialmente oculto -->
+   
+ </a-entity>
+
+    <!-- ÁRBOL -->
+    <a-entity 
+      gltf-model="#enchanted"
+      animation-mixer="clip: *"
+      position="-150 -299 -1"
+      scale="50 50 50"
+      rotation="0 100 0">
+    </a-entity>
+
+<!-- GATO -->
+<a-entity 
+  id="cat" 
+  gltf-model="#cat"
+  animation-mixer="clip: *"
+  position="-120 -270 50" 
+  scale="40 40 40"
+  rotation="0 -80 0"
+  animation="property: position; dir: alternate; dur: 2000; loop: true; to: -120 -265 50"
+  onclick="document.getElementById('cat-response').setAttribute('visible', 'true');">
+</a-entity>
+
+<!-- Texto -->
+<a-text
+  id="cat-response"
+  value="Un hombre sin propósito se pierde en distracciones! digo MIAU, MIAU!!!"
+  align="center"
+  color="#FFFFFF"
+  width="40"
+  anchor="center"
+  position="-75.95252 -220.19462 7.29031"
+  rotation="-5.688324990058812 90.03000426449651 -0.002864788975654116"
+  visible="false"> <!-- Inicialmente oculto -->
+</a-text>
+
+   <!-- GHOST -->
+<a-entity 
+id="ghost-boy"
+gltf-model="#ghost-boy"
+animation-mixer="clip: *"
+position="50 -263 -90"
+scale="5 5 5"
+rotation="0 -1 0"
+class="clickable"
+event-set__enter="_event: mouseenter; _target: #ghost-text; visible: true"
+event-set__leave="_event: mouseleave; _target: #ghost-text; visible: false"
+onclick="document.getElementById('ghost-response').setAttribute('visible', 'true');">
+</a-entity>
+<!-- TEXTO DEL GHOST-->
+<a-entity
+id="ghost-response"
+text="value: Por fin, te he estado esperando! Este bootcamp a matado mi existencia, pero mis proyectos siguen en vigencia! echales un vistazo!; align: center; color: #FFFFFF; width: 50"
+position="50 -240 -90" 
+visible="false"
+rotation="0 -1 0"></a-entity>
+ 
+
+<!-- CUADRO 1-->
+<a-entity 
+  gltf-model="#picture"
+  position="22.42456 -239.1241 -159.26777" scale="13 3.80905 10.26215" rotation="0.505 1.693 0.357">
+</a-entity>
+
+<!-- CUADRO 2 central -->
+<a-entity 
+  gltf-model="#picture"
+  position="22.01821 -238.73019 -180.40996" scale="15.01 4.56 10.985" rotation="0.505 1.693 0.357">
+</a-entity>
+
+<!-- CUADRO 3 -->
+<a-entity 
+  gltf-model="#picture"
+  position="22.21145 -249.73478 -169.86067" scale="13 4.40541 10.44062" rotation="0.505 1.693 0.357">
+</a-entity>
+
+<!-- Modelo de la librería cerca de los modelos de imagen -->
+<a-entity 
+  gltf-model="#libreria"
+  position="52.48596 -264.494 -181.10516" scale="0.03 0.04 0.042" rotation="-0.26 -88.797 0.076">
+</a-entity>
+<!-- Modelo de ghost_don -->
+<a-entity 
+  gltf-model="#ghost-don"
+  position="65.59099 -252.28461 -171.02962"  
+  scale="1 1 1"
+  rotation="-1.4661989977397767 -38.91815823426117 2.9759427879094957" 
+  animation="property: position; to: 65.59099 -250.08461 -171.02962; dir: alternate; dur: 2000; loop: true" 
+  class="clickable"
+  event-set__enter="_event: mouseenter; _target: #ghost-don-text; visible: true"
+  event-set__leave="_event: mouseleave; _target: #ghost-don-text; visible: false"
+  onclick="document.getElementById('ghost-don-response').setAttribute('visible', 'true');">
+</a-entity>
+
+<!-- Texto para ghost_don -->
+<a-entity
+  id="ghost-don-response"
+  text="value: Lord Bastori le dedico mucho amor a sus obras. Se le olvidaba comer, cuidar su salud y ordenar su habitacion solo por alcanzar la perfeccion...; align: center; color: #FFFFFF; width: 30"
+  position="64.42059 -234.8655 -168.50724" 
+  visible="false"
+  rotation="-3.12491181464351 -40.87538206242806 1.925711149434697"></a-entity>
+
+<!-- PROYECTOS  -->
+<!-- Imagen de Slashermovies como plano -->
+<a-entity 
+      id="plane-slashermovies"
+      geometry="primitive: plane; width: 1.5; height: 1" 
+      material="src: #slashermovies; transparent: true" 
+      position="22.58589 -239.13731 -159.29297" 
+      rotation="0 93.147 0" 
+      scale="7.74908 5.50886 1.37839">
+    </a-entity>
+
+<!-- Imagen de Dindom como plano -->
+<a-entity 
+id="plane-dindom"
+geometry="primitive: plane; width: 1.5; height: 1" 
+material="src: #dindom; transparent: true" 
+position="22.21324 -238.746 -180.40771" 
+rotation="0 93.147 0" 
+scale="7.74908 5.50886 1.37839">
+</a-entity>
+
+<!-- Imagen de bubbles como plano -->
+<a-entity 
+id="plane-bubbles"
+geometry="primitive: plane; width: 1.5; height: 1" 
+material="src: #bubbles; transparent: true" 
+position="22.3894 -249.6403 -169.69253" scale="7.85345 6.25159 9.02346" rotation="0.5047758175102552 92.84379999638399 0.3569527063665029">
+</a-entity>
+
+<!-- CUTE GHOST-->
+<a-entity 
+  id="cute-ghost"
+  gltf-model="#cute-ghost"
+  position="30 -276.41258 88.301" 
+  scale="6 6 6"
+  rotation="0 158.78780446917096 0"
+  animation="property: position; dir: alternate; dur: 5000; loop: true; to: 30 -270.93025 88.30115" 
+  class="clickable"
+  onclick="document.getElementById('cute-ghost-text').setAttribute('visible', 'true');">
+</a-entity>
+
+<!-- Texto para el nuevo fantasma -->
+<a-entity
+ id="cute-ghost-text"
+ text="value: Asi que tu tambien vienes de muy lejos para ver las obras de Jorge Bastori? Eh?; align: center; color: #FFFFFF; width: 50"
+ position="30 -242.8775 93.49268" 
+ visible="false"
+ rotation="2.148018773945457 169.33137381516838 0.3380450991271857"></a-entity>
+    <!-- Cielo -->
+    <a-sky src="#sky" scale="6 6 6"></a-sky>
+
+   
+  </a-scene>
+
+  <script type="module" src="../js/sala_jorge.js"></script>
+  
 </body>
 </html>
