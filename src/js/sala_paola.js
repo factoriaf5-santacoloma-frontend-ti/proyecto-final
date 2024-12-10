@@ -36,4 +36,9 @@ document.querySelector('a-scene').addEventListener('loaded', function () {
     },
   });
 
- 
+  const clickableElements = document.querySelectorAll('.clickable');
+  clickableElements.forEach(element => {
+  element.addEventListener('click', function () {
+      window.open(element.getAttribute('href'), '_blank');
+  });
+});
