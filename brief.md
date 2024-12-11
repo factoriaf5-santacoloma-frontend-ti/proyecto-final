@@ -1,16 +1,9 @@
 # Viatge a l'espai
 
-<<<<<<< HEAD
 - Queremos hacer un homenaje a "L'espai de les oportunitats de Sta Coloma de Gramanet". Para ello vamos a construir **Viatge a L'Espai**, un proyecto de web interactiva que presentará las acciones que ha llevado a cabo "L'espai de les Oportunitats" así como testimonios de personas que han pasado por aquí. 
 
 El punto de partida será una esfera de imágenes que enlazarán a escenarios 3d, de temáticas diferentes:
 - Unos contarán con un avatar que nos represente y que contará quienes somos y que hemos obtenido de l'espai durante el tiempo que hemos compartido. Podríamos enlazar también a los proye
-=======
-- Queremos hacer un homenaje al espai de les oportunitats de Sta Coloma de Gramanet. Para ello vamos a construir **Viate a L'Espai**, un proyecto de web interactiva que presentará las acciones que ha llevado a cabo "L'espai de les Oportunitats" así como testimonios de personas que han pasado por aquí. 
-
-El punto de partida será una esfera de imágenes que enlazarán a escenarios 3d diferentes, de dos temáticas diferentes:
-- Unos contarán con un avatar que nos represente y que contará quienes somos y que hemos obtenido de l'espai durante el tiempo que hemos compartido.
->>>>>>> 4504ca8 (create first version of brief)
 - Otros tendrán escenas que simbolicen alguna de las acciones que ha llevado a cabo l'espai o, en su defecto, el Servei de Convivència, Desenvolupament Comunitari i Civisme.
 
 
@@ -18,12 +11,8 @@ Trabajeremos tod@s junt@s en el mismo proyecto pero en ramas separadas que no se
 El punto de inicio será la estructura vacía del proyecto. 
 
 - La idea de la homepage comienza aquí: 
-<<<<<<< HEAD
     
     <img src="home-page.gif">
-=======
-![]("./home-page.gif")
->>>>>>> 4504ca8 (create first version of brief)
 
 Web de referencia: https://www.dn.no/d2/ledestjerner/ledestjerne/2022/ledestjerner-2022-30-under-30/7-1-kerobndgm6
 
