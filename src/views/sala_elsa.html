@@ -3,28 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ELSA</title>
 </head>
 <body>
     <a-scene>
         <a-assets>
             <img id="fondo" src="../public/assets/textura-elsa/fondo-espacio.jpg" alt="">
+            <img id="piso" src="../public/assets/textura-elsa/piso1.jpg" alt="">
+            <img id="pared" src="../public/assets/textura-elsa/pared1.jpg" alt="">
+            <a-asset-item id="elsa" src="../public/assets/textura-elsa/ImageToStl.com_model(9).glb"></a-asset-item>
         </a-assets>
+        
 
 
-        <a-entity position="0 0 -30">
+        <a-entity position="0 3.5 -30" rotation="0 90 0">
             <a-camera>
                 <a-cursor></a-cursor>
             </a-camera>
         </a-entity>
 
-        <a-sky src="#fondo"></a-sky>
+        <a-sky src="#fondo" position="0 -180 0"></a-sky>
 
-        <a-plane color="black" scale="1000 1000 1000" rotation="-90 0 0" position="0 -1 0"></a-plane>
+        <a-plane  color="black" scale="1000 1000 1000" rotation="-90 0 0" position="0 -1 0"></a-plane>
 
 
         <!-- ----------------------------piso abajo sala(1)    --------------------------------------- -->
-        <a-plane src="" color="red"  scale="30 40 0" rotation="-90 0 0" postion="0 0 0"></a-plane>
+        <a-plane src="#piso" scale="30 40 0" rotation="-90 0 0" postion="0 0 0"></a-plane>
         
 
         <!-- ----------------------------pared alfrente-------------------------------------- 
@@ -32,80 +36,87 @@
         <a-plane src=""  scale="50 15 50" rotation="0 -180 0" position="0 7.5 -20" ></a-plane> -->
        
         <!-- ----------------------------pared atras sala(1) --------------------------------------- -->
-        <a-plane src="" color="red"  scale="30 15 50" rotation="0 -180 0" position="0 7.5 20" ></a-plane>
-        <a-plane src="" color="red" scale="30 15 50" rotation="0 0 0" position="0 7.5 20" ></a-plane>
+        <a-plane src="#pared" color="#bababa" scale="30 15 50" rotation="0 -180 0" position="0 7.5 20" ></a-plane>
+        <a-plane src="#pared" color="#bababa" scale="30 15 50" rotation="0 0 0" position="0 7.5 20" ></a-plane>
          
 
         <!-- ----------------------------pared derecha sala(1) --------------------------------------- -->
-        <a-plane src="" color="red" scale="40 15 50" rotation="0 -90 0" position="15 7.5 0" ></a-plane>
-        <a-plane src="" color="red" scale="40 15 50" rotation="0 90 0" position="15 7.5 0" ></a-plane>
+        <a-plane src="#pared" color="#bababa" scale="40 15 50" rotation="0 -90 0" position="15 7.5 0" ></a-plane>
+        <a-plane src="#pared" color="#bababa" scale="40 15 50" rotation="0 90 0" position="15 7.5 0" ></a-plane>
         
         <!-- ----------------------------pared izquierda sala(1) --------------------------------------- -->
-        <a-plane src="" color="red"  scale="40 15 50" rotation="0 90 0" position="-15 7.5 0" ></a-plane>
-        <a-plane src="" color="red" scale="40 15 50" rotation="0 -90 0" position="-15 7.5 0" ></a-plane>
+        <a-plane src="#pared" color="#bababa"  scale="40 15 50" rotation="0 90 0" position="-15 7.5 0" ></a-plane>
+        <a-plane src="#pared" color="#bababa" scale="40 15 50" rotation="0 -90 0" position="-15 7.5 0" ></a-plane>
   
 
 
 
 
         <!-- ----------------------------el centro sala0)--------------------------------------- -->
-        <a-plane color="white" scale="30 30 30" rotation="-90 0 0" position="0 0 -35"></a-plane>
+        <a-plane src="#piso" color="#bababa" scale="30 30 30" rotation="-90 0 0" position="0 0 -35"></a-plane>
 
 
 
 
 
         <!-- ----------------------------piso abajo sala(A)  --------------------------------------- -->
-        <a-plane color="blue" scale="30 30 0" rotation="-90 0 0" position="-30 0 -35"></a-plane>
+        <a-plane src="#piso" scale="30 30 0" rotation="-90 0 0" position="-30 0 -35"></a-plane>
   
         <!-- ----------------------------pared izquierda sala(A) --------------------------------------- -->
-        <a-plane color="blue" scale="30 15 50" position="-30 7.5 -50"></a-plane>
-        <a-plane color="blue" scale="30 15 50" rotation="0 -180 0" position="-30 7.5 -50"></a-plane>
+        <a-plane src="#pared" scale="30 15 50" position="-30 7.5 -50"></a-plane>
+        <a-plane src="#pared" scale="30 15 50" rotation="0 -180 0" position="-30 7.5 -50"></a-plane>
 
         <!-- ----------------------------pared derecha sala(A) --------------------------------------- -->
-        <a-plane color="blue" scale="30 15 50" position="-30 7.5 -20"></a-plane>
-        <a-plane color="blue" scale="30 15 50" rotation="0 -180 0" position="-30 7.5 -20"></a-plane>
+        <a-plane src="#pared" scale="30 15 50" position="-30 7.5 -20"></a-plane>
+        <a-plane src="#pared" scale="30 15 50" rotation="0 -180 0" position="-30 7.5 -20"></a-plane>
 
         <!-- ----------------------------pared atras sala(A) --------------------------------------- -->
-       <a-plane color="blue" scale="30 15 50" rotation="0 90 0" position="-45 7.5 -35"></a-plane>
-       <a-plane color="blue" scale="30 15 50" rotation="0 -90 0" position="-45 7.5 -35"></a-plane>
+       <a-plane src="#pared" scale="30 15 50" rotation="0 90 0" position="-45 7.5 -35"></a-plane>
+       <a-plane src="#pared" scale="30 15 50" rotation="0 -90 0" position="-45 7.5 -35"></a-plane>
 
 
 
 
         <!-- ----------------------------piso abajo sala(C)  --------------------------------------- -->
-       <a-plane color="orange" scale="30 30 0" rotation="-90 0 0" position="0 0 -65"></a-plane>
+       <a-plane src="#piso" scale="30 30 0" rotation="-90 0 0" position="0 0 -65"></a-plane>
 
         <!-- ----------------------------pared derecha sala(C) --------------------------------------- -->
-       <a-plane color="orange" scale="30 15 50" rotation="0 -90 0" position="15 7.5 -65"></a-plane>
-       <a-plane color="orange" scale="30 15 50" rotation="0 90 0" position="15 7.5 -65"></a-plane>
+       <a-plane src="#pared" scale="30 15 50" rotation="0 -90 0" position="15 7.5 -65"></a-plane>
+       <a-plane src="#pared" scale="30 15 50" rotation="0 90 0" position="15 7.5 -65"></a-plane>
 
         <!-- ----------------------------pared izquierda(C) --------------------------------------- -->
-        <a-plane color="orange"  scale="30 15 50" rotation="0 90 0" position="-15 7.5 -65"></a-plane>
-        <a-plane color="orange"  scale="30 15 50" rotation="0 -90 0" position="-15 7.5 -65"></a-plane>
+        <a-plane src="#pared"  scale="30 15 50" rotation="0 90 0" position="-15 7.5 -65"></a-plane>
+        <a-plane src="#pared"  scale="30 15 50" rotation="0 -90 0" position="-15 7.5 -65"></a-plane>
  
         <!-- ---------------------------pared atras sala(C) --------------------------------------- -->
-       <a-plane color="orange" scale="30 15 50" position="0 7.5 -80"  ></a-plane>
-       <a-plane color="orange" scale="30 15 50" rotation="0 -180 0" position="0 7.5 -80"  ></a-plane>
+       <a-plane src="#pared" scale="30 15 50" position="0 7.5 -80"  ></a-plane>
+       <a-plane src="#pared" scale="30 15 50" rotation="0 -180 0" position="0 7.5 -80"  ></a-plane>
 
 
 
 
 
         <!-- ----------------------------piso abajo sala(B)  --------------------------------------- -->
-        <a-plane color="grey" scale="30 30 0" rotation="-90 0 0" position="30 0 -35"></a-plane>
+        <a-plane src="#piso" scale="30 30 0" rotation="-90 0 0" position="30 0 -35"></a-plane>
   
         <!-- ----------------------------pared izquierda sala(B) --------------------------------------- -->
-        <a-plane color="grey" scale="30 15 50" position="30 7.5 -50"></a-plane>
-        <a-plane color="grey" scale="30 15 50" rotation="0 -180 0" position="30 7.5 -50"></a-plane>
+        <a-plane src="#pared" scale="30 15 50" position="30 7.5 -50"></a-plane>
+        <a-plane src="#pared" scale="30 15 50" rotation="0 -180 0" position="30 7.5 -50"></a-plane>
 
         <!-- ----------------------------pared derecha sala(B) --------------------------------------- -->
-        <a-plane color="grey" scale="30 15 50" position="30 7.5 -20"></a-plane>
-        <a-plane color="grey" scale="30 15 50" rotation="0 -180 0" position="30 7.5 -20"></a-plane>
+        <a-plane src="#pared" scale="30 15 50" position="30 7.5 -20"></a-plane>
+        <a-plane src="#pared" scale="30 15 50" rotation="0 -180 0" position="30 7.5 -20"></a-plane>
 
         <!-- ----------------------------pared atras sala(B) --------------------------------------- -->
-       <a-plane color="grey" scale="30 15 50" rotation="0 90 0" position="45 7.5 -35"></a-plane>
-       <a-plane color="grey" scale="30 15 50" rotation="0 -90 0" position="45 7.5 -35"></a-plane>
+       <a-plane src="#pared" scale="30 15 50" rotation="0 90 0" position="45 7.5 -35"></a-plane>
+       <a-plane src="#pared" scale="30 15 50" rotation="0 -90 0" position="45 7.5 -35"></a-plane>
+
+
+       <a-entity gltf-model="#elsa" scale="10 10 10" position="0 4 -30"></a-entity>
+
+
+       <a-plane src="" ></a-plane>
+
 
 
 
