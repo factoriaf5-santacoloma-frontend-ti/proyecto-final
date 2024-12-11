@@ -3,17 +3,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sala Alba</title>
+  <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+
 </head>
+
+
 <body>
   <a-scene cursor="rayOrigin: mouse" vr-mode-ui="enabled: true" xrwebgl="enabled: true">
+
+
     <a-assets>
         <img id="grass" src="../public/assets/sala_luisa/grass.jpg" crossorigin="anonymous" />
-        <img id="skyblue" src="../public/assets/sala_alba/sky_blue.jpg" crossorigin="anonymous" />
+        <img id="skyblue" src="../assets/sala_alba/sky_blue.jpg" crossorigin="anonymous" />
         <a-asset-item id="cat" src="../assets/sala_luisa/toon_cat_free/scene.gltf"></a-asset-item>
         <a-asset-item id="flowers" src="../assets/sala_luisa/flowers/scene.gltf"></a-asset-item>
         <a-asset-item id="tree" src="../assets/sala_luisa/stylized_tree/scene.gltf"></a-asset-item>
-        <a-assests-item id="people1" src="../assets/sala_alba/blockbench_park_bench/scene.gltf"></a-assests-item>
-
+        <a-assests-item id="people1" src="../assets/sala_alba/low_poly_people_free_sample_pack/scene.gltf"></a-assests-item>
+        <img id="diada2" src="../public/assets/sala_alba/diadaprimavera.jpg">
+        <img id="defensa" src="../public/assets/sala_alba/autodefensafemenina.jpg">
+        <img id="karate" src="../public/assets/sala_alba/karakara.jpg" >
+        <img id="estiu" src="../public/assets/sala_alba/estiufresca.jpg">
+        <img id="tallergame" src="../public/assets/sala_alba/tallergaming.jpg">
+        <img id="jobs" src="../public/assets/sala_alba/integrajobes.jpg">
+        <img id="raval" src="../public/assets/sala_alba/ravaleando.jpg">
     </a-assets>
     
     <a-sky src="#skyblue"></a-sky>
@@ -42,7 +54,53 @@
     </a-entity>
 
     <a-entity ></a-entity>
- 
+
+
+
+   <!----cajas con las fotos de los proyectos--> 
+   <!--diada-->
+    <a-box position="12 3 -11" rotation="0 0 0" 
+             width="2" height="2" depth="2"
+             material="src: #diada2; repeat: 1 1; shader: flat">
+      </a-box>
+
+      <!--defesa feminina-->
+      <a-box position="-8 3 -3" rotation="0 0 0" 
+      width="2" height="2" depth="2"
+      material="src: #defensa; repeat: 1 1; shader: flat">
+    </a-box>
+
+    <!--karate-->
+     <a-box position="-13 3 -1" rotation="0 0 0" 
+             width="2" height="2" depth="2"
+             material="src: #karate; repeat: 1 1; shader: flat">
+      </a-box>
+
+      <!--estiu fresca-->
+     <a-box position="2 3 6" rotation="0 0 0" 
+     width="2" height="2" depth="2"
+     material="src: #estiu; repeat: 1 1; shader: flat">
+    </a-box>
+    
+    <!--taller gamming-->
+    <a-box position="8 3 2" rotation="0 0 0" 
+    width="2" height="2" depth="2"
+    material="src: #tallergame; repeat: 1 1; shader: flat">
+   </a-box>
+
+   <!--intera jobs-->
+   <a-box position="3 3 -15" rotation="0 0 0" 
+   width="2" height="2" depth="2"
+   material="src: #jobs; repeat: 1 1; shader: flat">
+  </a-box>
+
+  <!--ravaleando-->
+  <a-box position="3 3 -1.5" rotation="0 0 0" 
+  width="2" height="2" depth="2"
+  material="src: #raval; repeat: 1 1; shader: flat">
+ </a-box>
+
+
     
 </a-scene>
 
