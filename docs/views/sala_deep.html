@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Jungle Island</title>
+    <link rel="stylesheet" href="css/sala_deep.css">
+    <!-- <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe-animation-component.min.js"></script> -->
+  <script type="module" crossorigin src="/proyecto-final/assets/sala_deep-DFSvsUCK.js"></script>
+  <link rel="modulepreload" crossorigin href="/proyecto-final/assets/aframe-master-1FPB_1PP.js">
+  <link rel="modulepreload" crossorigin href="/proyecto-final/assets/index-BjdfkQtK.js">
+</head>
+
+<body>
+    <a-scene 
+        vr-mode-ui="enabled: true"
+        environment="preset: forest; groundTexture: grass; groundColor: #3B7A57; skyColor: #87CEEB; grid: none;" 
+        cursor="rayOrigin: mouse">
+        
+        <a-light type="directional" color="#ffffff" intensity="1" position="10 20 10" target="#building"></a-light>
+        <a-light type="ambient" color="#aaaaaa" intensity="0.6"></a-light>
+
+        <a-circle id="island" radius="30" color="#3B7A57" position="0 0 0" rotation="-90 0 0"></a-circle>
+        <a-plane 
+            src="https://cdn.aframe.io/a-painter/images/floor.jpg" 
+            position="0 0.01 0" 
+            rotation="-90 0 0" 
+            width="60" height="60" 
+            repeat="20 20" 
+            material="repeat: true">
+        </a-plane>
+
+        <a-entity position="5 0 0">
+            <a-sphere radius="1.5" color="#228B22" position="0 1.5 0"></a-sphere>
+            <a-cylinder radius="0.5" height="6" color="#8B4513" position="0 3 0"></a-cylinder>
+        </a-entity>
+
+        <a-entity position="-5 0 5">
+            <a-sphere radius="1.5" color="#228B22" position="0 1.5 0"></a-sphere>
+            <a-cylinder radius="0.5" height="6" color="#8B4513" position="0 3 0"></a-cylinder>
+        </a-entity>
+
+        <a-entity id="building" position="0 0 -20">
+            <a-box position="0 1 0" width="10" height="20" depth="10" color="#4682B4"></a-box>
+            <a-box position="0 2 5" width="1" height="3" depth="1" color="#ADD8E6"></a-box>
+            <a-box position="0 5 5" width="1" height="3" depth="1" color="#ADD8E6"></a-box>
+            <a-box position="0 8 5" width="1" height="3" depth="1" color="#ADD8E6"></a-box>
+            <a-box position="0 11 5" width="1" height="3" depth="1" color="#ADD8E6"></a-box>
+            <a-cone position="0 20 0" radius-bottom="8" height="6" color="#B22222"></a-cone>
+
+            <a-box id="door" position="0 1 -5.1" width="2" height="3" depth="0.1" color="#654321" class="clickable"
+                event-set__enter="_event: mouseenter; color: #A52A2A;"
+                event-set__leave="_event: mouseleave; color: #654321" 
+                onclick="openDoor()">
+            </a-box>
+            <a-text value="Click to Open Door" position="0 5 -5" align="center" color="#FFFFFF" width="10"></a-text>
+        </a-entity>
+
+        <a-box id="teleport-button" position="0 0.2 10" width="2" height="0.1" depth="2" color="#FFD700"
+            class="clickable"
+            event-set__enter="_event: mouseenter; color: #FF6347; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; color: #FFD700; scale: 1 1 1"
+            onclick="document.getElementById('camera-rig').setAttribute('position', '0 1.6 -6');">
+        </a-box>
+        <a-text value="Step here to teleport to the building" position="0 0.8 10" align="center" color="#FFFFFF" width="4"></a-text>
+
+        <a-box id="reset-button" position="0 0.2 12" width="2" height="0.1" depth="2" color="#32CD32"
+            class="clickable"
+            event-set__enter="_event: mouseenter; color: #228B22; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; color: #32CD32; scale: 1 1 1"
+            onclick="document.getElementById('camera-rig').setAttribute('position', '0 1.6 15');">
+        </a-box>
+        <a-text value="Reset Position" position="0 0.8 12" align="center" color="#FFFFFF" width="4"></a-text>
+
+        <!-- Camera Rig with Movement Controls -->
+        <a-entity id="camera-rig" position="0 1.6 0" movement-controls="speed: 0.2">
+            <!-- Camera attached to the rig -->
+            <a-entity camera look-controls wasd-controls></a-entity>
+            <!-- VR Controllers -->
+            <a-entity oculus-touch-controls="hand: left"></a-entity>
+            <a-entity oculus-touch-controls="hand: right"></a-entity>
+        </a-entity>
+
+        <a-sound src="https://cdn.aframe.io/basic-guide/audio/backgroundnoise.mp3" autoplay="true" loop="true" position="0 1.6 0"></a-sound>
+        <a-sound src="https://cdn.aframe.io/basic-guide/audio/jungle.mp3" autoplay="true" loop="true" position="0 1.6 0" volume="0.5"></a-sound>
+        <a-sound src="https://cdn.aframe.io/basic-guide/audio/water.mp3" autoplay="true" loop="true" position="0 1.6 0" volume="0.3"></a-sound>
+
+        <a-animation 
+            attribute="rotation" 
+            dur="5000" 
+            to="0 360 0" 
+            repeat="indefinite" 
+            direction="alternate" 
+            target="#teleport-button">
+        </a-animation>
+
+    </a-scene>
+
+</body>
+
+</html>
