@@ -1,3 +1,6 @@
+import AFRAME from 'aframe';
+import 'aframe-extras';
+
 AFRAME.registerComponent("play",{
     init: function(){
         const myEl = document.querySelector("#sound-car");
