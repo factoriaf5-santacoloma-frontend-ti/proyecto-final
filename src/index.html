@@ -12,50 +12,38 @@
     <a-scene background="color: #FAFAFA">
       <a-assets>
         <img id="logo" src="./public/assets/home/logo_oporutnitats1.0.png" alt="Logo">
+        <img id="jiale" src="./public/assets/home/Personas/Jial.jpg" alt="Fotografía de integrante">
         <a-assets-item id="logo3D" src="./public/assets/home/ImageToStl.com_logo_oporutnitats1.0 (6)/ImageToStl.com_logo_oporutnitats1.0.gltf"></a-assets-item>
       </a-assets>
       
-      <a-entity id="camera-rig" position="0 1.6 0" movement-controls="speed: 0.2">
+      <a-entity id="camera-rig" position="-0.4 3 6" movement-controls="speed: 0.2">
         <a-entity camera look-controls></a-entity>
         <!-- Controladores VR (Meta Quest) -->
         <a-entity oculus-touch-controls="hand: left"></a-entity>
         <a-entity oculus-touch-controls="hand: right"></a-entity>
-    </a-entity>
-
-
-      
-    <a-entity gltf-model="#logo" position="0.01152 11.68643 -0.44176" scale="0.05 0.05 0.05" rotation="90 0 -0.21027551081301213" id="logo3D"></a-entity>
-    
-      <!-- <a-entity id="carousel" position="0 1.6 0">
-        <a-entity geometry="primitive: plane; width: 1.5" material="color: #FF5722" position="3 0 0.36735" rotation="0 -90 0" text="align: center; value: Enlace 1"></a-entity>
-        <a-entity geometry="primitive: plane; height: 1; width: 1.5" material="color: #4CAF50" position="2.7 0 -1.4" rotation="0 -60 0" text="value: Enlace 2; align: center;"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="color: #2196F3" position="1.59991 0 -2.68474" rotation="0 -29.999999999999996 0" text="align: center; value: Enlace 3"></a-entity>
-        <a-entity geometry="primitive: plane; height: 1; width: 1.5" material="color: #FFC107" position="0 0 -3" rotation="0 0 0" text="value: Enlace 4; align: center;"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="color: #673AB7" position="-1.57434 0 -2.56024" rotation="0 29.999999999999996 0" text="align: center; value: Enlace 5"></a-entity>
-        <a-entity geometry="primitive: plane; height: 1; width: 1.5" material="color: #E91E63" position="-2.7 0 -1.4" rotation="0 60 0" text="value: Enlace 6; align: center;"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="color: #3F51B5" position="-3 0 0.23497" rotation="0 90 0" text="align: center; value: Enlace 7"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="color: #009688" position="-2.7 0 1.91975" rotation="0 129.1137473015505 0" text="align: center; value: Enlace 8"></a-entity>
-        <a-entity geometry="primitive: plane; height: 1; width: 1.5" material="color: #CDDC39" position="-1.4 0 2.7" rotation="0 150 0" text="value: Enlace 9; align: center;"></a-entity>
-        <a-entity geometry="primitive: plane; height: 1; width: 1.5" material="color: #FF9800" position="0 0 3" rotation="0 180 0" text="value: Enlace 10; align: center;"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="color: #795548" position="2.05965 0 1.83126" rotation="0 -142.09467910803443 0" text="align: center; value: Enlace 11"></a-entity>
-      </a-entity> -->
-
-      <a-entity id="carousel" position="-0.46941 1.7475 -0.48754">
-        <a-entity geometry="primitive: plane; width: 1.5" material="color: #FF5722" position="3.0013 0 0.25648" rotation="0 -90 0" text="align: center; value: Enlace 1"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="color: #4CAF50" position="2.7 0 -1.4" rotation="0.55878 -68.32980073171171 0.791" text="align: center; value: Enlace 2"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="color: #2196F3" position="1.55797 0 -2.64285" rotation="0 -29.999999999999996 0" text="align: center; value: Enlace 3"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="color: #FFC107" position="0 0 -3" rotation="" text="align: center; value: Enlace 4"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="color: #673AB7" position="-1.57434 0 -2.56024" rotation="0 29.999999999999996 0" text="align: center; value: Enlace 5"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="color: #E91E63" position="-2.75966 0 -1.33214" rotation="0 59.99999999999999 0" text="align: center; value: Enlace 6"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="color: #3F51B5" position="-3.17239 0 0.22591" rotation="0 90 0" text="align: center; value: Enlace 7"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="color: #009688" position="-2.61808 0 1.65843" rotation="0 129.1137473015505 0" text="align: center; value: Enlace 8"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="color: #CDDC39" position="-1.15521 0 2.31762" rotation="-3.5311388913912634 169.31189325013392 -4.303485999227613" text="align: center; value: Enlace 9"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="color: #FF9800" position="0.6587 0 2.43612" rotation="7.7016986821485265 -179.26302423596604 -2.9518785605140017" text="align: center; value: Enlace 10"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="color: #795548" position="2.25816 0 1.71581" rotation="0 -142.09467910803443 0" text="align: center; value: Enlace 11"></a-entity>
       </a-entity>
-  
+
+
       
+     
+     <a-entity id="logo3D" gltf-model="#logo3D" position="-0.60426 5.47206 -0.48609" scale="0.05 0.05 0.05" rotation="90 0 -0.21000000000000002"></a-entity>
+     <a-light type="ambient" color="#FFFFFF" intensity="0.5"></a-light>
+
       
+      <a-entity id="carousel" position="-0.46941 2 -0.48754">
+        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Jialee.jpg; side: double"   position="3.0013 0 0.20669" rotation="0 -90 0"></a-entity>
+        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Deep.jpg; side: double" position="2.7 0 -1.4" rotation="0 -68.32980073171171 0" text="align: center; value: Enlace 2"></a-entity>
+        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Faryal.jpg; side: double" position="1.55797 0 -2.64285" rotation="0 -29.999999999999996 0" text="align: center; value: Enlace 3"></a-entity>
+        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Hassan.jpg; side: double" position="0 0 -3" rotation="" text="align: center; value: Enlace 4"></a-entity>
+        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Jorge.jpg; side: double" position="-1.57434 0 -2.56024" rotation="0 29.999999999999996 0" text="align: center; value: Enlace 5"></a-entity>
+        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Juan.jpg; side: double" position="-2.75966 0 -1.33214" rotation="0 59.99999999999999 0" text="align: center; value: Enlace 6"></a-entity>
+        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Lola.jpg; side: double" position="-3.17239 0 0.22086" rotation="0 90 0" text="align: center; value: Enlace 7"></a-entity>
+        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Luisa.jpg; side: double" position="-2.88952 0 1.76743" rotation="0 115.65840644069823 0" text="align: center; value: Enlace 8"></a-entity>
+        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Moha.jpg; side: double" position="-1.83278 -0.01314 2.89354" rotation="0 150.8666629514873 0" text="align: center; value: Enlace 9"></a-entity>
+        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Elsa.jpg; side: double" position="-0.24347 0 3.33665" rotation="0 -180 0" text="align: center; value: Enlace 10"></a-entity>
+        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Alba.jpg; side: double" position="1.33152 0 3.01596" rotation="0 -160.29869417493094 0" text="align: center; value: Enlace 11"></a-entity>
+        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Jialee.jpg; side: double" position="2.63066 0 1.8583" rotation="0 -120.7136130671375 0" text="align: center; value: Enlace 12"></a-entity>
+      </a-entity>
 
     </a-scene>
 
