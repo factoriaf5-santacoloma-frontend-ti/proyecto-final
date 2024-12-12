@@ -26,24 +26,34 @@
 
       
      
-     <a-entity id="logo3D" gltf-model="#logo3D" position="-0.60426 5.47206 -0.48609" scale="0.05 0.05 0.05" rotation="90 0 -0.21000000000000002"></a-entity>
+      <a-entity id="logo3D" gltf-model="#logo3D" position="-0.604 3.69631 -0.486" scale="0.02 0.02 0.02" rotation="90 0 -0.21000000000000002"></a-entity>
      <a-light type="ambient" color="#FFFFFF" intensity="0.5"></a-light>
 
       
       <a-entity id="carousel" position="-0.46941 2 -0.48754">
+        <a-animation 
+          attribute="rotation" 
+          to="0 360 0" 
+          dur="10000" 
+          repeat="indefinite" 
+          easing="linear">
+        </a-animation>
         <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Jialee.jpg; side: double"   position="3.0013 0 0.20669" rotation="0 -90 0"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Deep.jpg; side: double" position="2.7 0 -1.4" rotation="0 -68.32980073171171 0" text="align: center; value: Enlace 2"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Faryal.jpg; side: double" position="1.55797 0 -2.64285" rotation="0 -29.999999999999996 0" text="align: center; value: Enlace 3"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Hassan.jpg; side: double" position="0 0 -3" rotation="" text="align: center; value: Enlace 4"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Jorge.jpg; side: double" position="-1.57434 0 -2.56024" rotation="0 29.999999999999996 0" text="align: center; value: Enlace 5"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Juan.jpg; side: double" position="-2.75966 0 -1.33214" rotation="0 59.99999999999999 0" text="align: center; value: Enlace 6"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Lola.jpg; side: double" position="-3.17239 0 0.22086" rotation="0 90 0" text="align: center; value: Enlace 7"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Luisa.jpg; side: double" position="-2.88952 0 1.76743" rotation="0 115.65840644069823 0" text="align: center; value: Enlace 8"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Moha.jpg; side: double" position="-1.83278 -0.01314 2.89354" rotation="0 150.8666629514873 0" text="align: center; value: Enlace 9"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Elsa.jpg; side: double" position="-0.24347 0 3.33665" rotation="0 -180 0" text="align: center; value: Enlace 10"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Alba.jpg; side: double" position="1.33152 0 3.01596" rotation="0 -160.29869417493094 0" text="align: center; value: Enlace 11"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Jialee.jpg; side: double" position="2.63066 0 1.8583" rotation="0 -120.7136130671375 0" text="align: center; value: Enlace 12"></a-entity>
+        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Deep.jpg; side: double" position="2.7 0 -1.4" rotation="0 -68.32980073171171 0"></a-entity>
+        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Faryal.jpg; side: double" position="1.55797 0 -2.64285" rotation="0 -29.999999999999996 0" ></a-entity>
+        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Hassan.jpg; side: double" position="0 0 -3" rotation=""></a-entity>
+        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Jorge.jpg; side: double" position="-1.57434 0 -2.56024" rotation="0 29.999999999999996 0" ></a-entity>
+        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Juan.jpg; side: double" position="-2.75966 0 -1.33214" rotation="0 59.99999999999999 0"></a-entity>
+        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Lola.jpg; side: double" position="-3.17239 0 0.22086" rotation="0 90 0"></a-entity>
+        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Luisa.jpg; side: double" position="-2.88952 0 1.76743" rotation="0 115.65840644069823 0"></a-entity>
+        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Moha.jpg; side: double" position="-1.83278 -0.01314 2.89354" rotation="0 150.8666629514873 0"></a-entity>
+        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Elsa.jpg; side: double" position="-0.24347 0 3.33665" rotation="0 -180 0"></a-entity>
+        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Alba.jpg; side: double" position="1.33152 0 3.01596" rotation="0 -160.29869417493094 0"></a-entity>
+        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Jialee.jpg; side: double" position="2.63066 0 1.8583" rotation="0 -120.7136130671375 0"></a-entity>
+
       </a-entity>
+
+      
 
     </a-scene>
 
