@@ -2,10 +2,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
   <!-- <title>Sala Alba</title>
   <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script> -->
 
 
+=======
+
+  <title>Sala Alba</title>
+>>>>>>> edb3f1a (all)
 </head>
 
 
@@ -29,6 +34,19 @@
         <img id="raval" src="../public/assets/sala_alba/ravaleando.jpg">
         <a-asset-item  id= "pedestal" src="../public/assets/sala_alba/pedestal/scene.gltf">
     </a-assets>
+
+
+    <a-entity id="cameraRig" position="0 1.6 0">
+        <a-camera wasd-controls="acceleration: 50">
+        </a-camera>
+      </a-entity>
+
+      <a-entity id="camera-rig" position="0 1.6 0" movement-controls="speed: 0.2">
+        <a-entity camera look-controls></a-entity>
+        <!-- Controladores VR (Meta Quest) -->
+        <a-entity oculus-touch-controls="hand: left"></a-entity>
+        <a-entity oculus-touch-controls="hand: right"></a-entity>
+    </a-entity>
     
     <a-camera>
         <a-cursor></a-cursor>
@@ -43,22 +61,9 @@
         <a-entity camera look-controls></a-entity>
 
         <!-- Controladores VR con rayos láser -->
-        <a-entity 
-            laser-controls="hand: left" 
-            cursor="rayOrigin: mouse" 
-            raycaster="objects: .clickable"
-            visible="false"
-            id="laser-left">
-        </a-entity>
+        <a-entity laser-controls="hand: left"  cursor="rayOrigin: mouse"  raycaster="objects: .clickable" visible="false" id="laser-left"> </a-entity>
+        <a-entity laser-controls="hand: right"  cursor="rayOrigin: mouse"  raycaster="objects: .clickable" visible="false" id=" laser-right" ></a-entity> </a-entity>
 
-        <a-entity 
-            laser-controls="hand: right" 
-            cursor="rayOrigin: mouse" 
-            raycaster="objects: .clickable"
-            visible="false"
-            id="laser-right">
-        </a-entity>
-    </a-entity>
 
     <a-entity ></a-entity>
 
@@ -129,6 +134,16 @@
 
 
 </a-entity>
+    <a-entity gltf-model="../assets/sala_alba/blockbench_park_bench/scene.gltf" position="-0.1001 0.061 18.73664" rotation="0.9998113525032866 2.566850922186088 -2.000195662801704" scale="" id="kursi1"></a-entity>
+    <a-entity gltf-model="../assets/sala_alba/blockbench_park_bench/scene.gltf" position="-0.03535 0.16079 -20.01813" rotation="1 180 -2" scale="" id="kursi2"></a-entity>
+    <a-entity gltf-model="../assets/sala_alba/blockbench_park_bench/scene.gltf" position="-18.84535 0.3737 -1.03081" rotation="0.9998113525032866 -92.40949798767483 -2.000195662801704" scale="" id="kursi3"></a-entity>
+    <a-entity gltf-model="../assets/sala_alba/blockbench_park_bench/scene.gltf" position="17.58743 0.061 -0.37529" rotation="0.9998113525032866 90.49581895193788 -2.000195662801704" scale="" id="kursi4"></a-entity>
+
+
+    <a-entity gltf-model="../public/assets/sala_alba/low_poly_people_free_sample_pack/scene.gltf" position="31.19682 0.061 13.78355" rotation="0.9998113525032866 90.49581895193788 -2.000195662801704" animation-mixer="repeat" id="people1"></a-entity>
+    <a-entity gltf-model="../public/assets/sala_alba/low_poly_people_free_sample_pack/scene.gltf" position="-24.86621 0.06975 -14.58227" rotation="1 90.496 -2" animation-mixer="repeat" id="people2"></a-entity>
+   
+
     
 </a-scene>
 
