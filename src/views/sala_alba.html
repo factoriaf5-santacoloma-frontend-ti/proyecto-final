@@ -3,15 +3,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sala Alba</title>
-  <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+  <!-- <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script> -->
+
 
 </head>
 
 
 <body>
-  <a-scene cursor="rayOrigin: mouse" vr-mode-ui="enabled: true" xrwebgl="enabled: true">
+  <!-- <a-scene cursor="rayOrigin: mouse" vr-mode-ui="enabled: true" xrwebgl="enabled: true"> -->
 
-
+<a-scene> 
     <a-assets>
         <img id="grass" src="../public/assets/sala_luisa/grass.jpg" crossorigin="anonymous" />
         <img id="skyblue" src="../assets/sala_alba/sky_blue.jpg" crossorigin="anonymous" />
@@ -24,15 +25,20 @@
         <img id="karate" src="../public/assets/sala_alba/karakara.jpg" >
         <img id="estiu" src="../public/assets/sala_alba/estiufresca.jpg">
         <img id="tallergame" src="../public/assets/sala_alba/tallergaming.jpg">
-        <img id="jobs" src="../public/assets/sala_alba/integrajobes.jpg">
+        <img id="jobs" src="../public/assets/sala_alba/integrajobes.png">
         <img id="raval" src="../public/assets/sala_alba/ravaleando.jpg">
     </a-assets>
     
+    <a-camera>
+        <a-cursor></a-cursor>
+    </a-camera>
+
     <a-sky src="#skyblue"></a-sky>
     
     <a-plane width="80" height="80" position="0.00 0.00 0.00" rotation="-90 0 0"  material="src: #grass; repeat:10 10;" shadow="cast: false; receive: true"></a-plane>
 
     <a-entity id="camera-rig" position="0 1.6 0" movement-controls="speed: 0.2">
+
         <a-entity camera look-controls></a-entity>
 
         <!-- Controladores VR con rayos láser -->
@@ -59,13 +65,56 @@
 
    <!----cajas con las fotos de los proyectos--> 
    <!--diada-->
-    <a-box position="12 3 -11" rotation="0 0 0" 
+   <a-box position="12 3 -11" rotation="0 0 0" 
+       width="2" height="2" depth="2"
+       material="src: #diada2; repeat: 1 1; shader: flat"
+       toggle-text="groupId: #text1"
+       onclick="mostrarTexto()">
+</a-box>
+
+<a-entity id="text1" rotation="0 40 0" position="15 3 -11" visible="true">
+    <a-text value=" 2. Consciència i regulació emocional\n
+    La consciència i regulació emocional fa referència a la capacitat d'identificar\n
+    comprendre i gestionar les pròpies emocions de manera efectiva. Inclou aspectes com: \n
+    .Autoconeixement emocional: Reconèixer com et sents en diferents situacions.\n
+    .Autocontrol: Regular les reaccions emocionals per actuar de manera adequada i equilibrada.\n
+    .Empatia emocional: Entendre i respectar les emocions dels altres.\n"
+           color="#555555" 
+           align="center"
+           position="0 0 0" 
+           scale="1.8 2 2">
+    <!-- contenido del texto -->
+</a-entity> 
+   
+   
+   
+   
+   <!-- <a-box position="12 3 -11" rotation="0 0 0" 
              width="2" height="2" depth="2"
-             material="src: #diada2; repeat: 1 1; shader: flat">
+             material="src: #diada2; repeat: 1 1; shader: flat"
+             toggle-text="groupId: #text1">
       </a-box>
 
+      <a-entity id="text1" rotation="0 90 0" position="15 3 -11" visible="false">
+        <a-plane scale="10 10 0" color="#D3D3D3" rotation="0 0 0" position="0 0 -0.1"></a-plane>
+        <a-text value=" 2. Consciència i regulació emocional\n
+         La consciència i regulació emocional fa referència a la capacitat d'identificar\n
+         comprendre i gestionar les pròpies emocions de manera efectiva. Inclou aspectes com: \n
+         .Autoconeixement emocional: Reconèixer com et sents en diferents situacions.\n
+         .Autocontrol: Regular les reaccions emocionals per actuar de manera adequada i equilibrada.\n
+         .Empatia emocional: Entendre i respectar les emocions dels altres.\n"
+                color="#555555" align="center"
+                position="0 0 0" scale="1.8 2 2">
+        </a-text>
+    </a-entity> -->
+
+
+
+
+
+
       <!--defesa feminina-->
-      <a-box position="-8 3 -3" rotation="0 0 0" 
+      <a-box position="-15 3 -15" rotation="0 0 0" 
       width="2" height="2" depth="2"
       material="src: #defensa; repeat: 1 1; shader: flat">
     </a-box>
@@ -77,25 +126,25 @@
       </a-box>
 
       <!--estiu fresca-->
-     <a-box position="2 3 6" rotation="0 0 0" 
+     <a-box position="-4 3 10" rotation="0 0 0" 
      width="2" height="2" depth="2"
      material="src: #estiu; repeat: 1 1; shader: flat">
     </a-box>
     
     <!--taller gamming-->
-    <a-box position="8 3 2" rotation="0 0 0" 
+    <a-box position="15 3 7" rotation="0 0 0" 
     width="2" height="2" depth="2"
     material="src: #tallergame; repeat: 1 1; shader: flat">
    </a-box>
 
    <!--intera jobs-->
-   <a-box position="3 3 -15" rotation="0 0 0" 
+   <a-box position="-2 3 -10" rotation="0 0 0" 
    width="2" height="2" depth="2"
-   material="src: #jobs; repeat: 1 1; shader: flat">
+   material="src: #jobs ; repeat: 1 1; shader: flat">
   </a-box>
 
   <!--ravaleando-->
-  <a-box position="3 3 -1.5" rotation="0 0 0" 
+  <a-box position="0.7 3 0.2" rotation="0 0 0" 
   width="2" height="2" depth="2"
   material="src: #raval; repeat: 1 1; shader: flat">
  </a-box>
