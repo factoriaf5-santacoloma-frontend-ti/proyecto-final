@@ -52,12 +52,17 @@
         
         <a-entity id="cameraEntity" position="-60 7 0" rotation="0 -90 0">
             <a-camera>
-                <a-entity laser-controls="hand: left"></a-entity>
-                <a-entity laser-controls="hand: right"></a-entity>
                 <a-cursor scale="2 2 2"></a-cursor>
             </a-camera>
         </a-entity>
 
+
+        <a-entity id="camera-rig" position="-60 7 0" rotation="0 -90 0" movement-controls="speed: 0.2">
+            <a-entity camera look-controls></a-entity>
+            <!-- Controladores VR (Meta Quest) -->
+            <a-entity oculus-touch-controls="hand: left"></a-entity>
+            <a-entity oculus-touch-controls="hand: right"></a-entity>
+          </a-entity>
         
         <a-plane src="#piso" material="color: #FFFFFF" scale="50 40 50" rotation="-90 0 0" postion="0 0 0"></a-plane>
         
