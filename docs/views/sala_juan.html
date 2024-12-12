@@ -53,15 +53,15 @@
 
         <a-entity id="camera-rig" position="0 7 0" rotation="0 -90 0" movement-controls="speed: 0.2">
             <!-- Cámara -->
-            <a-entity camera look-controls></a-entity>
-            
-            <!-- Cursor que sigue el movimiento de la cámara -->
-            <a-cursor id="cursor" fuse="true" color="black" raycaster="objects: .interactable" cursor="maxDistance: 20; fuseTimeout: 500"></a-cursor>
-          
+        <a-camera>
+            <a-cursor  id="cursor" cursor="fuse: true; fuseTimeout: 100"  raycaster="objects: .interactable"
+            geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="shader: flat"></a-cursor>
+
+        </a-camera>            
             <!-- Controles Oculus para las manos -->
             <a-entity oculus-touch-controls="hand: left" raycaster="objects: .interactable"></a-entity>
             <a-entity oculus-touch-controls="hand: right" raycaster="objects: .interactable"></a-entity>
-          </a-entity>
+        </a-entity>
         
 
 
