@@ -55,11 +55,9 @@
         <a-camera>
             <a-cursor  id="cursor" cursor="fuse: true; fuseTimeout: 100"  raycaster="objects: .interactable"
             geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="shader: flat"></a-cursor>
-
         </a-camera>            
-            <!-- Controles Oculus para las manos -->
-            <a-entity oculus-touch-controls="hand: left" raycaster="objects: .interactable"></a-entity>
-            <a-entity oculus-touch-controls="hand: right" raycaster="objects: .interactable"></a-entity>
+        <a-entity oculus-touch-controls="hand: left"></a-entity>
+        <a-entity oculus-touch-controls="hand: right"></a-entity>
         </a-entity>
         
 
