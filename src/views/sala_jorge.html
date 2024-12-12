@@ -24,17 +24,18 @@
       <a-asset-item id="cute-ghost" src="../assets/sala_jorge/a_cute_ghost.glb"></a-asset-item>
       <a-asset-item id="leftHandModel" src="../assets/sala_jorge/leftHandLow.glb"></a-asset-item>
   <a-asset-item id="rightHandModel" src="../assets/sala_jorge/rightHandLow.glb"></a-asset-item>
-  
-  <a-camera position="0 1.6 0">
-    <a-cursor raycaster="objects: .clickable"></a-cursor>
-  
-   <!-- Cámara con controles de movimiento -->
-   <a-entity camera look-controls position="0 1.6 0" wasd-controls-enabled="true">
-    <a-cursor raycaster="objects: .clickable"></a-cursor>
-  </a-entity></a-camera>
 
+   
   <audio id="theme-music" src="../assets/sala_jorge/themeoutside.mp3" preload="auto"></audio>
-
+ <!-- Cámara con controles -->
+ <a-entity id="rig" movement-controls="fly: true; speed: 0.1">
+  <a-camera position="0 1.6 0" look-controls wasd-controls="acceleration: 150">
+    <a-cursor raycaster="objects: .clickable"></a-cursor>
+  </a-camera>
+  <!-- Controles de mano para VR -->
+  <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
+  <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
+</a-entity>
        <!-- Imágenes -->
        <img id="slashermovies" src="../assets/sala_jorge/slashermovies.png" crossorigin="anonymous">
        <img id="dindom" src="../assets/sala_jorge/dindom.png" alt="Dindom Image">
@@ -53,9 +54,6 @@
       <img id="sky" src="../assets/sala_jorge/redsky.jpg">
       
      
-    <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
-<a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
-
 
     
 

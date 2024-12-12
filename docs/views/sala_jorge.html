@@ -27,11 +27,13 @@
       <a-asset-item id="leftHandModel" src="../assets/sala_jorge/leftHandLow.glb"></a-asset-item>
   <a-asset-item id="rightHandModel" src="../assets/sala_jorge/rightHandLow.glb"></a-asset-item>
   
+  <a-camera position="0 1.6 0">
+    <a-cursor raycaster="objects: .clickable"></a-cursor>
   
    <!-- Cámara con controles de movimiento -->
    <a-entity camera look-controls position="0 1.6 0" wasd-controls-enabled="true">
     <a-cursor raycaster="objects: .clickable"></a-cursor>
-  </a-entity>
+  </a-entity></a-camera>
 
   <audio id="theme-music" src="../assets/sala_jorge/themeoutside.mp3" preload="auto"></audio>
 

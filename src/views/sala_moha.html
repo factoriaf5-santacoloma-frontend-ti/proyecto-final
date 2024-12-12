@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
+    <script>
+        // Componente para alternar visibilidad
+        AFRAME.registerComponent('toggle-text', {
+            schema: {
+                target: { type: 'selector' }
+            },
+            init: function () {
+                const el = this.el; // Modelo interactivo
+                const targetEl = this.data.target; // Texto asociado
+
+                if (!targetEl) {
+                    console.error('No se encontró el texto asociado.');
+                    return;
+                }
+
+                // Alternar visibilidad al hacer clic
+                el.addEventListener('click', () => {
+                    const isVisible = targetEl.getAttribute('visible') === true || targetEl.getAttribute('visible') === "true";
+                    targetEl.setAttribute('visible', !isVisible);
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+
+    <a-scene>
+        <!-- Assets -->
+        <a-assets>
+            <a-asset-item id="science-model" src="../public/assets/sala_moha/science.glb"></a-asset-item>
+            <a-asset-item id="man-in-vr-model" src="../public/assets/sala_moha/middle_aged_man_in_vr.glb"></a-asset-item>
+            <a-asset-item id="vr-thinker-model" src="../public/assets/sala_moha/vr_thinker.glb"></a-asset-item>
+            <a-asset-item id="terminal-model" src="../public/assets/sala_moha/terminal.glb"></a-asset-item>
+            <a-asset-item id="oldpc-model" src="../public/assets/sala_moha/oldpc.glb"></a-asset-item>
+            <a-asset-item id="hacker-model" src="../public/assets/sala_moha/hacker.glb"></a-asset-item>
+            <a-asset-item id="computer-model" src="../public/assets/sala_moha/pc.glb"></a-asset-item>
+            <a-asset-item id="candado-model" src="../public/assets/sala_moha/candado/scene.gltf"></a-asset-item>
+            <a-asset-item id="robot-model" src="../public/assets/sala_moha/robot/scene.gltf"></a-asset-item>
+            <img id="mohaaa-image" src="../public/assets/sala_moha/mohaaa.png" />
+            <audio id="background-music" src="../public/assets/sala_moha/music.mp3" preload="auto"></audio>
+        </a-assets>
+
+        <!-- Luz -->
+        <a-light type="ambient" color="#ffffff" intensity="4" light="angle: 60.14; color: #bdf4ff; intensity: 0.89" visible=""></a-light>
+
+        <!-- Imagen -->
+        <a-plane 
+            src="#mohaaa-image" 
+            position="0 1.66151 -1.54269" 
+            width="1.7" 
+            height="1.3" 
+            scale="1.08 0.65 1.28" 
+            material="shader: standard">
+        </a-plane>
+
+        <!-- Cielo -->
+        <a-sky color="#87CEEB"></a-sky>
+    
+        <!-- Suelo -->
+        <a-plane 
+            position="0 0 0" 
+            rotation="-90 0 0" 
+            width="10" 
+            height="10" 
+            color="#7CFC00">
+        </a-plane>
+    
+        <!-- Techo -->
+        <a-box 
+            position="0 2.5 0" 
+            width="10" 
+            height="10" 
+            depth="10" 
+            color="#D3D3D3">
+        </a-box>
+
+        <!-- Textos -->
+        <a-text value="ARTIFICIAL INTELLIGENCE" position="0.093 2.445 2.305" width="6" align="center" color="#000000" rotation="32.9 173.113 -0.09" t="" text="color: #b3e2ff; letterSpacing: 2.89; lineHeight: 0.03; opacity: 0.91; width: 6.28" scale="0.55 0.48 0.69"></a-text>
+        <a-text value="CYBERSECURITY" position="3.949 2.48596 1.301" width="6" align="center" color="#000000" rotation="36.30489773066948 -101.5378615796991 -2.003633409572489" t="" text="color: #b3e2ff; letterSpacing: 2.89; lineHeight: 0.03; opacity: 0.91; width: 6.28" scale="0.77 0.6 1"></a-text>
+        <a-text value="METAVERSE" position="-3.27327 2.47462 0.84863" width="6" align="center" color="#000000" rotation="32.879756031377426 92.96526704895172 0.2647065013504403" t="" text="color: #b3e2ff; letterSpacing: 2.89; lineHeight: 0.03; opacity: 0.91; value: METAVERSE; width: 6.28"></a-text>
+
+        <!-- Modelo: Science (No clickeable) -->
+        <a-entity 
+            gltf-model="#science-model" 
+            position="0 1.07037 -1.27469" 
+            scale="0.1 0.1 0.1" 
+            class="ignore-raycaster">
+        </a-entity>
+
+        <!-- Modelo: Robot -->
+        <a-entity 
+            gltf-model="#robot-model" 
+            position="0.04236 1.088 1.90769" 
+            scale="0.5 0.5 0.5" 
+            rotation="0 -167.6199488811126 0" 
+            animation-mixer 
+            class="clickable" 
+            toggle-text="target: #text-robot">
+        </a-entity>
+        <a-entity id="text-robot" position="0.04236 2.00382 1.66365" visible="false" rotation="0 179.6096637020202 0" scale="0.47 0.35 1">
+            
+            <a-text 
+                value="Disciplina cientifica que s ocupa de crear programes informatics que executen operacions comparables a les quals realitza la ment humana"
+                color="white" 
+                align="center" 
+                position="0 0 0.1" 
+                width="3.5">
+            </a-text>
+        </a-entity>
+
+        <!-- Modelo: Old PC -->
+        <a-entity 
+            gltf-model="#oldpc-model" 
+            position="-3.08418 1.03927 0.86894" 
+            scale="0.2377 0.22704 0.23" 
+            rotation="0 84.57430013926081 0" 
+            animation-mixer>
+        </a-entity>
+
+        <!-- Modelos: Hacker, Computer, Candado -->
+        <a-entity 
+            gltf-model="#hacker-model" 
+            position="3.82 1.2277 1.774" 
+            scale="0.02 0.02 0.02" 
+            rotation="0 -13.54 0" 
+            class="clickable" 
+            toggle-text="target: #text-cybersecurity">
+        </a-entity>
+        <a-entity 
+            gltf-model="#computer-model" 
+            position="4.15356 1.31373 0.423" 
+            scale="0.19 0.18 0.148" 
+            rotation="0 -100.0097831400852 0" 
+            animation-mixer 
+            class="clickable" 
+            toggle-text="target: #text-cybersecurity">
+        </a-entity>
+        <a-entity 
+            gltf-model="#candado-model" 
+            position="7.288 1.467 -13.71085" 
+            scale="5 5 10" 
+            rotation="1.12 -102.27 0" 
+            animation-mixer 
+            class="clickable" 
+            toggle-text="target: #text-cybersecurity">
+        </a-entity>
+        <a-entity id="text-cybersecurity"  position="4.199 2.27508 1.35558" visible="false" rotation="36.529497186360764 -98.56421062297012 0" scale="0.45317 0.37982 2.03584">
+           
+            <a-text value="La ciberseguretat te com a objectiu protegir els sistemes informatics, les aplicacions, els dispositius, les dades, els actius financers i les persones contra el ransomware i altres malware, les estafes de phishing, el robatori de dades i altres ciberamenazas." color="white" align="center" position="0 0 0.1" width="4.5">
+            </a-text>
+        </a-entity>
+            </a-text>
+        </a-entity>
+
+        <!-- Modelos: Metaverse -->
+        <a-entity 
+            gltf-model="#man-in-vr-model" 
+            position="-2.11934 0.908 0.19925" 
+            scale="0.02 0.01 0.01" 
+            rotation="-0.1 34.218 0" 
+            animation-mixer 
+            class="clickable" 
+            toggle-text="target: #text-metaverse">
+        </a-entity>
+        <a-entity 
+            gltf-model="#vr-thinker-model" 
+            position="-2.88579 1.073 0.88872" 
+            scale="0.01 0.01 -0.01" 
+            rotation="0 -84.78744043904948 0" 
+            animation-mixer 
+            class="clickable" 
+            toggle-text="target: #text-metaverse">
+        </a-entity>
+        <a-entity id="text-metaverse" position="-2.713 1.76419 0.77023" visible="false" rotation="21.231524056367785 92.60143884904367 0.5162349734128717" scale="0.28847 0.25068 1">
+            
+            <a-text 
+                value="El metaverso es un univers digital on realitat i virtualitat es fusionen, permetent-te interactuar, crear i explorar sense limits fisics, sent qui vulguis en mons completament imaginats."
+                color="white" 
+                align="center" 
+                position="0 0 0.1" 
+                width="4.5">
+            </a-text>
+        </a-entity>
+
+        <!-- Cámara -->
+        <a-camera position="0 1.6 0">
+            <a-cursor color="white" raycaster="objects: .clickable; exclude: .ignore-raycaster"></a-cursor>
+        </a-camera>
+         <!-- Música de fondo -->
+         <a-entity 
+         sound="src: #background-music; autoplay: true; loop: true; volume: 0.5;">
+     </a-entity>
+
+         <!-- Controles para MetaQuest -->
+         <a-entity laser-controls="hand: left" raycaster="objects: .clickable"></a-entity>
+         <a-entity laser-controls="hand: right" raycaster="objects: .clickable"></a-entity>
+ 
+         <!-- Teleport y movimiento -->
+         <a-entity 
+             id="player" 
+             movement-controls="fly: true; speed: 0.2"
+             position="0 1.6 0">
+         </a-entity>
+    </a-scene>
+
+</body>
+</html>
