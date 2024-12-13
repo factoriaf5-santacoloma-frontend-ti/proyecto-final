@@ -56,11 +56,9 @@
         <a-camera>
             <a-cursor  id="cursor" cursor="fuse: true; fuseTimeout: 100"  raycaster="objects: .interactable"
             geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="shader: flat"></a-cursor>
-        </a-camera>            
-        <a-entity laser-controls="hand: left"></a-entity>
-        <a-entity laser-controls="hand: right"></a-entity>
-        <a-entity id="player" movement-controls="fly:true; speed:02"
-        position="0 1.6 0"></a-entity>
+        </a-camera>                 
+        <a-entity oculus-touch-controls="hand: left"></a-entity>
+        <a-entity oculus-touch-controls="hand: right"></a-entity>
         </a-entity>
         
 
