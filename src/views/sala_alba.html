@@ -37,50 +37,55 @@
 
     </a-assets>
 
-
-    <a-entity id="cameraRig" position="0 1.6 0">
-        <a-camera wasd-controls="acceleration: 50">
-        </a-camera>
+  
+        <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #FFCCCC"></a-entity>
+        <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #FFCCCC"></a-entity>
       </a-entity>
+      <a-sky src="#skyblue"></a-sky>
+      <a-plane width="80" height="80" position="0 0 0" rotation="-90 0 0"
+               material="src: #grass; repeat: 10 10; shader: flat"
+               shadow="cast: false; receive: true">
+      </a-plane>
+
+      
+
 
       <a-entity id="camera-rig" position="0 1.6 0" movement-controls="speed: 0.2">
-        <a-entity camera look-controls></a-entity>
+        <a-entity camera look-controls></a-entity> -->
         <!-- Controladores VR (Meta Quest) -->
-        <a-entity oculus-touch-controls="hand: left"></a-entity>
+         <a-entity oculus-touch-controls="hand: left"></a-entity>
         <a-entity oculus-touch-controls="hand: right"></a-entity>
     </a-entity>
     
     <a-camera>
-        <a-cursor></a-cursor>
-    </a-camera>
+        <a-cursor raycaster= "objects= .interactable"></a-cursor> 
+    </a-camera> 
 
-    <a-sky src="#skyblue"></a-sky>
     
-    <a-plane width="80" height="80" position="0.00 0.00 0.00" rotation="-90 0 0" material="src: #grass; repeat:10 10;" shadow="cast: false; receive: true"></a-plane>
+    <a-plane width="80" height="80" position="0.00 0.00 0.00" rotation="-90 0 0" material="src: #grass; repeat:10 10;" shadow="cast: false; receive: true"></a-plane> 
 
     <!-- Caja de imagen Diada con transparencia encima -->
     <a-box position="12 3 -11" rotation="0 0 0" 
        width="2" height="2" depth="2"
        material="src: #diada2; repeat: 1 1; shader: flat"
        toggle-text="groupId: #text1"
-       clickhandler="groupId: #text1">
+       clickhandler="groupId: #text1"
+       >
     </a-box>
 
     <!-- Caja transparente encima de la imagen Diada, con las mismas dimensiones que el cubo -->
     <a-box position="12 3 -11" rotation="0 0 0" 
        width="2" height="2" depth="2"
        material="opacity: 0; color: #ffffff; shader: flat"
-       visible="true">
+       visible="true"
+       class="interactable">
     </a-box>
 
     <!-- Texto -->
     <a-entity id="text1" rotation="0 -50 0" position="13 3 -7" visible="false">
-        <a-text value="2. Consciència i regulació emocional\n
-        La consciència i regulació emocional fa referència a la capacitat d'identificar\n
-        comprendre i gestionar les pròpies emocions de manera efectiva. Inclou aspectes com: \n
-        .Autoconeixement emocional: Reconèixer com et sents en diferents situacions.\n
-        .Autocontrol: Regular les reaccions emocionals per actuar de manera adequada i equilibrada.\n
-        .Empatia emocional: Entendre i respectar les emocions dels altres.\n"
+        <a-text value="
+        Esdeveniments que cohesionen
+        Accions clau com la Diada de Primavera, les Festes de Barri i Ravaleando han servit com a punts de trobada per la comunitat, reforçant les relacions veïnals i la identitat local."
            color="#555555" 
            align="center" 
            scale="0.5 0.5 0.5">  
@@ -107,12 +112,8 @@
 
     <!-- Texto -->
     <a-entity id="text2" rotation="0 -50 0" position="-13 3 -10" visible="false">
-        <a-text value="2. Consciència i regulació emocional\n
-        La consciència i regulació emocional fa referència a la capacitat d'identificar\n
-        comprendre i gestionar les pròpies emocions de manera efectiva. Inclou aspectes com: \n
-        .Autoconeixement emocional: Reconèixer com et sents en diferents situacions.\n
-        .Autocontrol: Regular les reaccions emocionals per actuar de manera adequada i equilibrada.\n
-        .Empatia emocional: Entendre i respectar les emocions dels altres.\n"
+        <a-text value=" Programes formatius de qualitat
+        Amb èmfasi en el desenvolupament professional i personal, es van implementar programes com la mentoria interdepartamental, la formació en enfocaments restauratius i la capacitació en marc d’estrangeria, amb gran impacte al territori."
            color="#555555" 
            align="center" 
            scale="0.5 0.5 0.5">  
@@ -138,12 +139,8 @@
 
     <!-- Texto -->
     <a-entity id="text3" rotation="0 -50 0" position="-13 3 1" visible="false">
-        <a-text value="2. Consciència i regulació emocional\n
-        La consciència i regulació emocional fa referència a la capacitat d'identificar\n
-        comprendre i gestionar les pròpies emocions de manera efectiva. Inclou aspectes com: \n
-        .Autoconeixement emocional: Reconèixer com et sents en diferents situacions.\n
-        .Autocontrol: Regular les reaccions emocionals per actuar de manera adequada i equilibrada.\n
-        .Empatia emocional: Entendre i respectar les emocions dels altres.\n"
+        <a-text value="Projectes Antenes Comunitàries
+        Col·laboració amb tres entitats per arribar a 211 persones. Destaca ConnectaGrama amb 84 joves, oferint sessions d’autodescobriment, autodefensa, karate i motivació. També IntegraJOBes, amb 31 participants en tallers laborals, i Joves+, que va sensibilitzar 96 joves sobre tecnologia i va reforçar la seva educació i participació comunitària."
            color="#555555" 
            align="center" 
            scale="0.5 0.5 0.5">  
@@ -169,12 +166,8 @@ visible="true">
 
 <!-- Texto -->
 <a-entity id="text4" rotation="0 -50 0" position="-1 3 8" visible="false">
- <a-text value="2. Consciència i regulació emocional\n
- La consciència i regulació emocional fa referència a la capacitat d'identificar\n
- comprendre i gestionar les pròpies emocions de manera efectiva. Inclou aspectes com: \n
- .Autoconeixement emocional: Reconèixer com et sents en diferents situacions.\n
- .Autocontrol: Regular les reaccions emocionals per actuar de manera adequada i equilibrada.\n
- .Empatia emocional: Entendre i respectar les emocions dels altres.\n"
+ <a-text value="Espais públics revitalitzats
+ Durant l’estiu, el programa Estiu a la Fresca va dinamitzar les nits a espais públics, promovent la participació comunitària i un ús segur i inclusiu d’aquests llocs."
     color="#555555" 
     align="center" 
     scale="0.5 0.5 0.5">  
@@ -201,12 +194,8 @@ visible="true">
 
 <!-- Texto -->
 <a-entity id="text5" rotation="0 -50 0" position="13 3 9" visible="false">
- <a-text value="2. Consciència i regulació emocional\n
- La consciència i regulació emocional fa referència a la capacitat d'identificar\n
- comprendre i gestionar les pròpies emocions de manera efectiva. Inclou aspectes com: \n
- .Autoconeixement emocional: Reconèixer com et sents en diferents situacions.\n
- .Autocontrol: Regular les reaccions emocionals per actuar de manera adequada i equilibrada.\n
- .Empatia emocional: Entendre i respectar les emocions dels altres.\n"
+ <a-text value="Connectivitat laboral
+ Es van realitzar tallers innovadors com les sessions d’autodefensa femenina i activitats específiques per facilitar l’accés al mercat laboral a través d’IntegraJOBes i programes de recerca activa de feina amb una participació sostinguda."
     color="#555555" 
     align="center" 
     scale="0.5 0.5 0.5">  
@@ -231,12 +220,8 @@ visible="true">
 
 <!-- Texto -->
 <a-entity id="text6" rotation="0 -50 0" position="1 3 -8" visible="false">
- <a-text value="2. Consciència i regulació emocional\n
- La consciència i regulació emocional fa referència a la capacitat d'identificar\n
- comprendre i gestionar les pròpies emocions de manera efectiva. Inclou aspectes com: \n
- .Autoconeixement emocional: Reconèixer com et sents en diferents situacions.\n
- .Autocontrol: Regular les reaccions emocionals per actuar de manera adequada i equilibrada.\n
- .Empatia emocional: Entendre i respectar les emocions dels altres.\n"
+ <a-text value=" Impuls tecnològic i social
+ El programa Joves+ va fomentar l’ús responsable de la tecnologia amb activitats pràctiques com tallers de gaming i suport socioeducatiu, contribuint a la inclusió digital i al creixement personal dels participants."
     color="#555555" 
     align="center" 
     scale="0.5 0.5 0.5">  
@@ -262,12 +247,8 @@ visible="true">
 
 <!-- Texto -->
 <a-entity id="text7" rotation="0 -50 0" position="0.5 3 -0.6" visible="false">
- <a-text value="2. Consciència i regulació emocional\n
- La consciència i regulació emocional fa referència a la capacitat d'identificar\n
- comprendre i gestionar les pròpies emocions de manera efectiva. Inclou aspectes com: \n
- .Autoconeixement emocional: Reconèixer com et sents en diferents situacions.\n
- .Autocontrol: Regular les reaccions emocionals per actuar de manera adequada i equilibrada.\n
- .Empatia emocional: Entendre i respectar les emocions dels altres.\n"
+ <a-text value="Coordinació estratègica comunitària
+ Lideratge en 102 reunions i 9 espais compartits. Iniciatives com la Taula Jove i l’ecosistema contra l’abandonament escolar han consolidat l’enfortiment de xarxes locals."
     color="#555555" 
     align="center" 
     scale="0.5 0.5 0.5">  
