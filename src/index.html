@@ -29,6 +29,7 @@
      
       <a-entity id="logo3D" gltf-model="#logo3D" position="-0.604 3.69631 -0.486" scale="0.02 0.02 0.02" rotation="0 0 0" animation="property: rotation; to: 0 360 0; dur: 20000; easing: linear; loop: true"></a-entity>
       <a-light type="ambient" color="#FFFFFF" intensity="0.5"></a-light>
+      <a-light type="directional" color="#ffffff" intensity="1" position="0 5 0" target="#logo3D"></a-light>
       <a-sky src="./public/assets/home/sky.jpeg" radius="10000" rotation="0 110 0" material="" geometry=""></a-sky>
       <a-plane width="80" height="80" position="0.00 0.00 0.00" rotation="-90 0 0"  material="src:#floor; repeat:10 10;" shadow="cast: false; receive: true"></a-plane>
       </a-plane>
@@ -45,7 +46,7 @@
         <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Luisa.jpg; side: double" position="-2.88952 0 1.76743" rotation="0 115.65840644069823 0"></a-entity>
         <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Moha.jpg; side: double" position="-1.83278 -0.01314 2.89354" rotation="0 150.8666629514873 0"></a-entity>
         <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Elsa.jpg; side: double" position="-0.24347 0 3.33665" rotation="0 -180 0"></a-entity>
-        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Alba.jpg; side: double" position="1.33152 0 3.01596" rotation="0 -160.29869417493094 0"></a-entity>
+        <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Alba.jpg; side: double" position="1.33152 0 3.01596" rotation="0 -160.29869417493094 0" href="views/sala_alba.html"></a-entity>
         <a-entity geometry="primitive: plane; width: 1.5" material="src: ./public/assets/home/Personas/Jiale.jpg; side: double" position="2.63066 0 1.8583" rotation="0 -120.7136130671375 0"></a-entity>
 
       </a-entity>
