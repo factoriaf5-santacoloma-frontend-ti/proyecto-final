@@ -2,10 +2,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- <title>Sala Alba</title>
+  <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script> -->
+
+
+
   <title>Sala Alba</title>
-  <!-- <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script> -->
-
-
 </head>
 
 
@@ -28,7 +31,24 @@
         <img id="jobs" src="../public/assets/sala_alba/integrajobes.png">
         <img id="raval" src="../public/assets/sala_alba/ravaleando.jpg">
         <a-asset-item  id= "pedestal" src="../public/assets/sala_alba/pedestal/scene.gltf">
+        <a-asset-item id="peole" src="../public/assets/sala_alba/persomas (1)/persomas/personas C/personas_C.gltf"></a-asset-item>
+        
+
+
     </a-assets>
+
+
+    <a-entity id="cameraRig" position="0 1.6 0">
+        <a-camera wasd-controls="acceleration: 50">
+        </a-camera>
+      </a-entity>
+
+      <a-entity id="camera-rig" position="0 1.6 0" movement-controls="speed: 0.2">
+        <a-entity camera look-controls></a-entity>
+        <!-- Controladores VR (Meta Quest) -->
+        <a-entity oculus-touch-controls="hand: left"></a-entity>
+        <a-entity oculus-touch-controls="hand: right"></a-entity>
+    </a-entity>
     
     <a-camera>
         <a-cursor></a-cursor>
@@ -36,55 +56,36 @@
 
     <a-sky src="#skyblue"></a-sky>
     
-    <a-plane width="80" height="80" position="0.00 0.00 0.00" rotation="-90 0 0"  material="src: #grass; repeat:10 10;" shadow="cast: false; receive: true"></a-plane>
+    <a-plane width="80" height="80" position="0.00 0.00 0.00" rotation="-90 0 0" material="src: #grass; repeat:10 10;" shadow="cast: false; receive: true"></a-plane>
 
-    <a-entity id="camera-rig" position="0 1.6 0" movement-controls="speed: 0.2">
-
-        <a-entity camera look-controls></a-entity>
-
-        <!-- Controladores VR con rayos láser -->
-        <a-entity 
-            laser-controls="hand: left" 
-            cursor="rayOrigin: mouse" 
-            raycaster="objects: .clickable"
-            visible="false"
-            id="laser-left">
-        </a-entity>
-
-        <a-entity 
-            laser-controls="hand: right" 
-            cursor="rayOrigin: mouse" 
-            raycaster="objects: .clickable"
-            visible="false"
-            id="laser-right">
-        </a-entity>
-    </a-entity>
-
-    <a-entity ></a-entity>
-
-
-
-   <!----cajas con las fotos de los proyectos--> 
-   <!--diada-->
-   <a-box position="12 3 -11" rotation="0 0 0" 
+    <!-- Caja de imagen Diada con transparencia encima -->
+    <a-box position="12 3 -11" rotation="0 0 0" 
        width="2" height="2" depth="2"
        material="src: #diada2; repeat: 1 1; shader: flat"
        toggle-text="groupId: #text1"
-       onclick="mostrarTexto()">
-</a-box>
+       clickhandler="groupId: #text1">
+    </a-box>
 
-<a-entity id="text1" rotation="0 -45 0" position="13 3 -7" visible="true">
-    <a-text value=" 2. Consciència i regulació emocional\n
-    La consciència i regulació emocional fa referència a la capacitat d'identificar\n
-    comprendre i gestionar les pròpies emocions de manera efectiva. Inclou aspectes com: \n
-    .Autoconeixement emocional: Reconèixer com et sents en diferents situacions.\n
-    .Autocontrol: Regular les reaccions emocionals per actuar de manera adequada i equilibrada.\n
-    .Empatia emocional: Entendre i respectar les emocions dels altres.\n"
+    <!-- Caja transparente encima de la imagen Diada, con las mismas dimensiones que el cubo -->
+    <a-box position="12 3 -11" rotation="0 0 0" 
+       width="2" height="2" depth="2"
+       material="opacity: 0; color: #ffffff; shader: flat"
+       visible="true">
+    </a-box>
+
+    <!-- Texto -->
+    <a-entity id="text1" rotation="0 -50 0" position="13 3 -7" visible="false">
+        <a-text value="2. Consciència i regulació emocional\n
+        La consciència i regulació emocional fa referència a la capacitat d'identificar\n
+        comprendre i gestionar les pròpies emocions de manera efectiva. Inclou aspectes com: \n
+        .Autoconeixement emocional: Reconèixer com et sents en diferents situacions.\n
+        .Autocontrol: Regular les reaccions emocionals per actuar de manera adequada i equilibrada.\n
+        .Empatia emocional: Entendre i respectar les emocions dels altres.\n"
            color="#555555" 
            align="center" 
            scale="0.5 0.5 0.5">  
-    <!-- contenido del texto -->
-</a-entity> 
+        </a-text>
+    </a-entity>
    
 
 
@@ -92,43 +93,208 @@
       <!--defesa feminina-->
       <a-box position="-15 3 -15" rotation="0 0 0" 
       width="2" height="2" depth="2"
-      material="src: #defensa; repeat: 1 1; shader: flat">
+      material="src: #defensa; repeat: 1 1; shader: flat"
+      toggle-text="groupId: #text2"
+        clickhandler="groupId: #text2">
     </a-box>
+
+<!--box transparente de defesa-->
+    <a-box position="-15 3 -15" rotation="0 0 0" 
+       width="2" height="2" depth="2"
+       material="opacity: 0; color: #ffffff; shader: flat"
+       visible="true">
+    </a-box>
+
+    <!-- Texto -->
+    <a-entity id="text2" rotation="0 -50 0" position="-13 3 -10" visible="false">
+        <a-text value="2. Consciència i regulació emocional\n
+        La consciència i regulació emocional fa referència a la capacitat d'identificar\n
+        comprendre i gestionar les pròpies emocions de manera efectiva. Inclou aspectes com: \n
+        .Autoconeixement emocional: Reconèixer com et sents en diferents situacions.\n
+        .Autocontrol: Regular les reaccions emocionals per actuar de manera adequada i equilibrada.\n
+        .Empatia emocional: Entendre i respectar les emocions dels altres.\n"
+           color="#555555" 
+           align="center" 
+           scale="0.5 0.5 0.5">  
+        </a-text>
+    </a-entity>
+
+
 
     <!--karate-->
      <a-box position="-13 3 -1" rotation="0 0 0" 
              width="2" height="2" depth="2"
-             material="src: #karate; repeat: 1 1; shader: flat">
+             material="src: #karate; repeat: 1 1; shader: flat"
+             toggle-text="groupId: #text3"
+        clickhandler="groupId: #text3">
       </a-box>
+
+<!--caja transparente debajo de karate-->
+      <a-box position="-13 3 -1" rotation="0 0 0" 
+       width="2" height="2" depth="2"
+       material="opacity: 0; color: #ffffff; shader: flat"
+       visible="true">
+    </a-box>
+
+    <!-- Texto -->
+    <a-entity id="text3" rotation="0 -50 0" position="-13 3 1" visible="false">
+        <a-text value="2. Consciència i regulació emocional\n
+        La consciència i regulació emocional fa referència a la capacitat d'identificar\n
+        comprendre i gestionar les pròpies emocions de manera efectiva. Inclou aspectes com: \n
+        .Autoconeixement emocional: Reconèixer com et sents en diferents situacions.\n
+        .Autocontrol: Regular les reaccions emocionals per actuar de manera adequada i equilibrada.\n
+        .Empatia emocional: Entendre i respectar les emocions dels altres.\n"
+           color="#555555" 
+           align="center" 
+           scale="0.5 0.5 0.5">  
+        </a-text>
+    </a-entity>
+
+
 
       <!--estiu fresca-->
      <a-box position="-4 3 10" rotation="0 0 0" 
      width="2" height="2" depth="2"
-     material="src: #estiu; repeat: 1 1; shader: flat">
+     material="src: #estiu; repeat: 1 1; shader: flat"
+     toggle-text="groupId: #text4"
+        clickhandler="groupId: #text4">
     </a-box>
+
+<!--caja transparente debajo de fresca-->
+<a-box position="-4 3 10" rotation="0 0 0" 
+width="2" height="2" depth="2"
+material="opacity: 0; color: #ffffff; shader: flat"
+visible="true">
+</a-box>
+
+<!-- Texto -->
+<a-entity id="text4" rotation="0 -50 0" position="-1 3 8" visible="false">
+ <a-text value="2. Consciència i regulació emocional\n
+ La consciència i regulació emocional fa referència a la capacitat d'identificar\n
+ comprendre i gestionar les pròpies emocions de manera efectiva. Inclou aspectes com: \n
+ .Autoconeixement emocional: Reconèixer com et sents en diferents situacions.\n
+ .Autocontrol: Regular les reaccions emocionals per actuar de manera adequada i equilibrada.\n
+ .Empatia emocional: Entendre i respectar les emocions dels altres.\n"
+    color="#555555" 
+    align="center" 
+    scale="0.5 0.5 0.5">  
+ </a-text>
+</a-entity>
+
+
+
     
     <!--taller gamming-->
     <a-box position="15 3 7" rotation="0 0 0" 
     width="2" height="2" depth="2"
-    material="src: #tallergame; repeat: 1 1; shader: flat">
+    material="src: #tallergame; repeat: 1 1; shader: flat"
+    toggle-text="groupId: #text5"
+    clickhandler="groupId: #text5">
    </a-box>
+
+<!--caja transparente debajo de gamming-->
+<a-box position="15 3 7" rotation="0 0 0" 
+width="2" height="2" depth="2"
+material="opacity: 0; color: #ffffff; shader: flat"
+visible="true">
+</a-box>
+
+<!-- Texto -->
+<a-entity id="text5" rotation="0 -50 0" position="13 3 9" visible="false">
+ <a-text value="2. Consciència i regulació emocional\n
+ La consciència i regulació emocional fa referència a la capacitat d'identificar\n
+ comprendre i gestionar les pròpies emocions de manera efectiva. Inclou aspectes com: \n
+ .Autoconeixement emocional: Reconèixer com et sents en diferents situacions.\n
+ .Autocontrol: Regular les reaccions emocionals per actuar de manera adequada i equilibrada.\n
+ .Empatia emocional: Entendre i respectar les emocions dels altres.\n"
+    color="#555555" 
+    align="center" 
+    scale="0.5 0.5 0.5">  
+ </a-text>
+</a-entity>
+
 
    <!--intera jobs-->
    <a-box position="-2 3 -10" rotation="0 0 0" 
    width="2" height="2" depth="2"
-   material="src: #jobs ; repeat: 1 1; shader: flat">
+   material="src: #jobs ; repeat: 1 1; shader: flat"
+   toggle-text="groupId: #text6"
+    clickhandler="groupId: #text6">
   </a-box>
+
+<!--caja transparente debajo de jobs-->
+<a-box position="-2 3 -10" rotation="0 0 0" 
+width="2" height="2" depth="2"
+material="opacity: 0; color: #ffffff; shader: flat"
+visible="true">
+</a-box>
+
+<!-- Texto -->
+<a-entity id="text6" rotation="0 -50 0" position="1 3 -8" visible="false">
+ <a-text value="2. Consciència i regulació emocional\n
+ La consciència i regulació emocional fa referència a la capacitat d'identificar\n
+ comprendre i gestionar les pròpies emocions de manera efectiva. Inclou aspectes com: \n
+ .Autoconeixement emocional: Reconèixer com et sents en diferents situacions.\n
+ .Autocontrol: Regular les reaccions emocionals per actuar de manera adequada i equilibrada.\n
+ .Empatia emocional: Entendre i respectar les emocions dels altres.\n"
+    color="#555555" 
+    align="center" 
+    scale="0.5 0.5 0.5">  
+ </a-text>
+</a-entity>
+
+
 
   <!--ravaleando-->
   <a-box position="0.7 3 0.2" rotation="0 0 0" 
   width="2" height="2" depth="2"
-  material="src: #raval; repeat: 1 1; shader: flat">
+  material="src: #raval; repeat: 1 1; shader: flat"
+  toggle-text="groupId: #text7"
+    clickhandler="groupId: #text7">
  </a-box>
+
+<!--caja transparente debajo de ravaleando-->
+<a-box position="0.7 3 0.2" rotation="0 0 0" 
+width="2" height="2" depth="2"
+material="opacity: 0; color: #ffffff; shader: flat"
+visible="true">
+</a-box>
+
+<!-- Texto -->
+<a-entity id="text7" rotation="0 -50 0" position="0.5 3 -0.6" visible="false">
+ <a-text value="2. Consciència i regulació emocional\n
+ La consciència i regulació emocional fa referència a la capacitat d'identificar\n
+ comprendre i gestionar les pròpies emocions de manera efectiva. Inclou aspectes com: \n
+ .Autoconeixement emocional: Reconèixer com et sents en diferents situacions.\n
+ .Autocontrol: Regular les reaccions emocionals per actuar de manera adequada i equilibrada.\n
+ .Empatia emocional: Entendre i respectar les emocions dels altres.\n"
+    color="#555555" 
+    align="center" 
+    scale="0.5 0.5 0.5">  
+ </a-text>
+</a-entity>
+
+
+
 
 
 
 
 </a-entity>
+    <a-entity gltf-model="../assets/sala_alba/blockbench_park_bench/scene.gltf" position="-0.1001 0.061 18.73664" rotation="0.9998113525032866 2.566850922186088 -2.000195662801704" scale="" id="kursi1"></a-entity>
+    <a-entity gltf-model="../assets/sala_alba/blockbench_park_bench/scene.gltf" position="-0.03535 0.16079 -20.01813" rotation="1 180 -2" scale="" id="kursi2"></a-entity>
+    <a-entity gltf-model="../assets/sala_alba/blockbench_park_bench/scene.gltf" position="-18.84535 0.3737 -1.03081" rotation="0.9998113525032866 -92.40949798767483 -2.000195662801704" scale="" id="kursi3"></a-entity>
+    <a-entity gltf-model="../assets/sala_alba/blockbench_park_bench/scene.gltf" position="17.58743 0.061 -0.37529" rotation="0.9998113525032866 90.49581895193788 -2.000195662801704" scale="" id="kursi4"></a-entity>
+
+
+    <a-entity gltf-model="../public/assets/sala_alba/low_poly_people_free_sample_pack/scene.gltf" position="31.19682 0.061 13.78355" rotation="0.9998113525032866 90.49581895193788 -2.000195662801704" animation-mixer="repeat" id="people1"></a-entity>
+    <a-entity gltf-model="../public/assets/sala_alba/low_poly_people_free_sample_pack/scene.gltf" position="-24.86621 0.06975 -14.58227" rotation="1 90.496 -2" animation-mixer="repeat" id="people2"></a-entity>
+
+
+
+
+
+
     
 </a-scene>
 
