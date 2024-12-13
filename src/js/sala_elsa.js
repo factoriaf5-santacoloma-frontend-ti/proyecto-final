@@ -21,3 +21,21 @@ AFRAME.registerComponent('toggle-text', {
   },
 });
 
+
+AFRAME.registerComponent('joystick-movement', {
+  schema: {
+    speed: {type: 'number', default: 0.1}
+  },
+  init: function () {
+    this.direction = new THREE.Vector3();
+  },
+  tick: function () {
+    const gamepad = navigator.getGamepads()[0]; // Controlador principal
+    if (gamepad && gamepad.axes.length >= 2) {
+      const [xAxis, yAxis] = gamepad.axes; // Ejes del joystick derecho
+      this.direction.set(xAxis, 0, -yAxis); // Ajustar dirección (Z negativo es adelante)
+      this.direction.multiplyScalar(this.data.speed);
+      this.el.object3D.position.add(this.direction); // Actualizar posición del camera-rig
+    }
+  }
+});

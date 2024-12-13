@@ -8,7 +8,7 @@
     <title>Práctica con Aframe</title>
 
     <!-- Carga de la biblioteca A-Frame para realidad virtual -->
-    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <!-- <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>-->
     
   <script type="module" crossorigin src="/proyecto-final/assets/sala_juan-B83zEqU3.js"></script>
 </head>
@@ -51,12 +51,23 @@
         
         <a-sky src="#espacio1" rotation="0 -90 0" ></a-sky>
 
-        <a-entity id="camera-rig" position="-60 3 6" movement-controls="speed: 0.2">
-            <a-entity camera look-controls></a-entity>
-            <!-- Controladores VR (Meta Quest) -->
+
+
+        <a-entity id="camera-rig" position="-40 7 0" rotation="0 -90 0">
+            <!-- Cámara -->
+            <a-camera>
+                <a-cursor id="cursor" cursor="fuse: true; fuseTimeout: 100" 
+                        raycaster="objects: .interactable"
+                        geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" 
+                        material="shader: flat"></a-cursor>
+            </a-camera>
+            
+            <!-- Controladores -->
             <a-entity oculus-touch-controls="hand: left"></a-entity>
             <a-entity oculus-touch-controls="hand: right"></a-entity>
-          </a-entity>
+        </a-entity>
+
+        <a-entity id="camera-rg" joystick-movement="speed: 0.1"></a-entity>
         
 
 
