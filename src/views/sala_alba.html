@@ -2,22 +2,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <!-- <title>Sala Alba</title>
   <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script> -->
-
-
-
   <title>Sala Alba</title>
 </head>
-
-
 <body>
   <!-- <a-scene cursor="rayOrigin: mouse" vr-mode-ui="enabled: true" xrwebgl="enabled: true"> -->
 
 <a-scene> 
     <a-assets>
-        <img id="grass" src="../public/assets/sala_luisa/grass.jpg" crossorigin="anonymous" />
+        <audio id="avatar-sound" src="../public/assets/sala_alba/WhatsApp Ptt 2024-12-11 at 14.04.21.ogg"></audio>
+
+        <img id="grass" src="../assets/sala_luisa/grass.jpg" crossorigin="anonymous" />
         <img id="skyblue" src="../assets/sala_alba/sky_blue.jpg" crossorigin="anonymous" />
         <a-asset-item id="cat" src="../assets/sala_luisa/toon_cat_free/scene.gltf"></a-asset-item>
         <a-asset-item id="flowers" src="../assets/sala_luisa/flowers/scene.gltf"></a-asset-item>
@@ -31,10 +27,7 @@
         <img id="jobs" src="../public/assets/sala_alba/integrajobes.png">
         <img id="raval" src="../public/assets/sala_alba/ravaleando.jpg">
         <a-asset-item  id= "pedestal" src="../public/assets/sala_alba/pedestal/scene.gltf">
-        <a-asset-item id="peole" src="../public/assets/sala_alba/persomas (1)/persomas/personas C/personas_C.gltf"></a-asset-item>
-        
-
-
+        <a-asset-item id="" src="../public/assets/sala_alba/ImageToStl.com_model+(1)/ImageToStl.com_model (1).glb"></a-asset-item>
     </a-assets>
 
 
@@ -65,10 +58,6 @@
         <!-- Controladores VR con rayos láser -->
         <a-entity laser-controls="hand: left"  cursor="rayOrigin: mouse"  raycaster="objects: .clickable" visible="false" id="laser-left"> </a-entity>
         <a-entity laser-controls="hand: right"  cursor="rayOrigin: mouse"  raycaster="objects: .clickable" visible="false" id=" laser-right" ></a-entity> </a-entity>
-
-
-    <a-entity ></a-entity>
-
 
 
    <!----cajas con las fotos de los proyectos--> 
@@ -113,7 +102,7 @@
      width="2" height="2" depth="2"
      material="src: #estiu; repeat: 1 1; shader: flat">
     </a-box>
-    
+
     <!--taller gamming-->
     <a-box position="15 3 7" rotation="0 0 0" 
     width="2" height="2" depth="2"
@@ -133,20 +122,20 @@
  </a-box>
 
 
-
-
+                                        <!--sillas-->
 </a-entity>
     <a-entity gltf-model="../assets/sala_alba/blockbench_park_bench/scene.gltf" position="-0.1001 0.061 18.73664" rotation="0.9998113525032866 2.566850922186088 -2.000195662801704" scale="" id="kursi1"></a-entity>
     <a-entity gltf-model="../assets/sala_alba/blockbench_park_bench/scene.gltf" position="-0.03535 0.16079 -20.01813" rotation="1 180 -2" scale="" id="kursi2"></a-entity>
     <a-entity gltf-model="../assets/sala_alba/blockbench_park_bench/scene.gltf" position="-18.84535 0.3737 -1.03081" rotation="0.9998113525032866 -92.40949798767483 -2.000195662801704" scale="" id="kursi3"></a-entity>
     <a-entity gltf-model="../assets/sala_alba/blockbench_park_bench/scene.gltf" position="17.58743 0.061 -0.37529" rotation="0.9998113525032866 90.49581895193788 -2.000195662801704" scale="" id="kursi4"></a-entity>
 
-
+                                                 <!--people-->
     <a-entity gltf-model="../public/assets/sala_alba/low_poly_people_free_sample_pack/scene.gltf" position="31.19682 0.061 13.78355" rotation="0.9998113525032866 90.49581895193788 -2.000195662801704" animation-mixer="repeat" id="people1"></a-entity>
     <a-entity gltf-model="../public/assets/sala_alba/low_poly_people_free_sample_pack/scene.gltf" position="-24.86621 0.06975 -14.58227" rotation="1 90.496 -2" animation-mixer="repeat" id="people2"></a-entity>
 
+    <a-entity gltf-model="../public/assets/sala_alba/pedestal/scene.gltf" position="6.86655 0.07 11.88374" rotation="1 90.496 -2" scale="0.2 0.2 0.2" animation-mixer="repeat" id="pedestal"></a-entity>
 
-
+    <a-entity gltf-model="../public/assets/sala_alba/ImageToStl.com_model+(1)/ImageToStl.com_model (1).glb" position="7.001 3.27509 11.79073" rotation="1 90.496 -2" scale="4.3 6 6" animation-mixer="repeat" id="avatar" sound="src: #avatar-sound; on: click"></a-entity>
 
 
 
