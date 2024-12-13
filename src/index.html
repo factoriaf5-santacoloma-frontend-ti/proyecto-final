@@ -12,8 +12,9 @@
     <a-scene background="color: #FAFAFA">
       <a-assets>
         <img id="logo" src="./public/assets/home/logo_oporutnitats1.0.png" alt="Logo">
+        <img id="floor" src="./public/assets/home/floorneon.jpg" alt="">
         <a-assets-item id="logo3D" src="./public/assets/home/logo3D/logo3D.gltf"></a-assets-item>
-        <img id="sueloexterior" src="./public/assets/home/Suelo.jpg" alt="">
+        
       </a-assets>
       
       <a-entity id="camera-rig" position="-0.4 3 6" movement-controls="speed: 0.2">
@@ -28,8 +29,8 @@
      
       <a-entity id="logo3D" gltf-model="#logo3D" position="-0.604 3.69631 -0.486" scale="0.02 0.02 0.02" rotation="0 0 0" animation="property: rotation; to: 0 360 0; dur: 20000; easing: linear; loop: true"></a-entity>
       <a-light type="ambient" color="#FFFFFF" intensity="0.5"></a-light>
-      <a-sky src="./public/assets/home/sky.jpg" radius="10000" rotation="0 110 0" material="" geometry=""></a-sky>
-      <a-plane width="80" height="80" position="0.00 0.00 0.00" rotation="-90 0 0"  color="#029BA6" shadow="cast: false; receive: true"></a-plane>
+      <a-sky src="./public/assets/home/sky.jpeg" radius="10000" rotation="0 110 0" material="" geometry=""></a-sky>
+      <a-plane width="80" height="80" position="0.00 0.00 0.00" rotation="-90 0 0"  material="src:#floor; repeat:10 10;" shadow="cast: false; receive: true"></a-plane>
       </a-plane>
 
       
