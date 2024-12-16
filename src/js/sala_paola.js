@@ -1,6 +1,6 @@
 import AFRAME from 'aframe';
-import 'aframe-extras';
-import 'aframe-effects';
+// import 'aframe-extras';
+// import 'aframe-effects';
 
 document.querySelector('a-scene').addEventListener('loaded', function () {
     const sombrero = document.querySelector('#clickable-sombrero');

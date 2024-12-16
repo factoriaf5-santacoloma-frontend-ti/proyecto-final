@@ -1,2 +1,2 @@
 import AFRAME from 'aframe';
-import 'aframe-animation-component';
+// import 'aframe-animation-component';

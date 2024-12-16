@@ -1,5 +1,6 @@
 import AFRAME from "aframe";
 import 'aframe-extras';
+// import 'aframe-effects';
 
 AFRAME.registerComponent('pause-on-hover', {
     init: function () {
