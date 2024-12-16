@@ -1,1 +1,0 @@
-import"./aframe-master-1FPB_1PP.js";import"./index-DNbT2VYR.js";const o=document.querySelector("#cameraRig");document.addEventListener("keydown",e=>{const t=o.object3D.position;e.key==="e"?t.y+=.5:e.key==="q"&&(t.y-=.5)});

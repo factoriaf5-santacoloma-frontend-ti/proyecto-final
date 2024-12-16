@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  import AFRAME from 'aframe';
+=======
+; import AFRAME from 'aframe';
+>>>>>>> dcd95e532a1a43a4fff7a9d20a8192e0ec402eec
 
 AFRAME.registerComponent('toggle-text', {
   schema: {
