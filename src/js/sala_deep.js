@@ -1,7 +1,7 @@
 import AFRAME from 'aframe';
-import 'aframe-environment-component';
-import 'aframe-animation-component';
-
+// import 'aframe-environment-component';
+// import 'aframe-animation-component';
+import 'aframe-extras';
 function openDoor() {
     const door = document.getElementById('door');
     door.setAttribute('animation', {
