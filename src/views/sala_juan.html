@@ -8,7 +8,7 @@
     <title>Práctica con Aframe</title>
 
     <!-- Carga de la biblioteca A-Frame para realidad virtual -->
-    <!-- <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>-->
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
     
 </head>
 
@@ -49,17 +49,19 @@
         
         
         <a-sky src="#espacio1" rotation="0 -90 0" ></a-sky>
-        
-        <a-entity id="cameraEntity" position="-60 7 0" rotation="0 -90 0">
-            <a-camera>
-                <a-entity laser-controls="hand: left"></a-entity>
-                <a-entity laser-controls="hand: right"></a-entity>
-                <a-cursor scale="2 2 2"></a-cursor>
-            </a-camera>
-        </a-entity>
 
+        <a-entity id="camera-rig" position="-60 3 6" movement-controls="speed: 0.2">
+            <a-entity camera look-controls></a-entity>
+            <!-- Controladores VR (Meta Quest) -->
+            <a-entity oculus-touch-controls="hand: left"></a-entity>
+            <a-entity oculus-touch-controls="hand: right"></a-entity>
+          </a-entity>
         
-        <a-plane src="#piso" material="color: #FFFFFF" scale="50 40 50" rotation="-90 0 0" postion="0 0 0"></a-plane>
+
+
+
+
+        <a-plane src="#piso" material="color: #FFFFFF" scale="50 40 50" rotation="-90 0 0" position="0 0 0"></a-plane>
         
         <a-plane src="#piso"  scale="50 40 50" rotation="90 0 0" position="0 15 0"></a-plane> 
         
@@ -98,7 +100,7 @@
         
 
         <!-- Caja 1 -->
-        <a-box opacity="0.6" material="transparent: true" position="-20 8.4 -17.6" rotation="0 0 0" color="#CCCCCC" scale="1.5 0.7 0.1" toggle-text="groupId: #text-group1">
+        <a-box class="interactable" opacity="0.6" material="transparent: true" position="-20 8.4 -17.6" rotation="0 0 0" color="#CCCCCC" scale="1.5 0.7 0.1" toggle-text="groupId: #text-group1">
             <a-text value="+info" color="black" align="center" position="0 0 0.6" scale="1.7 1.7 1.7"></a-text>
         </a-box>
 
@@ -128,7 +130,7 @@
 
 
         <!-- Caja 2  -->
-        <a-box opacity="0.6" material="transparent: true" position="-10 8.4 -17.6" rotation="0 0 0" color="#CCCCCC" scale="1.5 0.7 0.1" toggle-text="groupId: #text-group2">
+        <a-box class="interactable" opacity="0.6" material="transparent: true" position="-10 8.4 -17.6" rotation="0 0 0" color="#CCCCCC" scale="1.5 0.7 0.1" toggle-text="groupId: #text-group2">
         <a-text value="+info" color="black" align="center" position="0 0 0.6" scale="1.7 1.7 1.7"></a-text>
         </a-box>
 
@@ -157,7 +159,7 @@
         <a-entity gltf-model="#raul" rotation="0 0 0" scale="5 5 5" position="0 9.5 -18.5"></a-entity>
 
            <!-- Caja 3  -->
-        <a-box opacity="0.6" material="transparent: true" position="0 8.4 -17.6" rotation="0 0 0" color="#CCCCCC" scale="1.5 0.7 0.1" toggle-text="groupId: #text-group3">
+        <a-box class="interactable" opacity="0.6" material="transparent: true" position="0 8.4 -17.6" rotation="0 0 0" color="#CCCCCC" scale="1.5 0.7 0.1" toggle-text="groupId: #text-group3">
         <a-text value="+info" color="black" align="center" position="0 0 0.6" scale="1.7 1.7 1.7"></a-text>
         </a-box>
 
@@ -185,7 +187,7 @@
         <a-entity gltf-model="#david" rotation="0 0 0" scale="5 5 5" position="10 9.2 -18.5"></a-entity>
 
         <!-- Caja 4  -->
-        <a-box opacity="0.6" material="transparent: true" position="10 8.4 -17.6" rotation="0 0 0" color="#CCCCCC" scale="1.5 0.7 0.1" toggle-text="groupId: #text-group4">
+        <a-box class="interactable" opacity="0.6" material="transparent: true" position="10 8.4 -17.6" rotation="0 0 0" color="#CCCCCC" scale="1.5 0.7 0.1" toggle-text="groupId: #text-group4">
         <a-text value="+info" color="black" align="center" position="0 0 0.6" scale="1.7 1.7 1.7"></a-text>
         </a-box>
 
@@ -211,7 +213,7 @@
         <a-entity gltf-model="#lucia" rotation="0 0 0" scale="5 5 5" position="20 9.2 -18.5"></a-entity>
 
         <!-- Caja 5  -->
-        <a-box opacity="0.6" material="transparent: true" position="20 8.4 -17.6" rotation="0 0 0" color="#CCCCCC" scale="1.5 0.7 0.1" toggle-text="groupId: #text-group5">
+        <a-box class="interactable" opacity="0.6" material="transparent: true" position="20 8.4 -17.6" rotation="0 0 0" color="#CCCCCC" scale="1.5 0.7 0.1" toggle-text="groupId: #text-group5">
         <a-text value="+info" color="black" align="center" position="0 0 0.6" scale="1.7 1.7 1.7"></a-text>
         </a-box>
 
@@ -239,7 +241,7 @@
         <a-entity gltf-model="#jiale" rotation="0 180 0" scale="5 5 5" position="-20 9.5 18.8"></a-entity>
 
         <!-- Caja 4  -->
-        <a-box opacity="0.6" material="transparent: true" position="-20 8.4 17.6" rotation="0 180 0" color="#CCCCCC" scale="1.5 0.7 0.1" toggle-text="groupId: #text-group6">
+        <a-box class="interactable" opacity="0.6" material="transparent: true" position="-20 8.4 17.6" rotation="0 180 0" color="#CCCCCC" scale="1.5 0.7 0.1" toggle-text="groupId: #text-group6">
         <a-text value="+info" color="black" align="center" position="0 0 0.6" scale="1.7 1.7 1.7"></a-text>
         </a-box>
 
@@ -266,7 +268,7 @@
         <a-entity gltf-model="#faryal" rotation="0 180 0" scale="5 5 5" position="-10 9.5 18.8"></a-entity>
 
         <!-- Caja 7  -->
-        <a-box opacity="0.6" material="transparent: true" position="-10 8.4 17.6" rotation="0 180 0" color="#CCCCCC" scale="1.5 0.7 0.1" toggle-text="groupId: #text-group7">
+        <a-box class="interactable" opacity="0.6" material="transparent: true" position="-10 8.4 17.6" rotation="0 180 0" color="#CCCCCC" scale="1.5 0.7 0.1" toggle-text="groupId: #text-group7">
         <a-text value="+info" color="black" align="center" position="0 0 0.6" scale="1.7 1.7 1.7"></a-text>
         </a-box>
 
@@ -292,7 +294,7 @@
         <a-entity gltf-model="#lola" rotation="0 180 0" scale="5 5 5" position="0 9.5 18.8"></a-entity>
 
         <!-- Caja 8  -->
-        <a-box opacity="0.6" material="transparent: true" position="0 8.4 17.6" rotation="0 180 0" color="#CCCCCC" scale="1.5 0.7 0.1" toggle-text="groupId: #text-group8">
+        <a-box class="interactable" opacity="0.6" material="transparent: true" position="0 8.4 17.6" rotation="0 180 0" color="#CCCCCC" scale="1.5 0.7 0.1" toggle-text="groupId: #text-group8">
         <a-text value="+info" color="black" align="center" position="0 0 0.6" scale="1.7 1.7 1.7"></a-text>
         </a-box>
 
@@ -317,7 +319,7 @@
         <a-entity gltf-model="#luisa" rotation="0 180 0" scale="5 5 5" position="10 9.5 18.8"></a-entity>
 
         <!-- Caja 9  -->
-        <a-box opacity="0.6" material="transparent: true" position="10 8.4 17.6" rotation="0 180 0" color="#CCCCCC" scale="1.5 0.7 0.1" toggle-text="groupId: #text-group9">
+        <a-box class="interactable" opacity="0.6" material="transparent: true" position="10 8.4 17.6" rotation="0 180 0" color="#CCCCCC" scale="1.5 0.7 0.1" toggle-text="groupId: #text-group9">
         <a-text value="+info" color="black" align="center" position="0 0 0.6" scale="1.7 1.7 1.7"></a-text>
         </a-box>
 
@@ -342,7 +344,7 @@
         <a-entity gltf-model="#has" rotation="0 180 0" scale="5 5 5" position="20 9.5 18.8"></a-entity>
        
        <!-- Caja 10  -->
-       <a-box opacity="0.6" material="transparent: true" position="20 8.4 17.6" rotation="0 180 0" color="#CCCCCC" scale="1.5 0.7 0.1" toggle-text="groupId: #text-group10">
+       <a-box class="interactable" opacity="0.6" material="transparent: true" position="20 8.4 17.6" rotation="0 180 0" color="#CCCCCC" scale="1.5 0.7 0.1" toggle-text="groupId: #text-group10">
         <a-text value="+info" color="black" align="center" position="0 0 0.6" scale="1.7 1.7 1.7"></a-text>
         </a-box>
 
@@ -376,7 +378,7 @@
         <a-entity gltf-model="#libro" rotation="0.5 0 27.5" scale="0.05 0.05 0.05" position="21 4.6 6"></a-entity>
         
         <!-- Botón interactivo derecho -->
-        <a-box opacity="0" material="transparent: true" position="20.8 4.8 6" rotation="-60 -90 0" color="#CCCCCC" scale="2.5 2 0.1" toggle-text="groupId: #text-group11">
+        <a-box class="interactable" opacity="0" material="transparent: true" position="20.8 4.8 6" rotation="-60 -90 0" color="#CCCCCC" scale="2.5 2 0.1" toggle-text="groupId: #text-group11">
         </a-box>
 
         <a-entity id="text-group11" position="24 7.5 13" rotation="0 -90 0" visible="false">
@@ -412,7 +414,7 @@
         <a-entity gltf-model="#libro" rotation="0.5 0 27.5" scale="0.05 0.05 0.05" position="21 4.6 -7"></a-entity>
         
         <!-- Botón interactivo izquierdo -->
-        <a-box opacity="0" material="transparent: true" position="20.8 4.8 -7" rotation="-60 -90 0" color="#CCCCCC" scale="2.5 2 0.1" toggle-text="groupId: #text-group12">
+        <a-box class="interactable" opacity="0" material="transparent: true" position="20.8 4.8 -7" rotation="-60 -90 0" color="#CCCCCC" scale="2.5 2 0.1" toggle-text="groupId: #text-group12">
         </a-box>
 
         <a-entity id="text-group12" position="24 7.5 -13" rotation="0 -90 0" visible="false">
@@ -435,12 +437,12 @@
 
 
 
-        <a-box class="burbuja" scale="3 0.7 0.1" position="-24.8 12.5 0" rotation="0 90 0"  color="#ffff" event-set__click="_event: click; color: red"
+        <a-box class="interactable"  scale="3 0.7 0.1" position="-24.8 12.5 0" rotation="0 90 0"  color="#ffff" event-set__click="_event: click; color: red"
            onclick="window.location.href='index.html'">
             <a-text value="volver al inicio" scale="0.7 2 1" position="-0.5 0 0.5" color="#555555"></a-text>     
         </a-box>
 
-        <a-box class="burbuja" scale="3 0.7 0.1" position="-25 12.5 0" rotation="0 -90 0"  color="#ffff" event-set__click="_event: click; color: red"
+        <a-box class="interactable" scale="3 0.7 0.1" position="-25 12.5 0" rotation="0 -90 0"  color="#ffff" event-set__click="_event: click; color: red"
         onclick="window.location.href='index.html'">
          <a-text value="volver al inicio" scale="0.7 2 1" position="-0.5 0 0.5" color="#555555"></a-text>     
      </a-box>

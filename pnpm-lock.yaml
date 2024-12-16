@@ -11,9 +11,15 @@ importers:
       aframe:
         specifier: ^1.6.0
         version: 1.6.0
+      aframe-animation-component:
+        specifier: ^5.1.2
+        version: 5.1.2
       aframe-effects:
         specifier: ^0.9.1
         version: 0.9.1
+      aframe-environment-component:
+        specifier: ^1.4.0
+        version: 1.4.0
       aframe-extras:
         specifier: ^7.5.2
         version: 7.5.2
@@ -278,8 +284,14 @@ packages:
   '@types/responselike@1.0.3':
     resolution: {integrity: sha512-H/+L+UkTV33uf49PH5pCAUBVPNj2nDBXTN+qS1dOwyyg24l3CcicicCA7ca+HMvJBZcFgl5r8e+RR6elsb4Lyw==}
 
+  aframe-animation-component@5.1.2:
+    resolution: {integrity: sha512-DGUsRGB6TaN0rRKGYRrU0M1eblhpnMMYR1Vhulh0d5TxQRNszWJ5I1aHB/YW6wcj0gO89hLabSe5Is5NFpUeGg==}
+
   aframe-effects@0.9.1:
     resolution: {integrity: sha512-HicRWqlttT1LBumMEKOdYCP/w16k2zWsyLVhBoRMHnA28/zA6s1i4EztWPtC1F6Jk0WF+F+HKrjP37atz8yMwg==}
+
+  aframe-environment-component@1.4.0:
+    resolution: {integrity: sha512-7TgXnMi/GZREIzrdta2laGKpB3bRLr8HvH4PMD4yZwPxD76LIRQFxtYpeq2YeWZqMLjonCUI55yt7sAzzClOcw==}
 
   aframe-extras@7.5.2:
     resolution: {integrity: sha512-rLjKZTMDVt+ial6/S8IH1lnKAQQgPclMNjuImh80nC67OTUT9yOEOZh79IqSOQD2YGs1DEwkl9hAkUSiPkUKCQ==}
@@ -290,6 +302,9 @@ packages:
 
   an-array@1.0.0:
     resolution: {integrity: sha512-M175GYI7RmsYu24Ok383yZQa3eveDfNnmhTe3OQ3bm70bEovz2gWenH+ST/n32M8lrwLWk74hcPds5CDRPe2wg==}
+
+  animejs@2.2.0:
+    resolution: {integrity: sha512-suPqfRapTDhrfwxg1El8LlGz6qVGwoandR2uRQLQBxXavxkpIr9Uv2kNGrJIF7oa001jSxS5rRIXPHryKIshJg==}
 
   array-shuffle@1.0.1:
     resolution: {integrity: sha512-PBqgo1Y2XWSksBzq3GFPEb798ZrW2snAcmr4drbVeF/6MT/5aBlkGJEvu5A/CzXHf4EjbHOj/ZowatjlIiVidA==}
@@ -779,7 +794,13 @@ snapshots:
     dependencies:
       '@types/node': 22.10.1
 
+  aframe-animation-component@5.1.2:
+    dependencies:
+      animejs: 2.2.0
+
   aframe-effects@0.9.1: {}
+
+  aframe-environment-component@1.4.0: {}
 
   aframe-extras@7.5.2:
     dependencies:
@@ -801,6 +822,8 @@ snapshots:
       - supports-color
 
   an-array@1.0.0: {}
+
+  animejs@2.2.0: {}
 
   array-shuffle@1.0.1: {}
 

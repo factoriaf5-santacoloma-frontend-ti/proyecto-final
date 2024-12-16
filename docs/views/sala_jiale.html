@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
-  <script type="module" crossorigin src="/proyecto-final/assets/aframe-master-BqMUpO3Y.js"></script>
-  <script type="module" crossorigin src="/proyecto-final/assets/index-D66LEcnl.js"></script>
+  <script type="module" crossorigin src="/proyecto-final/assets/aframe-master-1FPB_1PP.js"></script>
+  <script type="module" crossorigin src="/proyecto-final/assets/index-DNbT2VYR.js"></script>
 </head>
 <body>
     <a-scene>
@@ -26,13 +26,15 @@
     
       </a-assets>
     
+    
     <audio id="background-music" src="../assets/sala_jiale/musica/AbChoiceUi_BGM.mp3" preload="auto" loop></audio>
     
-    <a-camera position="0 5 10">
-        <a-entity laser-controls="hand: left"></a-entity>
-        <a-entity laser-controls="hand: right"></a-entity>
-        <a-cursor scale="1 1 1" color="#fff"></a-cursor>
-    </a-camera>
+    <a-entity id="camera-rig" position="0 8 10" movement-controls="speed: 0.5">
+        <a-entity camera look-controls></a-entity>
+        <!-- Controladores VR (Meta Quest) -->
+        <a-entity oculus-touch-controls="hand: left"></a-entity>
+        <a-entity oculus-touch-controls="hand: right"></a-entity>
+    </a-entity>
       
     <a-box src="../assets/sala_jiale/imagen/ParedyPiso_baseColor_pader.png" scale="10 25 1" position=" 10 5 0 " metalness="0.5"></a-box>
       
