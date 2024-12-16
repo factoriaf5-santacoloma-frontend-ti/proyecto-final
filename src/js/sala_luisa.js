@@ -102,3 +102,22 @@ addRandomFlores(25);
 addRandomTree(8);
 addRandomMushrooms(15);
 
+AFRAME.registerComponent('play-audio-on-load', {
+    init: function () {
+      // Esperar a que la escena esté completamente cargada
+      const sceneEl = this.el.sceneEl;
+      sceneEl.addEventListener('loaded', () => {
+        // Obtener el elemento de audio por su ID
+        const audio = document.getElementById('music');
+        if (audio) {
+          // Reproducir el audio
+          audio.play().catch((error) => {
+            console.warn('Interacción de usuario requerida para reproducir el audio:', error);
+          });
+        } else {
+          console.error('No se encontró el elemento de audio con el ID "music".');
+        }
+      });
+    }
+  });
+  
