@@ -17,7 +17,7 @@
             <a-asset-item id="welcome" src="../assets/sala_luisa/lit_welcome_sign_planter_prop/scene.gltf"></a-asset-item>
             <a-asset-item id="flowers" src="../assets/sala_luisa/flowers/scene.gltf"></a-asset-item>
             <a-asset-item id="tree" src="../assets/sala_luisa/stylized_tree/scene.gltf"></a-asset-item>
-            <a-asset-item id="mushrooms" src="../assets/sala_luisa/mushrooms/scene.gltf"></a-asset-item>
+            <a-asset-item id="mushrooms" src="../public/assets/sala_luisa/mushrooms/scene.gltf"></a-asset-item>
             <a-asset-item id="piano" src="../assets/sala_luisa/piano/scene.gltf"></a-asset-item>
             <a-asset-item id="cartelera" src="../assets/sala_luisa/clapperboard/scene.gltf"></a-asset-item>
             <a-asset-item id="medusa" src="../assets/sala_luisa/jellyfish/scene.gltf"></a-asset-item>
@@ -28,6 +28,7 @@
             <a-asset-item id="planet" src="../public/assets/sala_luisa/planet/scene.gltf"></a-asset-item>
             <a-asset-item id="girl" src="../public/assets/sala_luisa/girl/scene.gltf"></a-asset-item>
             <a-asset-item id="sign" src="../public/assets/sala_luisa/sign/scene.gltf"></a-asset-item>
+            <a-asset-item id="magic" src="../public/assets/sala_luisa/magic/scene.gltf"></a-asset-item>
         </a-assets>
         <audio id="background-music" src="../public/assets/sala_luisa/music.mp3" preload="auto" loop></audio>
 
@@ -40,14 +41,14 @@
             <a-entity camera look-controls></a-entity>
         
             <!-- Controladores VR con rayos láser -->
-            <a-entity oculus-touch-controls="hand: left" laser-controls raycaster="lineColor: red; lineOpacity: 0.5; far:10"></a-entity>
+            <a-entity oculus-touch-controls="hand: left" laser-controls raycaster="lineColor: #FFFb; lineOpacity: 0.5; far:10"></a-entity>
             <a-entity oculus-touch-controls="hand: right"></a-entity>
             </a-entity>
         </a-entity>
 
         <a-light type="ambient" color="#fff" intensity="1.0"></a-light>
 
-        <a-entity sound="src: #background-music; autoplay: true; loop: true; volume: 0.5"></a-entity>
+        <a-entity sound="src: #background-music; autoplay: true; loop: true; volume: 1"></a-entity>
         <!-- Objetos en la escena -->
         <a-entity gltf-model="#cat" position="-17.64302 -0.045 20" scale="0.004 0.004 0.004" animation-mixer="" rotation="0 112 0"></a-entity>
         <a-entity gltf-model="#welcome"  position="0 -0.045 -3" scale="2 2 2" class="clickable" onclick="window.location.href='../';"></a-entity>
@@ -60,6 +61,7 @@
         <a-text value="¡Mis Proyectos!" position="27 9 -30" color="#FFFFFF" align="center" font="https://cdn.aframe.io/fonts/mozillavr.fnt" scale="5 5 5"></a-text>
         <a-text value="¡Mis Redes Sociales!" position="-23 10 -30" color="#FFFFFF" align="center" font="https://cdn.aframe.io/fonts/mozillavr.fnt" scale="5 5 5"></a-text>
         <a-entity gltf-model="#house" position="-21 0 27.9416" scale="230 230 230" rotation="0 119.2863751994666 0"></a-entity>
+        <a-entity id="magic" gltf-model="#magic" position="-20.4 0.5 27.5" scale="0.28 0.28 0.28" rotation="0 125 0"></a-entity>
         <a-entity gltf-model="#planet" position="15.52842 23.81114 29.1145" scale="150 150 150" rotation="0 119.286 0"></a-entity>
         <a-entity gltf-model="#girl" position="-13.5 1.5 24" scale="1.5 1.5 1.5" rotation="0 142 0"></a-entity>
         <a-entity gltf-model="../public/assets/sala_luisa/sign/scene.gltf" position="-12.08524 -0.36317 26.11452" scale="1.5 1.5 1.5" rotation="0 142 0">

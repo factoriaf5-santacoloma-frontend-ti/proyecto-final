@@ -5,12 +5,12 @@ const scene = document.querySelector('a-scene');
 const plane = document.querySelector('a-plane');
 const occupiedPositions = [];
 
-// const clickableElements = document.querySelectorAll('.clickable');
-//     clickableElements.forEach(element => {
-//     element.addEventListener('click', function () {
-//         window.open(element.getAttribute('href'), '_blank');
-//     });
-// });
+const clickableElements = document.querySelectorAll('.clickable');
+    clickableElements.forEach(element => {
+    element.addEventListener('click', function () {
+        window.open(element.getAttribute('href'), '_blank');
+    });
+});
 
 // Posición del objeto fijo (#welcome)
 const fixedObjectPosition = { x: 0, y: -0.045, z: -3 };
@@ -66,19 +66,19 @@ function addRandomFlores(numFlores) {
 }
 
 // Función para agregar árboles
-// function addRandomTree(numTree) {
-//     for (let i = 0; i < numTree; i++) {
-//         const tree = document.createElement('a-entity');
+function addRandomTree(numTree) {
+    for (let i = 0; i < numTree; i++) {
+        const tree = document.createElement('a-entity');
 
-//         tree.setAttribute('gltf-model', '#tree');
-//         tree.setAttribute('scale', '15 15 15');
+        tree.setAttribute('gltf-model', '#tree');
+        tree.setAttribute('scale', '15 15 15');
 
-//         const { x, y, z } = getRandomValidPositionOnPlane(plane, 5);
-//         tree.setAttribute('position', `${x} ${y + 0.1} ${z}`);
+        const { x, y, z } = getRandomValidPositionOnPlane(plane, 5);
+        tree.setAttribute('position', `${x} ${y + 0.1} ${z}`);
 
-//         scene.appendChild(tree);
-//     }
-// }
+        scene.appendChild(tree);
+    }
+}
 
 
 function addRandomMushrooms(numMushrooms) {
@@ -98,26 +98,6 @@ function addRandomMushrooms(numMushrooms) {
 }
 
 // Llamada a las funciones
-addRandomFlores(25);
-addRandomTree(8);
-addRandomMushrooms(15);
+addRandomFlores(35);
+addRandomMushrooms(20);
 
-AFRAME.registerComponent('play-audio-on-load', {
-    init: function () {
-      // Esperar a que la escena esté completamente cargada
-      const sceneEl = this.el.sceneEl;
-      sceneEl.addEventListener('loaded', () => {
-        // Obtener el elemento de audio por su ID
-        const audio = document.getElementById('music');
-        if (audio) {
-          // Reproducir el audio
-          audio.play().catch((error) => {
-            console.warn('Interacción de usuario requerida para reproducir el audio:', error);
-          });
-        } else {
-          console.error('No se encontró el elemento de audio con el ID "music".');
-        }
-      });
-    }
-  });
-  
