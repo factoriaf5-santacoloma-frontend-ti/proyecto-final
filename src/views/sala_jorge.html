@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>sala_jorge's House</title>
   
-  
+  <script src="../js/sala_jorge.js"></script> <!-- Tu script personalizado -->
 </head>
 <body>
   <a-scene>
@@ -23,29 +23,43 @@
       <a-asset-item id="ghost-don" src="../assets/sala_jorge/ghost_don.glb"></a-asset-item>
       <a-asset-item id="cute-ghost" src="../assets/sala_jorge/a_cute_ghost.glb"></a-asset-item>
       <a-asset-item id="leftHandModel" src="../assets/sala_jorge/leftHandLow.glb"></a-asset-item>
-  <a-asset-item id="rightHandModel" src="../assets/sala_jorge/rightHandLow.glb"></a-asset-item>
+      <a-asset-item id="rightHandModel" src="../assets/sala_jorge/rightHandLow.glb"></a-asset-item>
+      <a-asset-item id="vertice-scene" src="../assets/sala_jorge/ring.glb"></a-asset-item>
+        <a-asset-item id="portal-exit" src="../assets/sala_jorge/portalexit.glb"></a-asset-item>
+        <a-asset-item id="ghost-globo" src="../assets/sala_jorge/ghostglobo.glb"></a-asset-item>
+         <a-asset-item id="sadghost-model" src="../assets/sala_jorge/sadghost/scene.gltf"></a-asset-item>
+         <audio id="theme-music" src="../assets/sala_jorge/themeoutside.mp3" preload="auto"></audio>
+         <a-asset-item id="spider" src="../assets/sala_jorge/spider/scene.gltf"></a-asset-item>
 
-   
-  <audio id="theme-music" src="../assets/sala_jorge/themeoutside.mp3" preload="auto"></audio>
- <!-- Cámara con controles -->
- <a-entity id="rig" movement-controls="fly: true; speed: 0.1">
-  <a-camera position="0 1.6 0" look-controls wasd-controls="acceleration: 150">
-    <a-cursor raycaster="objects: .clickable"></a-cursor>
-  </a-camera>
-  <!-- Controles de mano para VR -->
-  <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
-  <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
+        
+
+</a-assets>
+<a-entity 
+sound="src: #theme-music; autoplay: true; loop: true; positional: false; volume: 0.5">
 </a-entity>
+  
+  <a-entity id="rig" movement-controls=" speed: 1">
+    <a-camera position="0 5 0" look-controls wasd-controls="acceleration: 150">
+      <a-cursor raycaster="objects: .clickable"
+      material="color: white; opacity: 1"></a-cursor>
+    </a-camera>
+    <!-- Controles de mano para VR -->
+    <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
+    <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
+  </a-entity>
+  
+  
+
+  <!-- Depuración visual para asegurar que el movimiento funcione -->
+  <a-entity 
+    id="debug-movement" 
+    text="value:; color: red; width: 5" 
+    position="0 3 -4">
+  </a-entity>
        <!-- Imágenes -->
        <img id="slashermovies" src="../assets/sala_jorge/slashermovies.png" crossorigin="anonymous">
        <img id="dindom" src="../assets/sala_jorge/dindom.png" alt="Dindom Image">
        <img id="bubbles" src="../assets/sala_jorge/bubbles.png" alt="Bubbles Image">
-
-     <!-- Entidad para música -->
-     <a-entity 
-     sound="src: #theme-music; autoplay: true; loop: true; volume: 0.5">
-   </a-entity>
-
 
     </a-assets>
     <a-entity id="leftHand" gltf-model="#leftHandModel" hand-controls="hand: left; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
@@ -54,9 +68,14 @@
       <img id="sky" src="../assets/sala_jorge/redsky.jpg">
       
      
-
+      <a-entity 
+      gltf-model="#evil-portal" 
+      position="0 0 -10" 
+      scale="1 1 1"
+      change-model-color="color: blue">
+    </a-entity>
     
-
+  </a-entity>
     <!-- MANSION -->
     <a-entity 
       gltf-model="#mansion"
@@ -64,13 +83,23 @@
       scale="0.3 0.3 0.3">
     </a-entity>
 
+    <!-- PATIO -->
     <a-entity 
-      sound="src: #background-music; autoplay: true; loop: true; volume: 1">
+    id="low-poly-graveyard-entity" 
+    gltf-model="#low-poly-graveyard" 
+    position="100 0 -200" 
+    scale="10 10 10" 
+    rotation="0 180 0">
+</a-entity>
+
+
+    <a-entity gltf-model="../assets/sala_jorge/ring.glb" position="55.7487 -1.769 -121.60676" scale="10.72257 10.82759 3.769" animation-mixer="">
     </a-entity>
+
     
 
     <!-- Luces -->
-    <a-light type="directional" color="#FF0000" intensity="2" position="0 -100 0" target="#scene-center"></a-light>
+    <a-light type="directional" color="#FF0000" intensity="2" position="0 0 0" target="#scene-center"></a-light>
     <a-light type="ambient" color="#e8ccff" intensity="0.5"></a-light>
 
     <!-- Marcador del centro de la escena -->
@@ -85,35 +114,40 @@
       rotation="0 70 0">
     </a-entity>
 
-   <!-- Fantasma con sombrero -->
-   <a-entity 
-   id="ghost-tophat"
-   gltf-model="#ghost-tophat"
-   class="clickable"
-   animation-mixer
-   position="120 -2.98681 25"
-   scale="5 5 5"
-   rotation="0 -90 0"
-   animation="property: position; dir: alternate; dur: 2000; loop: true; to: 120 0 25"
-   class="clickable"
-  event-set__enter="_event: mouseenter; _target: #tophat-text; visible: true"
-  event-set__leave="_event: mouseleave; _target: #tophat-text; visible: false"
-  event-set__enter="_event: raycaster-intersected; _target: #tophat-response; visible: true"
-  event-set__leave="_event: raycaster-intersected-cleared; _target: #tophat-response; visible: false"
-  onclick="document.getElementById('tophat-response').setAttribute('visible', 'true');">
-  
+  <!-- Fantasma con sombrero -->
+<a-entity 
+id="ghost-tophat" 
+gltf-model="#ghost-tophat" 
+class="clickable" 
+animation-mixer 
+position="120 -2.98681 25" 
+scale="5 5 5" 
+rotation="0 -90 0" 
+animation="property: position; dir: alternate; dur: 2000; loop: true; to: 120 0 25" 
+ghost-tophat-message>
+</a-entity>
 
- </a-entity>
+<!-- Texto dinámico para ghost-tophat -->
+<a-entity 
+id="tophat-response" 
+text="value: Vaya! Otra alma en pena, parece que estas en la lista de invitados de esta noche. Por favor, pasa.; 
+      align: center; 
+      color: #FFFFFF; 
+      width: 40" 
+position="120 19.61249 25" 
+visible="false" 
+rotation="0 -90 0">
+</a-entity>
 
- <!-- Texto dinámico -->
- <a-entity
-   id="tophat-response"
-   text="value: Vaya! Otra alma en pena, parece que estas en la lista de invitados de esta noche. Por favor, pasa. ; align: center; color: #FFFFFF; width: 40"
-   position="120 19.61249 25" 
-   visible="false"
-   rotation="0 -90 0"></a-entity> <!-- Inicialmente oculto -->
-   
- </a-entity>
+
+
+<!-- SADGHOST -->
+<a-entity id="sadghost" gltf-model="../assets/sala_jorge/sadghost/scene.gltf" position="79.08498 -4.82755 -214.70098" scale="0.3 0.3 0.3" rotation="0 180 0" class="clickable" animation="dir: alternate; dur: 4000; loop: true; property: position; to: 79.08498 -1 -214.70098" sadghost-message="">
+</a-entity>
+
+<!-- Texto del sadghost -->
+<a-entity id="sadghost-text" text="align: center; color: #FFFFFF; value: Que linda luna! Desde aqui veo otra cara diferente a cuando vivia en mi querida Venezuela, lastima que el color rojo no me trae lindos recuerdos!; width: 50" position="64.21717 16.4378 -207.24641" visible="false" rotation="0 179.3959504444364 0">
+</a-entity>
 
     <!-- ÁRBOL -->
     <a-entity 
@@ -133,45 +167,39 @@
   scale="40 40 40"
   rotation="0 -80 0"
   animation="property: position; dir: alternate; dur: 4000; loop: true; to: -120 -15 50"
-  onclick="document.getElementById('cat-response').setAttribute('visible', 'true');">
+  class="clickable"
+  cat-message>
 </a-entity>
 
-<!-- Texto -->
-<a-text
-  id="cat-response"
-  value="Un hombre sin propósito se pierde en distracciones! digo MIAU, MIAU!!!"
-  align="center"
-  color="#FFFFFF"
-  width="40"
-  anchor="center"
-  position="-75.95252 -220.19462 7.29031"
-  rotation="-5.688324990058812 90.03000426449651 -0.002864788975654116"
-  visible="false"> <!-- Inicialmente oculto -->
-</a-text>
+<!-- TEXTO DEL GATO -->
+<a-entity id="cat-text" text="align: center; color: #FFFFFF; value: Cuando reencarne, fundare GATALUNYA, para que todos hablemos gatalan! Digo, meow, meow!; width: 30" position="-101.60807 14.488 15.917" rotation="0 88.731 0" visible="false" scale="1.38 1.71 1.17">
+</a-entity>
 
-   <!-- GHOST -->
+<!-- Modelo ghost-boy -->
 <a-entity 
-id="ghost-boy"
-gltf-model="#ghost-boy"
-animation-mixer="clip: *"
-position="50 -9.74 -90"
-scale="5 5 5"
-rotation="0 -1 0"
-class="clickable"
-event-set__enter="_event: mouseenter; _target: #ghost-text; visible: true"
-event-set__leave="_event: mouseleave; _target: #ghost-text; visible: false"
-onclick="document.getElementById('ghost-response').setAttribute('visible', 'true');"
-event-set__enter="_event: raycaster-intersected; _target: #ghost-response; visible: true"
-  event-set__leave="_event: raycaster-intersected-cleared; _target: #ghost-response; visible: false">
+  id="ghost-boy" 
+  gltf-model="#ghost-boy" 
+  animation-mixer="clip: *" 
+  position="50 -9.74 -90" 
+  scale="5 5 5" 
+  rotation="0 -1 0" 
+  class="clickable"
+  ghost-boy-message>
 </a-entity>
-<!-- TEXTO DEL GHOST-->
-<a-entity
-id="ghost-response"
-text="value: Por fin, te he estado esperando! Este bootcamp a matado mi existencia, pero mis proyectos siguen en vigencia! echales un vistazo!; align: center; color: #FFFFFF; width: 50"
-position="50.02 8.18 -90" 
-visible="false"
-rotation="0 -1 0"></a-entity>
- 
+
+<!-- Texto para ghost-boy -->
+<a-entity 
+  id="ghost-boy-text" 
+  text="value: Por fin, te he estado esperando! Este bootcamp ha matado mi existencia, pero mis proyectos siguen en vigencia! Entra a mi humilde hogar!; 
+        align: center; 
+        color: #FFFFFF; 
+        width: 50" 
+  position="50.02 8.18 -90" 
+  visible="false">
+</a-entity>
+
+<a-entity id="animated-scene" gltf-model="../assets/sala_jorge/fatghost/scene.gltf" position="52.425 -7.567 -203.3" scale="0.3 0.3 0.3" rotation="-13.376000000000001 178.127 0.433" animation-mixer="loop: pingpong; timeScale: 0.1">
+</a-entity>
 
 <!-- CUADRO 1-->
 <a-entity 
@@ -196,29 +224,30 @@ rotation="0 -1 0"></a-entity>
   gltf-model="#libreria"
   position="52.48596 -10.52 -181.10516" scale="0.03 0.04 0.042" rotation="-0.26 -88.797 0.076">
 </a-entity>
-<!-- Modelo de ghost_don -->
+
+<!-- Modelo ghost-don -->
 <a-entity 
-  gltf-model="#ghost-don"
+  id="ghost-don" 
+  gltf-model="#ghost-don" 
   position="65.59099 3 -171.02962"  
   scale="1 1 1"
   rotation="-1.4661989977397767 -38.91815823426117 2.9759427879094957" 
   animation="property: position; to: 65.59099 0 -171.02962; dir: alternate; dur: 3000; loop: true" 
   class="clickable"
-  event-set__enter="_event: mouseenter; _target: #ghost-don-text; visible: true"
-  event-set__leave="_event: mouseleave; _target: #ghost-don-text; visible: false"
-  onclick="document.getElementById('ghost-don-response').setAttribute('visible', 'true');"
-  event-set__enter="_event: raycaster-intersected; _target: #ghost-don-response; visible: true"
-  event-set__leave="_event: raycaster-intersected-cleared; _target: #ghost-don-response; visible: false"
-  onclick="document.getElementById('ghost-don-response').setAttribute('visible', 'true');">
+  ghost-don-message>
 </a-entity>
 
-<!-- Texto para ghost_don -->
+<!-- Texto para ghost-don -->
 <a-entity
-  id="ghost-don-response"
-  text="value: Lord Bastori le dedico mucho amor a sus obras. Se le olvidaba comer, cuidar su salud y ordenar su habitacion solo por alcanzar la perfeccion...; align: center; color: #FFFFFF; width: 30"
+  id="ghost-don-text"
+  text="value: Lord Bastori le dedico mucho amor a sus obras. Se le olvidaba comer, cuidar su salud y ordenar su habitacion solo por alcanzar la perfeccion...; 
+        align: center; 
+        color: #FFFFFF; 
+        width: 30"
   position="65.591 17.74 -171.03" 
-  visible="false"
-  rotation="-3.12491181464351 -42.869275189483325 1.9262841072298276"></a-entity>
+  rotation="-3.12491181464351 -42.869275189483325 1.9262841072298276"
+  visible="false">
+</a-entity>
 
 <!-- PROYECTOS  -->
 <!-- Imagen de Slashermovies como plano -->
@@ -230,14 +259,16 @@ rotation="0 -1 0"></a-entity>
       rotation="0 93.147 0" 
       scale="7.74908 5.50886 1.37839">
     </a-entity>
-
-<!-- Imagen de Dindom como plano -->
+<!-- Imagen Dindom (plano interactivo) -->
 <a-entity 
 id="plane-dindom"
 geometry="primitive: plane; width: 1.5; height: 1" 
 material="src: #dindom; transparent: true" 
-position="22.213 14.9812 -180.408" rotation="0 92.143072612939 0" scale="8.40839 7.42806 1.53038">
-
+position="22.213 14.9812 -180.408" 
+rotation="0 92.143072612939 0" 
+scale="8.40839 7.42806 1.53038" 
+class="clickable" 
+onclick="showPopupDindom();">
 </a-entity>
 
 <!-- Imagen de bubbles como plano -->
@@ -249,34 +280,184 @@ position="22.22524 3.04802 -169.87554" scale="8.14487 6.25159 8.44171" rotation=
 
 </a-entity>
 
-<!-- CUTE GHOST-->
+<!-- CUTE GHOST -->
 <a-entity 
-  id="cute-ghost"
-  gltf-model="#cute-ghost"
+  id="cute-ghost" 
+  gltf-model="#cute-ghost" 
   position="140.70749 -16.627 -71.0435" 
-  scale="6 6 6"
-  rotation="0 -50.054738898218986 0"
+  scale="6 6 6" 
+  rotation="0 -50.054738898218986 0" 
   animation="property: position; dir: alternate; dur: 5000; loop: true; to: 140.70749 -10.627 -71.0435" 
   class="clickable"
-  onclick="document.getElementById('cute-ghost-text').setAttribute('visible', 'true');"
-  event-set__enter="_event: raycaster-intersected; _target: #cute-ghost-text; visible: true"
-  event-set__leave="_event: raycaster-intersected-cleared; _target: #cute-ghost-text; visible: false">
+  cute-ghost-message>
 </a-entity>
 
-<!-- Texto para el nuevo fantasma -->
-<a-entity
- id="cute-ghost-text"
- text="value: Eh? Y yo que hago aca? Lo ultimo que recuerdo es haber caminado la subidita para llegar al Espai de les oportunitats, pues vaya oportunidad de morir, no?; align: center; color: #FFFFFF; width: 50"
- position="140.70749 15 -71.0435" 
- visible="false"
- rotation="0 -50.054738898218986 0"></a-entity>
+<!-- Texto para el cute ghost -->
+<a-entity 
+  id="cute-ghost-text" 
+  text="value: Eh? Y yo que hago aca? Lo ultimo que recuerdo es haber caminado aquella gran subida para llegar al Espai de les oportunitats, pues vaya oportunidad de morir, no?; 
+        align: center; 
+        color: #FFFFFF; 
+        width: 50" 
+  position="140.70749 15 -71.0435" 
+  visible="false" 
+  rotation="0 -50.054738898218986 0">
+</a-entity>
+
     <!-- Cielo -->
     <a-sky src="#sky" scale="6 6 6"></a-sky>
 
-  </a-scene>
-  
-  <script type="module" src="../js/sala_jorge.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
 
+    <a-entity id="portal-container" position="37.25172 -22.411 116.14625">
+      <!-- Modelo del portal -->
+      <a-entity 
+        gltf-model="../assets/sala_jorge/portalexit.glb" 
+        scale="12.14896 2 11.32516" 
+        rotation="0 180 0" 
+        animation-mixer="timeScale: 0.2">
+      </a-entity>
+    
+      <a-box position="-0.48215 2 0.19297" depth="0.5" width="3" height="3" material="opacity: 0; transparent: true" class="clickable" go-back="" scale="13.3629 13.11794 20.4223" rotation="-87.54107560244822 0 0">
+      </a-box>
+    </a-entity>
+
+        <!-- GHOST-GLOBO -->
+        <a-entity id="ghost-globo" gltf-model="../assets/sala_jorge/ghostglobo.glb" position="-54.079 -0.318 -133.127" scale="0.5 0.5 0.5" rotation="0 58.90865570637558 0" class="clickable" ghost-globo-message="" animation="property: position; dir: alternate; dur: 3000; loop: true; to: -54.079 3 -133.127">
+        </a-entity>
+
+<!-- Texto del ghost-globo -->
+<a-entity id="ghost-globo-text" text="align: center; color: #FFFFFF; value: ¿Has pensado alguna vez que siempre buscamos distracciones? Es como si tuvieramos miedo de estar encerrados para hablar con nosotros mismos; width: 50" position="-52.19072 11.19698 -124.42969" visible="false" rotation="0 33.675021451019006 0" scale="0.57 0.65 0.9">
+</a-entity>
+
+  
+    <!-- SPIDER -->
+    <a-entity id="spider" gltf-model="../assets/sala_jorge/spider/scene.gltf" position="54.528 -0.826 -188.171" scale="1.9 1.9 1.9" rotation="0 10.787 0" animation-mixer="loop: pingpong" spider-message  class="clickable">
+    </a-entity>
+    
+    <!-- TEXTO DEL SPIDER -->
+    <a-entity id="spider-text" text="align: center; color: #FFFFFF; value: Muchos nos hemos tardado en descubrir lo que nos apasiona! Pero hoy despues de tres siglos, me estoy dedicando a tejer historias mientras bailo!; width: 40" position="54.20773 7.51021 -185.58275" rotation="0 0.31101 0" visible="false" scale="0.45 0.44 1">
+    </a-entity>
+
+<!-- Popup para Slashermovies -->
+<div id="popup-slashermovies" style="
+    display: none; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 800px; 
+    height: 600px; 
+    background-color: white; 
+    border: 2px solid black; 
+    z-index: 9999;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);">
+    <iframe src="https://jortecs.github.io/slashermovies/" style="width: 100%; height: 100%; border: none;"></iframe>
+    <button onclick="hidePopupSlasher()" style="
+        position: absolute; 
+        top: 10px; 
+        right: 10px; 
+        background-color: red; 
+        color: white; 
+        border: none; 
+        padding: 10px; 
+        cursor: pointer;">
+        X
+    </button>
+</div>
+<a-entity 
+    id="plane-slashermovies"
+    geometry="primitive: plane; width: 1.5; height: 1" 
+    material="src: #slashermovies; transparent: true" 
+    position="22.50693 14.58608 -159.29297" 
+    rotation="0 93.147 0" 
+    scale="7.74908 5.50886 1.37839" 
+    class="clickable" 
+    onclick="showPopupSlasher();">
+</a-entity>
+
+
+<!-- Popup para Dindom -->
+<div id="popup-dindom" style="
+    display: none; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 800px; 
+    height: 600px; 
+    background-color: white; 
+    border: 2px solid black; 
+    z-index: 9999;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);">
+    <iframe src="https://jortecs.github.io/anden-27/" style="width: 100%; height: 100%; border: none;"></iframe>
+    <button onclick="hidePopupDindom()" style="
+        position: absolute; 
+        top: 10px; 
+        right: 10px; 
+        background-color: red; 
+        color: white; 
+        border: none; 
+        padding: 10px; 
+        cursor: pointer;">
+        X
+    </button>
+</div>
+<a-entity 
+    id="plane-dindom"
+    geometry="primitive: plane; width: 1.5; height: 1" 
+    material="src: #dindom; transparent: true" 
+    position="22.213 14.9812 -180.408" 
+    rotation="0 92.143072612939 0" 
+    scale="8.40839 7.42806 1.53038" 
+    class="clickable" 
+    onclick="showPopupDindom();">
+</a-entity>
+
+<!-- Popup para Bubbles -->
+<div id="popup-bubbles" style="
+    display: none; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 800px; 
+    height: 600px; 
+    background-color: white; 
+    border: 2px solid black; 
+    z-index: 9999;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);">
+    <iframe 
+        src="https://factoriaf5-santacoloma-frontend-ti.github.io/bubble-game-los-justicieros/" 
+        style="width: 100%; height: 100%; border: none;">
+    </iframe>
+    <button onclick="hidePopupBubbles()" style="
+        position: absolute; 
+        top: 10px; 
+        right: 10px; 
+        background-color: red; 
+        color: white; 
+        border: none; 
+        padding: 10px; 
+        cursor: pointer;">
+        X
+    </button>
+</div>
+
+<!-- Imagen de Bubbles (plano interactivo) -->
+<a-entity 
+    id="plane-bubbles"
+    geometry="primitive: plane; width: 1.5; height: 1" 
+    material="src: #bubbles; transparent: true" 
+    position="22.22524 3.04802 -169.87554" 
+    scale="8.14487 6.25159 8.44171" 
+    rotation="0.5047758175102552 92.84379999638399 0.3569527063665029" 
+    class="clickable" 
+    onclick="showPopupBubbles();">
+</a-entity>
+
+  </a-scene>
+
+  <script type="module" src="../js/sala_jorge.js"></script>
+  
 </body>
 </html>
