@@ -2,22 +2,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <title>Sala Alba</title>
-  <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script> -->
-
   <title>Sala Alba</title>
-  <!-- <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>  -->
 
+  <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+
+  
 
 
   <title>Sala Alba</title>
 </head>
 <body>
-  <!-- <a-scene cursor="rayOrigin: mouse" vr-mode-ui="enabled: true" xrwebgl="enabled: true"> -->
+    <!-- <a-scene cursor="rayOrigin: mouse" vr-mode-ui="enabled: true" xrwebgl="enabled: true"> -->
 
 <a-scene> 
     <a-assets>
-        <audio id="avatar-sound" src="../public/assets/sala_alba/WhatsApp Ptt 2024-12-11 at 14.04.21.ogg"></audio>
+        <audio id="avatar-sound" src="../assets/sala_alba/WhatsApp Ptt 2024-12-11 at 14.04.21.ogg"></audio>
 
         <img id="grass" src="../assets/sala_luisa/grass.jpg" crossorigin="anonymous" />
         <img id="skyblue" src="../assets/sala_alba/sky_blue.jpg" crossorigin="anonymous" />
@@ -32,7 +31,7 @@
         <img id="tallergame" src="../assets/sala_alba/tallergaming.jpg">
         <img id="jobs" src="../assets/sala_alba/integrajobes.png">
         <img id="raval" src="../assets/sala_alba/ravaleando.jpg">
-        <a-asset-item  id= "pedestal" src="../public/assets/sala_alba/pedestal/scene.gltf">
+        <a-asset-item  id= "pedestal" src="../assets/sala_alba/pedestal/scene.gltf">
     </a-assets>
 
   
@@ -56,7 +55,7 @@
     </a-entity>
     
     <a-camera>
-        <a-cursor raycaster= "objects= .interactable"></a-cursor> 
+        <a-cursor raycaster></a-cursor> 
     </a-camera> 
 
     
@@ -79,19 +78,18 @@
        class="interactable">
     </a-box>
 
-    <!-- Texto -->
-    <a-entity id="text1" rotation="0 -50 0" position="13 3 -7" visible="false">
+    <a-entity id="text1" rotation="19.94695267968448 -88.71220133569562 0.4394586288653414" position="13.20112 3.03982 -7.50855" visible="false">
+        <!-- Plano blanco de fondo -->
+        <a-plane position="0 0 -0.3205" width="5" height="2" color="#FFFFFF" opacity="0.8" material="" geometry="">
+        </a-plane>
+        
+        <!-- Texto -->
         <a-text value="
-        Esdeveniments que cohesionen
-        Accions clau com la Diada de Primavera, les Festes de Barri i Ravaleando han servit com a punts de trobada per la comunitat, reforçant les relacions veïnals i la identitat local."
-           color="#555555" 
-           align="center" 
-           scale="0.5 0.5 0.5">  
+            Esdeveniments que cohesionen
+            Accions clau com la Diada de Primavera, les Festes de Barri i Ravaleando han servit com a punts de trobada per la comunitat, reforçant les relacions veïnals i la identitat local." color="#000000" align="center" scale="0.7855 1.10042 0.68325" position="0 0.04435 0.02">
         </a-text>
     </a-entity>
-   
-
-
+    
 
       <!--defesa feminina-->
       <a-box position="-15 3 -15" rotation="0 0 0" 
@@ -108,14 +106,21 @@
        visible="true">
     </a-box>
 
+
+
     <!-- Texto -->
-    <a-entity id="text2" rotation="0 -50 0" position="-13 3 -10" visible="false">
+    <a-entity id="text2" rotation="4.631217858042444 -50.22376144778257 -5.538783005529669" position="-13 2.00216 -7.69515" visible="">
+
         <a-text value=" Programes formatius de qualitat
         Amb èmfasi en el desenvolupament professional i personal, es van implementar programes com la mentoria interdepartamental, la formació en enfocaments restauratius i la capacitació en marc d’estrangeria, amb gran impacte al territori."
            color="#555555" 
            align="center" 
-           scale="0.5 0.5 0.5">  
+           scale="0.89 1.01 0.5">  
         </a-text>
+
+        <!-- Plano blanco de fondo -->
+        <a-plane position="-2.61602 0.03353 -5.92905" width="5" height="2" color="#FFFFFF" opacity="0.8" material="" geometry="">
+        </a-plane>
     </a-entity>
 
 
@@ -134,6 +139,10 @@
        material="opacity: 0; color: #ffffff; shader: flat"
        visible="true">
     </a-box>
+
+<!-- Plano blanco de fondo -->
+<a-plane position="0 0 -0.3205" width="5" height="2" color="#FFFFFF" opacity="0.8" material="" geometry="">
+</a-plane>
 
     <!-- Texto -->
     <a-entity id="text3" rotation="0 -50 0" position="-13 3 1" visible="false">
@@ -161,6 +170,10 @@ width="2" height="2" depth="2"
 material="opacity: 0; color: #ffffff; shader: flat"
 visible="true">
 </a-box>
+
+<!-- Plano blanco de fondo -->
+<a-plane position="0 0 -0.3205" width="5" height="2" color="#FFFFFF" opacity="0.8" material="" geometry="">
+</a-plane>
 
 <!-- Texto -->
 <a-entity id="text4" rotation="0 -50 0" position="-1 3 8" visible="false">
@@ -190,6 +203,10 @@ material="opacity: 0; color: #ffffff; shader: flat"
 visible="true">
 </a-box>
 
+<!-- Plano blanco de fondo -->
+<a-plane position="0 0 -0.3205" width="5" height="2" color="#FFFFFF" opacity="0.8" material="" geometry="">
+</a-plane>
+
 <!-- Texto -->
 <a-entity id="text5" rotation="0 -50 0" position="13 3 9" visible="false">
  <a-text value="Connectivitat laboral
@@ -215,6 +232,10 @@ width="2" height="2" depth="2"
 material="opacity: 0; color: #ffffff; shader: flat"
 visible="true">
 </a-box>
+
+<!-- Plano blanco de fondo -->
+<a-plane position="0 0 -0.3205" width="5" height="2" color="#FFFFFF" opacity="0.8" material="" geometry="">
+</a-plane>
 
 <!-- Texto -->
 <a-entity id="text6" rotation="0 -50 0" position="1 3 -8" visible="false">
@@ -243,6 +264,10 @@ material="opacity: 0; color: #ffffff; shader: flat"
 visible="true">
 </a-box>
 
+<!-- Plano blanco de fondo -->
+<a-plane position="0 0 -0.3205" width="5" height="2" color="#FFFFFF" opacity="0.8" material="" geometry="">
+</a-plane>
+
 <!-- Texto -->
 <a-entity id="text7" rotation="0 -50 0" position="0.5 3 -0.6" visible="false">
     <a-plane scale="3 3 0"  color="black" position="0 0 -0.1"></a-plane>
@@ -266,19 +291,19 @@ visible="true">
 <a-entity gltf-model="../assets/sala_alba/blockbench_park_bench/scene.gltf" position="17.587 -0.23948 -0.375" rotation="1.0192919175377346 90.39383246440458 -0.5397262430132355" scale="" id="kursi4"></a-entity>
 
                                                  <!--people-->
-    <a-entity gltf-model="../public/assets/sala_alba/low_poly_people_free_sample_pack/scene.gltf" position="31.19682 0.061 13.78355" rotation="0.9998113525032866 90.49581895193788 -2.000195662801704" animation-mixer="repeat" id="people1"></a-entity>
-    <a-entity gltf-model="../public/assets/sala_alba/low_poly_people_free_sample_pack/scene.gltf" position="-24.86621 0.06975 -14.58227" rotation="1 90.496 -2" animation-mixer="repeat" id="people2"></a-entity>
+    <a-entity gltf-model="../assets/sala_alba/low_poly_people_free_sample_pack/scene.gltf" position="31.19682 0.061 13.78355" rotation="0.9998113525032866 90.49581895193788 -2.000195662801704" animation-mixer="repeat" id="people1"></a-entity>
+    <a-entity gltf-model="../assets/sala_alba/low_poly_people_free_sample_pack/scene.gltf" position="-24.86621 0.06975 -14.58227" rotation="1 90.496 -2" animation-mixer="repeat" id="people2"></a-entity>
 
-    <a-entity gltf-model="../public/assets/sala_alba/pedestal/scene.gltf" position="6.86655 0.07 11.88374" rotation="1 90.496 -2" scale="0.2 0.2 0.2" animation-mixer="repeat" id="pedestal"></a-entity>
+    <a-entity gltf-model="../assets/sala_alba/pedestal/scene.gltf" position="6.86655 0.07 11.88374" rotation="1 90.496 -2" scale="0.2 0.2 0.2" animation-mixer="repeat" id="pedestal"></a-entity>
 
-    <a-entity gltf-model="../public/assets/sala_alba/ImageToStl.com_model+(1)/ImageToStl.com_model (1).glb" position="7.001 3.27509 11.79073" rotation="1 90.496 -2" scale="4.3 6 6" animation-mixer="repeat" id="avatar" sound="src: #avatar-sound; on: click"></a-entity>
+    <a-entity gltf-model="../assets/sala_alba/ImageToStl.com_model+(1)/ImageToStl.com_model (1).glb" position="7.001 3.27509 11.79073" rotation="1 90.496 -2" scale="4.3 6 6" animation-mixer="repeat" id="avatar" sound="src: #avatar-sound; on: click"></a-entity>
 
 
 
     
 </a-scene>
 
-    <script type="module" src="../js/sala_luisa.js"></script>
+    <!-- <script type="module" src="../js/sala_luisa.js"></script> -->
     <script type="module" src="../js/sala_alba.js"></script>
 
 </body>

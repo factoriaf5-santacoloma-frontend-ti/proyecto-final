@@ -1,4 +1,5 @@
-import AFRAME from 'aframe';
+// import AFRAME from 'aframe';
+import './sala_luisa.js' ;
 
 
 const boxes = document.querySelectorAll('a-box'); // Selecciona todas las a-box

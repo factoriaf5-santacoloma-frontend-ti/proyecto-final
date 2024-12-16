@@ -1,4 +1,4 @@
-import AFRAME from "aframe";
+// import AFRAME from "aframe";
 import 'aframe-extras';
 
 const scene = document.querySelector('a-scene');
@@ -16,7 +16,7 @@ const clickableElements = document.querySelectorAll('.clickable');
 const fixedObjectPosition = { x: 0, y: -0.045, z: -3 };
 
 // Función para verificar si una posición está ocupada
-function isPositionOccupied(newPos, minDistance = 2) {
+export function isPositionOccupied(newPos, minDistance = 2) {
     // Verificar si está demasiado cerca del objeto fijo
     const dx = newPos.x - fixedObjectPosition.x;
     const dz = newPos.z - fixedObjectPosition.z;
@@ -31,7 +31,7 @@ function isPositionOccupied(newPos, minDistance = 2) {
 }
 
 // Función para generar una posición válida
-function getRandomValidPositionOnPlane(plane, minDistance = 2) {
+export function getRandomValidPositionOnPlane(plane, minDistance = 2) {
     const planeWidth = plane.getAttribute('width');
     const planeHeight = plane.getAttribute('height');
     const planePos = plane.getAttribute('position');
@@ -51,7 +51,7 @@ function getRandomValidPositionOnPlane(plane, minDistance = 2) {
 }
 
 // Función para agregar flores
-function addRandomFlores(numFlores) {
+export function addRandomFlores(numFlores) {
     for (let i = 0; i < numFlores; i++) {
         const flor = document.createElement('a-entity');
 
@@ -66,7 +66,7 @@ function addRandomFlores(numFlores) {
 }
 
 // Función para agregar árboles
-function addRandomTree(numTree) {
+export function addRandomTree(numTree) {
     for (let i = 0; i < numTree; i++) {
         const tree = document.createElement('a-entity');
 
@@ -81,7 +81,7 @@ function addRandomTree(numTree) {
 }
 
 
-function addRandomMushrooms(numMushrooms) {
+export function addRandomMushrooms(numMushrooms) {
     for (let i = 0; i < numMushrooms; i++) {
         const mushroom = document.createElement('a-entity');
 
