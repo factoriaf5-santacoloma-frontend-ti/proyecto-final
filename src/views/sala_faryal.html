@@ -17,10 +17,13 @@
                     <img id="woodfloor" src="../assets/sala_faryal/floor.jpg">
                     <img id="islamabad" src="../assets/sala_faryal/islamabad.png">
 
+
                     <img id="wall" src="../assets/sala_faryal/moon_mural_wallpaper.webp">
                     <img id="lahore" src="../assets/sala_faryal/lahore.png">
             </a-assets>
             <a-sky src="#sky"></a-sky>
+
+            
            
             <a-entity id="architecture" class="homeworld">
                <a-plane id="floor" rotation="-90 90 0" width="30" height="30" src="#woodfloor" repeat="4 4"></a-plane>
@@ -32,16 +35,17 @@
                material="metalness:1; roughness:0; transparent: true; opacity: .7; shader: standard; 
                color: #faaf52; side:double;"  ></a-plane>
 
-           
-       
+            
              
              </a-entity>
              <a-entity id="home" class="home_free" position="0 3 -10">
                 <a-plane id="home_" color="#191817" width="3" height="4"></a-plane>
-                <a-plane id="home" src="#islamabad" position="0 0 0.1" width="2.5" height="3.5" ></a-plane>
-                <a-plane id="home" position="0 -2.249 0" height="0.6" width="auto" color="#191817" text="align: center; value: minar-e-pakistan: i leraned  a lot of thing about 3d model  how to write text and how to make objects all things about this project how to find and make" geometry="width: 1.42" scale="2.12 1.69 1"></a-plane>
+                <a-plane id="home" src="#islamabad" position="0 0 .1" width="2.5" height="3.5" ></a-plane>
+                <a-plane id="home" position="0 -2.249 0" height=".6" width="auto" color="#191817" text="align: center; value: minar-e-pakistan: i leraned  a lot of thing about 3d model  how to write text and how to make objects all things about this project how to find and make 
+                width: 3" geometry="width: 1.42" scale="2.12 1.69 1"></a-plane>
               </a-entity>
-             
+            
+
 
     
              <!-- <a-entity id="picassodisplay" class="homeworld" position="0 3 -14.9">
@@ -57,17 +61,17 @@
                 ></a-sphere>
                 <a-plane id="photospherecaption" position="-.5 .5 .5" rotation="0 0 0" height=".6" width="auto" color="#191817"
                 text="value: i am faryal and i lernened a lot of things about 3d model and all thing html css jslereaned 
-                 lot if things about many topic and i like it very much ; width: 2; wrapCount: 30; align: center"
+                 lot if things about many topic and i like it very much;  width: 2; wrapCount: 30; align: center"
                 ></a-plane>
              </a-entity>
-             
+
              <a-circle id="homebutton" position="0 .1 0" rotation="-90 0 0" backhome></a-circle>
     
              <a-entity gltf-model="#home"></a-entity>
              <a-sky color="#333"></a-sky>
             </a-scene>
-     
-<script type="module" src="../js/sala_faryal.js"></script>
-</body>
-</html>
+             
+        <script type="module" src="../js/sala_faryal.js"></script>
+        </body>
+      </html>
   
