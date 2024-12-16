@@ -27,6 +27,7 @@
             <a-asset-item id="house" src="../public/assets/sala_luisa/casita/scene.gltf"></a-asset-item>
             <a-asset-item id="planet" src="../public/assets/sala_luisa/planet/scene.gltf"></a-asset-item>
             <a-asset-item id="girl" src="../public/assets/sala_luisa/girl/scene.gltf"></a-asset-item>
+            <a-asset-item id="sign" src="../public/assets/sala_luisa/sign/scene.gltf"></a-asset-item>
         </a-assets>
         
         <!-- Cielo y Suelo del escenario -->
@@ -36,22 +37,10 @@
         <!-- Camara y controles -->
         <a-entity id="camera-rig" position="0 1.6 2" movement-controls="speed: 0.2">
             <a-entity camera look-controls></a-entity>
-            
-            <a-cursor id="cursor" position="" raycaster="objects: .clickable" cursor="rayOrigin: mouse"></a-cursor>
         
             <!-- Controladores VR con rayos láser -->
-            <a-entity 
-              laser-controls="hand: left" 
-              cursor="rayOrigin: mouse" 
-              raycaster="objects: .clickable"
-              id="laser-left">
-            </a-entity>
-        
-            <a-entity 
-              laser-controls="hand: right" 
-              cursor="rayOrigin: mouse" 
-              raycaster="objects: .clickable"
-              id="laser-right">
+            <a-entity oculus-touch-controls="hand: left" laser-controls raycaster="lineColor: red; lineOpacity: 0.5; far:10"></a-entity>
+            <a-entity oculus-touch-controls="hand: right"></a-entity>
             </a-entity>
         </a-entity>
 
@@ -70,17 +59,21 @@
         <a-text value="¡Mis Redes Sociales!" position="-23 10 -30" color="#FFFFFF" align="center" font="https://cdn.aframe.io/fonts/mozillavr.fnt" scale="5 5 5"></a-text>
         <a-entity gltf-model="#house" position="-21 0 27.9416" scale="230 230 230" rotation="0 119.2863751994666 0"></a-entity>
         <a-entity gltf-model="#planet" position="15.52842 23.81114 29.1145" scale="150 150 150" rotation="0 119.286 0"></a-entity>
-        <a-entity gltf-model="#girl" position="-13.5 1.5 24" scale="1.5 1.5 1.5" rotation="0 139 0"></a-entity>
+        <a-entity gltf-model="#girl" position="-13.5 1.5 24" scale="1.5 1.5 1.5" rotation="0 142 0"></a-entity>
+        <a-entity gltf-model="../public/assets/sala_luisa/sign/scene.gltf" position="-12.08524 -0.36317 26.11452" scale="1.5 1.5 1.5" rotation="0 142 0">
+            <a-text value="Hola soy Luisa! Soy de Colombia, me gustan los gatos, viajar, programar y la fotografia. Amo tomar cafe y comer chocolates" position="0 2.2 0.2" rotation="0 -0.52196455136418 0" color="#FFFFFF" align="center" scale="0.8 0.8 0.8" text="font: mozillavr; side: double; tabSize: 3; width: 2.5; wrapCount: 26"></a-text>
+        </a-entity>
+        
         <a-entity id="trees">
             <a-entity gltf-model="#tree" scale="15 15 15" position="-5.409 0.1 -24.38833"></a-entity>
-            <a-entity gltf-model="#tree" scale="15 15 15" position="-15.25033 0.1 14.00563"></a-entity>
+            <a-entity gltf-model="#tree" scale="15 15 15" position="-24 0.1 10"></a-entity>
             <a-entity gltf-model="#tree" scale="15 15 15" position="25 0.1 -14.60665"></a-entity>
             <a-entity gltf-model="#tree" scale="15 15 15" position="15 0.1 30.57533"></a-entity>
             <a-entity gltf-model="#tree" scale="15 15 15" position="-26.58571 0.1 23.26063"></a-entity>
             <a-entity gltf-model="#tree" scale="15 15 15" position="6.93379 0.1 -29.64087"></a-entity>
             <a-entity gltf-model="#tree" scale="15 15 15" position="13.6307 0.1 13.59098"></a-entity>
             <a-entity gltf-model="#tree" scale="15 15 15" position="-36.44621 0.1 -27.84055"></a-entity>
-            <a-entity gltf-model="#tree" scale="15 15 15" position="-8.32428 -0.1 22.08442"></a-entity>
+            <a-entity gltf-model="#tree" scale="15 15 15" position="-6 -0.1 22.08442"></a-entity>
         </a-entity>
         
     </a-scene>
