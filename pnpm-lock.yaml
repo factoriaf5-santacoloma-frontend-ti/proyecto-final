@@ -14,6 +14,9 @@ importers:
       aframe-effects:
         specifier: ^0.9.1
         version: 0.9.1
+      aframe-environment-component:
+        specifier: ^1.4.0
+        version: 1.4.0
       aframe-extras:
         specifier: ^7.5.2
         version: 7.5.2
@@ -280,6 +283,9 @@ packages:
 
   aframe-effects@0.9.1:
     resolution: {integrity: sha512-HicRWqlttT1LBumMEKOdYCP/w16k2zWsyLVhBoRMHnA28/zA6s1i4EztWPtC1F6Jk0WF+F+HKrjP37atz8yMwg==}
+
+  aframe-environment-component@1.4.0:
+    resolution: {integrity: sha512-7TgXnMi/GZREIzrdta2laGKpB3bRLr8HvH4PMD4yZwPxD76LIRQFxtYpeq2YeWZqMLjonCUI55yt7sAzzClOcw==}
 
   aframe-extras@7.5.2:
     resolution: {integrity: sha512-rLjKZTMDVt+ial6/S8IH1lnKAQQgPclMNjuImh80nC67OTUT9yOEOZh79IqSOQD2YGs1DEwkl9hAkUSiPkUKCQ==}
@@ -780,6 +786,8 @@ snapshots:
       '@types/node': 22.10.1
 
   aframe-effects@0.9.1: {}
+
+  aframe-environment-component@1.4.0: {}
 
   aframe-extras@7.5.2:
     dependencies:
