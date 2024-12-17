@@ -1,0 +1,11 @@
+Model Information:
+* title:	Animacion Corazon Pulpo
+* source:	https://sketchfab.com/3d-models/animacion-corazon-pulpo-ead031f3394548ca970e4b31b071d64d
+* author:	Aumentados (https://sketchfab.com/minego90)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Animacion Corazon Pulpo" (https://sketchfab.com/3d-models/animacion-corazon-pulpo-ead031f3394548ca970e4b31b071d64d) by Aumentados (https://sketchfab.com/minego90) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

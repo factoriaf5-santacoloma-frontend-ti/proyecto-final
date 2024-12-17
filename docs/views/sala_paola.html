@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <!-- <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-extras/dist/aframe-extras.min.js"></script>
+
+    <script src="https://unpkg.com/aframe-bloom/dist/aframe-bloom.min.js"></script> -->
+
+  <script type="module" crossorigin src="/proyecto-final/assets/sala_paola-Bvjg5-mT.js"></script>
+  <link rel="modulepreload" crossorigin href="/proyecto-final/assets/aframe-master-BqMUpO3Y.js">
+  <link rel="modulepreload" crossorigin href="/proyecto-final/assets/index-BnbecTj_.js">
+</head>
+<body>
+    <div id="app">
+        <a-scene>
+            <a-camera  position="-1.717 21 20"> <a-cursor></a-cursor></a-camera>
+            <a-scene bloom="threshold: 0.5; intensity: 1.5; radius: 0.5">
+                
+            </a-scene>
+             <!-- FONDO -->
+             <a-sky id="fondo" src="../assets/sala_paola/uhd_img3219pv2_cc_eq.jpg"></a-sky>
+            
+
+    
+
+            <a-image id="banner-welcome" src="../assets/sala_paola/banner-welcome.png" position="0.5 22 14"  scale="0 0 0" height="12" width="10"
+            animation__scale="property: scale; to: 1 1 1; dur: 10000; easing: easeInOutQuad"> </a-image>
+
+            <a-assets>
+                <a-asset-item id ="doby" src="../assets/sala_paola/dobby_the_free_house_elf_-_harry_potter/scene.gltf"></a-asset-item>
+                <a-asset-item id="sombrero" src="../assets/sala_paola/sombrero.glb"></a-asset-item>
+                <a-asset-item id="bandera-brasil" src="../assets/sala_paola/bandeira_do_brasil/scene.gltf" > </a-asset-item>
+                <a-asset-item id="pulpo" src="../assets/sala_paola//animacion_corazon_pulpo/scene.gltf"></a-asset-item>
+                <a-asset-item id="piano" src="../assets/sala_paola/grand_piano/scene.gltf"></a-asset-item>
+                <a-asset-item id="claqueta" src="../assets/sala_paola/movie_clipper/scene.gltf"></a-asset-item>
+                
+            </a-assets>
+            
+            <a-entity
+            gltf-model="#claqueta"
+            position="-28 25 70"
+            scale="2 2 2"
+            class="clickable"
+            href="../index.html"
+            animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"
+            material="color: #ffffff; emissive: #ff0000; emissiveIntensity: 1"
+        ></a-entity>
+
+            <a-entity
+            gltf-model="#pulpo"
+            position="14.3 25 70"
+            scale="2 2 2"
+            class="clickable"
+            href="https://factoriaf5-santacoloma-frontend-ti.github.io/bubble-game-los-justicieros/"
+            animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"
+            material="color: #ffffff; emissive: #ff0000; emissiveIntensity: 1"
+        ></a-entity>
+
+            <a-entity
+            gltf-model="#piano"
+            position="-4.5 25 70"
+            scale="2 2 2"
+            class="clickable"
+            href="../index.html"
+            animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"
+            material="color: #ffffff; emissive: #ff0000; emissiveIntensity: 2"
+        ></a-entity>
+
+            <a-entity
+            gltf-model="#bandera-brasil" 
+            position="-40 20 37" 
+            scale="0.02 0.02 0.02"
+            rotation="0 -90 0">
+            </a-entity>
+            
+            <a-entity 
+            id="clickable-sombrero" 
+            gltf-model="#sombrero" 
+            position="20 22 35" 
+            scale="10 10 10" 
+            rotation="0 -95 0"
+            class="clickable">
+          </a-entity>
+          
+          
+          <a-entity 
+            id="info-container" 
+            position="20 22 30"
+            visible="false">
+
+            <a-plane 
+              id="info-box" 
+              height="0.8" 
+              width="1.5" 
+              color="#D3D3D3" 
+              opacity="0.6">
+            </a-plane>
+
+            
+            <!---boton de volver al inicio-->
+        
+                     
+
+
+          <!-- texto del sombrero -->
+        <a-box opacity="0" material="transparent: true" position="33.2 21.5 35.5" rotation="0 0 0" color="#CCCCCC" scale="4.5 7 7" toggle-text="groupId: #text-group12">
+        </a-box>
+        <a-entity id="text-group12" position="33.2 21.5 45" rotation="0 -90 0" visible="false">
+        <a-text value="Soy Paola, una brasileña de 26 años apasionada por la tecnología y el aprendizaje. Actualmente estoy finalizando un bootcamp de front-end, un paso clave en mi transicion hacia una carrera en un campo que me emociona y al que ahora puedo dedicarme.
+        A lo largo de mi trayectoria profesional he trabajado en diversos sectores, ahora, en el mundo tecnologico, siento que he encontrado mi lugar, un espacio donde mi curiosidad y entusiasmo por aprender se alinean con mis objetivos.
+        Mis valores fundamentales son la justicia, el feminismo y la igualdad. Creo firmemente en construir un mundo mas equitativo y en la importancia de llevar esos principios a mi vida personal y profesional. "
+            color="#fffff" align="center"
+            position="0 0 0" scale="2.4 2 2">
+        </a-text>
+        </a-entity>
+
+
+
+            </a-scene>
+        </div>
+</body>
+</html>
