@@ -1,4 +1,4 @@
-// import AFRAME from "aframe";
+import AFRAME from "aframe";
 import 'aframe-extras';
 
 const scene = document.querySelector('a-scene');
