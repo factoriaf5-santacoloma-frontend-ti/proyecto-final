@@ -68,48 +68,48 @@ AFRAME.registerComponent('toggle-text', {
   }
 });
 
-// AFRAME.registerComponent('toggle-text', {
-//   schema: {
-//       target: { type: 'selector' } // Selector del texto asociado
-//   },
-//   init: function () {
-//       const el = this.el; // Modelo interactivo
-//       const targetEl = this.data.target; // Texto asociado
+AFRAME.registerComponent('toggle-text', {
+  schema: {
+      target: { type: 'selector' } // Selector del texto asociado
+  },
+  init: function () {
+      const el = this.el; // Modelo interactivo
+      const targetEl = this.data.target; // Texto asociado
 
-//       if (!targetEl) {
-//           console.error('No se encontró el texto asociado.');
-//           return;
-//       }
+      if (!targetEl) {
+          console.error('No se encontró el texto asociado.');
+          return;
+      }
 
-//       // Alternar visibilidad al hacer clic
-//       el.addEventListener('click', () => {
-//           const isVisible = targetEl.getAttribute('visible') === true || targetEl.getAttribute('visible') === "true";
-//           targetEl.setAttribute('visible', !isVisible);
-//       });
-//   }
-// });
+      // Alternar visibilidad al hacer clic
+      el.addEventListener('click', () => {
+          const isVisible = targetEl.getAttribute('visible') === true || targetEl.getAttribute('visible') === "true";
+          targetEl.setAttribute('visible', !isVisible);
+      });
+  }
+});
 
-//         // Componente para alternar visibilidad
-//         AFRAME.registerComponent('toggle-text', {
-//             schema: {
-//                 target: { type: 'selector' }
-//             },
-//             init: function () {
-//                 const el = this.el; // Modelo interactivo
-//                 const targetEl = this.data.target; // Texto asociado
+        // Componente para alternar visibilidad
+        AFRAME.registerComponent('toggle-text', {
+            schema: {
+                target: { type: 'selector' }
+            },
+            init: function () {
+                const el = this.el; // Modelo interactivo
+                const targetEl = this.data.target; // Texto asociado
 
-//                 if (!targetEl) {
-//                     console.error('No se encontró el texto asociado.');
-//                     return;
-//                 }
+                if (!targetEl) {
+                    console.error('No se encontró el texto asociado.');
+                    return;
+                }
 
-//                 // Alternar visibilidad al hacer clic
-//                 el.addEventListener('click', () => {
-//                     const isVisible = targetEl.getAttribute('visible') === true || targetEl.getAttribute('visible') === "true";
-//                     targetEl.setAttribute('visible', !isVisible);
-//                 });
-//             }
-//         });
+                // Alternar visibilidad al hacer clic
+                el.addEventListener('click', () => {
+                    const isVisible = targetEl.getAttribute('visible') === true || targetEl.getAttribute('visible') === "true";
+                    targetEl.setAttribute('visible', !isVisible);
+                });
+            }
+        });
 
 
 
