@@ -98,7 +98,6 @@ export function addRandomMushrooms(numMushrooms) {
 }
 
 // Llamada a las funciones
-addRandomFlores(25);
-addRandomTree(8);
-addRandomMushrooms(15);
+addRandomFlores(35);
+addRandomMushrooms(20);
 

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Planet Art 3D Model
+* source:	https://sketchfab.com/3d-models/planet-art-3d-model-a8ce19861cbd4aa2b5113d234a10cc9f
+* author:	ˢᵒᵘʳᶜᵉ ⁴ (https://sketchfab.com/stalker3Donline)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Planet Art 3D Model" (https://sketchfab.com/3d-models/planet-art-3d-model-a8ce19861cbd4aa2b5113d234a10cc9f) by ˢᵒᵘʳᶜᵉ ⁴ (https://sketchfab.com/stalker3Donline) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
