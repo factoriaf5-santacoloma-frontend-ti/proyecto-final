@@ -1,5 +1,5 @@
 import AFRAME from 'aframe';
-// import 'aframe-extras';
+import 'aframe-extras';
 
 
         const cameraRig = document.querySelector("#camera-rig");

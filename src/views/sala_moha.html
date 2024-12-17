@@ -4,35 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
-<script src="../js/sala_moha.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
+<script src="../js/sala_moha.js"></script> -->
 
     
     
-    <script type="module" src="../js/sala_moha.js"></script>
-    <script>
-        // Componente para alternar visibilidad
-        AFRAME.registerComponent('toggle-text', {
-            schema: {
-                target: { type: 'selector' }
-            },
-            init: function () {
-                const el = this.el; // Modelo interactivo
-                const targetEl = this.data.target; // Texto asociado
-
-                if (!targetEl) {
-                    console.error('No se encontró el texto asociado.');
-                    return;
-                }
-
-                // Alternar visibilidad al hacer clic
-                el.addEventListener('click', () => {
-                    const isVisible = targetEl.getAttribute('visible') === true || targetEl.getAttribute('visible') === "true";
-                    targetEl.setAttribute('visible', !isVisible);
-                });
-            }
-        });
-    </script>
 </head>
 <body>
 
@@ -40,17 +16,17 @@
 
         <!-- Assets -->
         <a-assets>
-            <a-asset-item id="science-model" src="../public/assets/sala_moha/science.glb"></a-asset-item>
-            <a-asset-item id="man-in-vr-model" src="../public/assets/sala_moha/middle_aged_man_in_vr.glb"></a-asset-item>
-            <a-asset-item id="vr-thinker-model" src="../public/assets/sala_moha/vr_thinker.glb"></a-asset-item>
-            <a-asset-item id="dancing-robot" src="../public/assets/sala_moha/robotpiano/scene.gltf"></a-asset-item>
-            <a-asset-item id="oldpc-model" src="../public/assets/sala_moha/oldpc.glb"></a-asset-item>
-            <a-asset-item id="hacker-model" src="../public/assets/sala_moha/hacker.glb"></a-asset-item>
-            <a-asset-item id="computer-model" src="../public/assets/sala_moha/pc.glb"></a-asset-item>
-            <a-asset-item id="candado-model" src="../public/assets/sala_moha/candado/scene.gltf"></a-asset-item>
-            <a-asset-item id="robot-model" src="../public/assets/sala_moha/robot/scene.gltf"></a-asset-item>
-            <img id="mohaaa-image" src="../public/assets/sala_moha/mohaaa.png" />
-            <audio id="background-music" src="../public/assets/sala_moha/music.mp3" preload="auto"></audio>
+            <a-asset-item id="science-model" src="../assets/sala_moha/science.glb"></a-asset-item>
+            <a-asset-item id="man-in-vr-model" src="../assets/sala_moha/middle_aged_man_in_vr.glb"></a-asset-item>
+            <a-asset-item id="vr-thinker-model" src="../assets/sala_moha/vr_thinker.glb"></a-asset-item>
+            <a-asset-item id="dancing-robot" src="../assets/sala_moha/robotpiano/scene.gltf"></a-asset-item>
+            <a-asset-item id="oldpc-model" src="../assets/sala_moha/oldpc.glb"></a-asset-item>
+            <a-asset-item id="hacker-model" src="../assets/sala_moha/hacker.glb"></a-asset-item>
+            <a-asset-item id="computer-model" src="../assets/sala_moha/pc.glb"></a-asset-item>
+            <a-asset-item id="candado-model" src="../assets/sala_moha/candado/scene.gltf"></a-asset-item>
+            <a-asset-item id="robot-model" src="../assets/sala_moha/robot/scene.gltf"></a-asset-item>
+            <img id="mohaaa-image" src="../assets/sala_moha/mohaaa.png" />
+            <audio id="background-music" src="../assets/sala_moha/music.mp3" preload="auto"></audio>
         </a-assets>
         <!-- Luz -->
         <a-light type="ambient" color="#ffffff" intensity="4" light="angle: 60.14; color: #bdf4ff; intensity: 0.89" visible=""></a-light>
@@ -259,7 +235,7 @@ toggle-text="target: #text-metaverse">
     <a-text value="Texto sobre el modelo Computer..." color="white" align="center" position="0 0 0.1" width="4" scale="1 1 1"></a-text>
 </a-entity>
 <!-- ROBOT DANCE -->
-<a-entity gltf-model="../public/assets/sala_moha/robotpiano/scene.gltf" position="0.30885 1.10907 -2.63202" scale="0.0006 0.0006 0.0006" rotation="0 180 0" animation-mixer="loop: pingpong; timeScale: 5" class="clickable" dancing-robot-message="" material="color: #0000ff; opacity: 0.9">
+<a-entity gltf-model="../assets/sala_moha/robotpiano/scene.gltf" position="0.30885 1.10907 -2.63202" scale="0.0006 0.0006 0.0006" rotation="0 180 0" animation-mixer="loop: pingpong; timeScale: 5" class="clickable" dancing-robot-message="" material="color: #0000ff; opacity: 0.9">
 </a-entity>
 <a-entity 
   id="dancing-robot-text" 
@@ -361,6 +337,9 @@ sound="src: #background-music; autoplay: true; loop: true; positional: false; vo
     
 
     </a-scene>
+    <script type="module" src="../js/sala_moha.js"></script>
+    <script>
+    </script>
 
 </body>
 </html>
