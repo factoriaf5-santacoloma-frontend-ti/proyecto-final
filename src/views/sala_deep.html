@@ -13,6 +13,14 @@
 <body>
     <a-scene vr-mode-ui="enabled: true" environment="preset: forest; groundTexture: grass; groundColor: #3B7A57; skyColor: #87CEEB; grid: none;" cursor="rayOrigin: mouse">
 
+        <a-entity id="camera-rig" position="0 1.6 2" movement-controls="speed: 0.2">
+            <a-entity camera look-controls></a-entity>
+        
+            <!-- Controladores VR con rayos láser -->
+            <a-entity oculus-touch-controls="hand: left" laser-controls raycaster="lineColor: #FFFb; lineOpacity: 0.5; far:10"></a-entity>
+            <a-entity oculus-touch-controls="hand: right"></a-entity>
+            </a-entity>
+        </a-entity>
         <!-- Lights -->
         <a-light type="directional" color="#ffffff" intensity="1" position="10 20 10"></a-light>
         <a-light type="ambient" color="#aaaaaa" intensity="0.6"></a-light>
