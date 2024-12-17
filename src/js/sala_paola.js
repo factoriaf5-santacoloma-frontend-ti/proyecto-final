@@ -1,5 +1,5 @@
 import AFRAME from 'aframe';
-// import 'aframe-extras';
+import 'aframe-extras';
 // import 'aframe-effects';
 
 document.querySelector('a-scene').addEventListener('loaded', function () {

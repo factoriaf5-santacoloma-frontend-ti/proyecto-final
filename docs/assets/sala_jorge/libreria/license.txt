@@ -1,0 +1,11 @@
+Model Information:
+* title:	DaeCrib - @DAE
+* source:	https://sketchfab.com/3d-models/daecrib-dae-223aef1781514126a91ca78d3c1d4019
+* author:	ItzJorinoPlays (https://sketchfab.com/ItzJorinoPlays)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "DaeCrib - @DAE" (https://sketchfab.com/3d-models/daecrib-dae-223aef1781514126a91ca78d3c1d4019) by ItzJorinoPlays (https://sketchfab.com/ItzJorinoPlays) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
