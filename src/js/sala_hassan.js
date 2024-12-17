@@ -1,8 +1,8 @@
 import AFRAME from 'aframe';
-import 'aframe-extras';
+// import 'aframe-extras';
 
 
-        const cameraRig = document.querySelector("#cameraRig");
+        const cameraRig = document.querySelector("#camera-rig");
 
         // Escuchar eventos de teclado
         document.addEventListener("keydown", (event) => {

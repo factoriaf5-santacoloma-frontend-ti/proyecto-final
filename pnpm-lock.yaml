@@ -11,9 +11,6 @@ importers:
       aframe:
         specifier: ^1.6.0
         version: 1.6.0
-      aframe-animation-component:
-        specifier: ^5.1.2
-        version: 5.1.2
       aframe-effects:
         specifier: ^0.9.1
         version: 0.9.1
@@ -25,8 +22,8 @@ importers:
         version: 7.5.2
     devDependencies:
       vite:
-        specifier: ^6.0.1
-        version: 6.0.2(@types/node@22.10.1)
+        specifier: ^6.0.3
+        version: 6.0.3(@types/node@22.10.1)
 
 packages:
 
@@ -284,9 +281,6 @@ packages:
   '@types/responselike@1.0.3':
     resolution: {integrity: sha512-H/+L+UkTV33uf49PH5pCAUBVPNj2nDBXTN+qS1dOwyyg24l3CcicicCA7ca+HMvJBZcFgl5r8e+RR6elsb4Lyw==}
 
-  aframe-animation-component@5.1.2:
-    resolution: {integrity: sha512-DGUsRGB6TaN0rRKGYRrU0M1eblhpnMMYR1Vhulh0d5TxQRNszWJ5I1aHB/YW6wcj0gO89hLabSe5Is5NFpUeGg==}
-
   aframe-effects@0.9.1:
     resolution: {integrity: sha512-HicRWqlttT1LBumMEKOdYCP/w16k2zWsyLVhBoRMHnA28/zA6s1i4EztWPtC1F6Jk0WF+F+HKrjP37atz8yMwg==}
 
@@ -302,9 +296,6 @@ packages:
 
   an-array@1.0.0:
     resolution: {integrity: sha512-M175GYI7RmsYu24Ok383yZQa3eveDfNnmhTe3OQ3bm70bEovz2gWenH+ST/n32M8lrwLWk74hcPds5CDRPe2wg==}
-
-  animejs@2.2.0:
-    resolution: {integrity: sha512-suPqfRapTDhrfwxg1El8LlGz6qVGwoandR2uRQLQBxXavxkpIr9Uv2kNGrJIF7oa001jSxS5rRIXPHryKIshJg==}
 
   array-shuffle@1.0.1:
     resolution: {integrity: sha512-PBqgo1Y2XWSksBzq3GFPEb798ZrW2snAcmr4drbVeF/6MT/5aBlkGJEvu5A/CzXHf4EjbHOj/ZowatjlIiVidA==}
@@ -576,8 +567,8 @@ packages:
     resolution: {integrity: sha512-NjFKA0DidqPa5ciFcSrXnAltTtzz84ogy+NebPvfEgAck0+TNg4UJ4IN+fB7zRZfbgUf0syOo9MDxFkDSMuFaQ==}
     engines: {node: '>=4'}
 
-  vite@6.0.2:
-    resolution: {integrity: sha512-XdQ+VsY2tJpBsKGs0wf3U/+azx8BBpYRHFAyKm5VeEZNOJZRB63q7Sc8Iup3k0TrN3KO6QgyzFf+opSbfY1y0g==}
+  vite@6.0.3:
+    resolution: {integrity: sha512-Cmuo5P0ENTN6HxLSo6IHsjCLn/81Vgrp81oaiFFMRa8gGDj5xEjIcEpf2ZymZtZR8oU0P2JX5WuUp/rlXcHkAw==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
@@ -794,10 +785,6 @@ snapshots:
     dependencies:
       '@types/node': 22.10.1
 
-  aframe-animation-component@5.1.2:
-    dependencies:
-      animejs: 2.2.0
-
   aframe-effects@0.9.1: {}
 
   aframe-environment-component@1.4.0: {}
@@ -822,8 +809,6 @@ snapshots:
       - supports-color
 
   an-array@1.0.0: {}
-
-  animejs@2.2.0: {}
 
   array-shuffle@1.0.1: {}
 
@@ -1132,7 +1117,7 @@ snapshots:
     dependencies:
       prepend-http: 2.0.0
 
-  vite@6.0.2(@types/node@22.10.1):
+  vite@6.0.3(@types/node@22.10.1):
     dependencies:
       esbuild: 0.24.0
       postcss: 8.4.49

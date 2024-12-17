@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^6.0.1"
+    "vite": "^6.0.3"
   },
   "dependencies": {
     "aframe": "^1.6.0",

@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.2/dist/aframe-extras.min.js"></script> -->
-    <title>hassan-aframe</title>
-    <script type="module" crossorigin src="/proyecto-final/assets/sala_hassan-BakeYzgo.js"></script>
-    <link rel="modulepreload" crossorigin href="/proyecto-final/assets/aframe-master-1FPB_1PP.js">
-    <link rel="modulepreload" crossorigin href="/proyecto-final/assets/index-DNbT2VYR.js">
+    <title>sala-hassan</title>
+    <script type="module" crossorigin src="/proyecto-final/assets/sala_hassan-D9Df3ep-.js"></script>
+    <link rel="modulepreload" crossorigin href="/proyecto-final/assets/aframe-master-BqMUpO3Y.js">
   </head>
   
   <body> 
@@ -23,18 +22,15 @@
         <a-asset-item id="ged4" src="../assets/sala_hassan/gltf/realistic_hd_date_palm_1378.glb"></a-asset-item>
       </a-assets>
 
-      <a-entity id="camera-rig" position="0 1.6 0" movement-controls="speed: 0.2">
+      <a-entity id="camera-rig" position="0 0 15" movement-controls="speed: 0.2">
         <a-entity camera look-controls></a-entity>
         <!-- Controladores VR (Meta Quest) -->
         <a-entity oculus-touch-controls="hand: left"></a-entity>
         <a-entity oculus-touch-controls="hand: right"></a-entity>
-    </a-entity>
-      
-      <a-entity id="cameraRig" position="0 1.6 0">
         <a-camera wasd-controls="acceleration: 50">
         </a-camera>
-      </a-entity>
-
+    </a-entity>
+      
       <a-plane position="0.14318 5.721 16.652" rotation="-89.797 -95.051 96.274" width="25" height="25" color="white" side="double" id="saqaf"></a-plane>
       <!-- Background -->
       <a-sky src="../assets/sala_hassan/photos/6.jpg" rotation="" position=""></a-sky>
@@ -43,9 +39,12 @@
       <a-plane  src="../assets/sala_hassan/photos/images.jpeg"  rotation="-90 0 0"  width="50"  height="20"  position="0 -3 -16"> </a-plane>
     
       <!-- Image -->
-      <a-image src="../assets/sala_hassan/photos/IMG_20200627_224120_445_Original.jpg" position="-7.65915 1.10124 20.0299" rotation="0 0.29 0" width="2.5" height="2" id="sawir-darbi"></a-image>
+      <a-image src="../assets/sala_hassan/photos/IMG_20200627_224120_445_Original.jpg" position="-7.65915 1.10124 20.0299" rotation="0 0.29 0" width="2" height="1.9" id="sawir-darbi"></a-image>
+
+      <a-image src="../assets/sala_hassan/photos/IMG_20200627_224120_445_Original.jpg" position="8.92492 -2.20621 14.64064" rotation="0.03265859432245692 6.038975160678876 1.7492401485344033" width="2.5" height="2" id="sawir-darbi2" scale="0.47573 0.48523 -0.00319"></a-image>
+
       
-      <a-image src="../assets/sala_hassan/photos/familia-viendo-smart-TV (1).jpg" position="0.48949 1.5034 9.22202" rotation="0 0.29 0" width="2.5" height="2" id="tv"></a-image>
+      <a-image src="../assets/sala_hassan/photos/familia-viendo-smart-TV (1).jpg" position="0.50559 1.24532 9.185" rotation="0.010886198107485642 0.02119943841984046 0.25095551426730056" width="2.5" height="2" sound="on: click; src: ../assets/sala_hassan/sound/relaxing-piano-music-248868.mp3" scale="0.96765 0.65288 -1.616" id="tv"></a-image>
       
     
 
