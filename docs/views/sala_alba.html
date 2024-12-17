@@ -1,0 +1,327 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sala Alba</title>
+
+  <!-- <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script> -->
+
+  <title>Sala Alba</title>
+  <script type="module" crossorigin src="/proyecto-final/assets/sala_alba-DSFfwuxn.js"></script>
+  <link rel="modulepreload" crossorigin href="/proyecto-final/assets/aframe-master-BqMUpO3Y.js">
+</head>
+<body>
+    <!-- <a-scene cursor="rayOrigin: mouse" vr-mode-ui="enabled: true" xrwebgl="enabled: true"> -->
+
+<a-scene> 
+    <a-assets>
+        <audio id="avatar-sound" src="../assets/sala_alba/WhatsApp Ptt 2024-12-11 at 14.04.21.ogg"></audio>
+
+        <img id="grass" src="../assets/sala_luisa/grass.jpg" crossorigin="anonymous" />
+        <img id="skyblue" src="../assets/sala_alba/sky_blue.jpg" crossorigin="anonymous" />
+        <a-asset-item id="cat" src="../assets/sala_luisa/toon_cat_free/scene.gltf"></a-asset-item>
+        <a-asset-item id="flowers" src="../assets/sala_luisa/flowers/scene.gltf"></a-asset-item>
+        <a-asset-item id="tree" src="../assets/sala_luisa/stylized_tree/scene.gltf"></a-asset-item>
+        <a-assests-item id="people1" src="../assets/sala_alba/low_poly_people_free_sample_pack/scene.gltf"></a-assests-item>
+        <img id="diada2" src="../assets/sala_alba/diadaprimavera.jpg">
+        <img id="defensa" src="../assets/sala_alba/autodefensafemenina.jpg">
+        <img id="karate" src="../assets/sala_alba/karakara.jpg" >
+        <img id="estiu" src="../assets/sala_alba/estiufresca.jpg">
+        <img id="tallergame" src="../assets/sala_alba/tallergaming.jpg">
+        <img id="jobs" src="../assets/sala_alba/integrajobes.png">
+        <img id="raval" src="../assets/sala_alba/ravaleando.jpg">
+        <a-asset-item  id= "pedestal" src="../assets/sala_alba/pedestal/scene.gltf">
+    </a-assets>
+
+  
+        <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #FFCCCC"></a-entity>
+        <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #FFCCCC"></a-entity>
+      </a-entity>
+      <a-sky src="#skyblue"></a-sky>
+      <a-plane width="80" height="80" position="0 0 0" rotation="-90 0 0"
+               material="src: #grass; repeat: 10 10; shader: flat"
+               shadow="cast: false; receive: true">
+      </a-plane>
+
+      
+
+
+      <a-entity id="camera-rig" position="0 1.6 0" movement-controls="speed: 0.2">
+        <a-entity camera look-controls></a-entity>
+        <!-- Controladores VR (Meta Quest) -->
+         <a-entity oculus-touch-controls="hand: left"></a-entity>
+        <a-entity oculus-touch-controls="hand: right"></a-entity>
+    </a-entity>
+    
+    <a-camera>
+        <a-cursor raycaster></a-cursor> 
+    </a-camera> 
+
+    
+    <a-plane width="80" height="80" position="0.00 0.00 0.00" rotation="-90 0 0" material="src: #grass; repeat:10 10;" shadow="cast: false; receive: true"></a-plane> 
+
+    <!-- Caja de imagen Diada con transparencia encima -->
+    <a-box position="12 3 -11" rotation="0 0 0" 
+       width="2" height="2" depth="2"
+       material="src: #diada2; repeat: 1 1; shader: flat"
+       toggle-text="groupId: #text1"
+       clickhandler="groupId: #text1"
+       >
+    </a-box>
+
+    <!-- Caja transparente encima de la imagen Diada, con las mismas dimensiones que el cubo -->
+    <a-box position="12 3 -11" rotation="0 0 0" 
+       width="2" height="2" depth="2"
+       material="opacity: 0; color: #ffffff; shader: flat"
+       visible="true"
+       class="interactable">
+    </a-box>
+
+    <a-entity id="text1" rotation="19.94695267968448 -88.71220133569562 0.4394586288653414" position="13.20112 3.03982 -7.50855" visible="false">
+        <!-- Plano blanco de fondo -->
+        <a-plane position="0 0 -0.3205" width="5" height="2" color="#FFFFFF" opacity="0.8" material="" geometry="">
+        </a-plane>
+        
+        <!-- Texto -->
+        <a-text value="
+            Esdeveniments que cohesionen
+            Accions clau com la Diada de Primavera, les Festes de Barri i Ravaleando han servit com a punts de trobada per la comunitat, reforçant les relacions veïnals i la identitat local." color="#000000" align="center" scale="0.7855 1.10042 0.68325" position="0 0.04435 0.02">
+        </a-text>
+    </a-entity>
+    
+
+      <!--defesa feminina-->
+      <a-box position="-15 3 -15" rotation="0 0 0" 
+      width="2" height="2" depth="2"
+      material="src: #defensa; repeat: 1 1; shader: flat"
+      toggle-text="groupId: #text2"
+        clickhandler="groupId: #text2">
+    </a-box>
+
+<!--box transparente de defesa-->
+    <a-box position="-15 3 -15" rotation="0 0 0" 
+       width="2" height="2" depth="2"
+       material="opacity: 0; color: #ffffff; shader: flat"
+       visible="true">
+    </a-box>
+
+
+
+    <!-- Texto -->
+    <a-entity id="text2" rotation="12.000028061219961 -50 0" position="-12.03396 2.7825 -12.38828" visible="">
+
+        
+        <!-- Plano blanco de fondo -->
+        <a-plane position="0 0 0" width="5" height="2" color="#FFFFFF"
+        opacity="0.8" material="" geometry="">
+        </a-plane>
+        
+        <a-text value=" Programes formatius de qualitat
+        Amb èmfasi en el desenvolupament professional i personal, es van implementar programes com la mentoria interdepartamental, la formació en enfocaments restauratius i la capacitació en marc d’estrangeria, amb gran impacte al territori." color="#555555" align="center" scale="0.89 1.01 0.5" position="0 0 0.1"></a-text>
+        </a-text>
+    </a-entity>
+
+
+
+    <!--karate-->
+     <a-box position="-13 3 -1" rotation="0 0 0" 
+             width="2" height="2" depth="2"
+             material="src: #karate; repeat: 1 1; shader: flat"
+             toggle-text="groupId: #text3"
+        clickhandler="groupId: #text3">
+      </a-box>
+
+<!--caja transparente debajo de karate-->
+      <a-box position="-13 3 -1" rotation="0 0 0" 
+       width="2" height="2" depth="2"
+       material="opacity: 0; color: #ffffff; shader: flat"
+       visible="true">
+    </a-box>
+
+<!-- Plano blanco de fondo -->
+<a-plane position="0 0 -0.3205" width="5" height="2" color="#FFFFFF" opacity="0.8" material="" geometry="">
+</a-plane>
+
+    <!-- Texto -->
+    <a-entity id="text3" rotation="12 -50 0" position="-11 3 3" visible="false">
+        <a-plane position="0 0 0" width="5" height="2" color="#FFFFFF"
+        opacity="0.8" material="" geometry="">
+        </a-plane>
+
+        <a-text value="Projectes Antenes Comunitàries
+        Col·laboració amb tres entitats per arribar a 211 persones. Destaca ConnectaGrama amb 84 joves, oferint sessions d’autodescobriment, autodefensa, karate i motivació. També IntegraJOBes, amb 31 participants en tallers laborals, i Joves+, que va sensibilitzar 96 joves sobre tecnologia i va reforçar la seva educació i participació comunitària."
+           color="#555555" 
+           align="center" 
+           scale="0.5 0.5 0.5"
+           position="0 0 0.1">  
+        </a-text>
+    </a-entity>
+
+
+
+      <!--estiu fresca-->
+     <a-box position="-4 3 10" rotation="0 0 0" 
+     width="2" height="2" depth="2"
+     material="src: #estiu; repeat: 1 1; shader: flat"
+     toggle-text="groupId: #text4"
+        clickhandler="groupId: #text4">
+    </a-box>
+
+<!--caja transparente debajo de fresca-->
+<a-box position="-4 3 10" rotation="0 0 0" 
+width="2" height="2" depth="2"
+material="opacity: 0; color: #ffffff; shader: flat"
+visible="true">
+</a-box>
+
+<!-- Plano blanco de fondo -->
+<a-plane position="0 0 -0.3205" width="5" height="2" color="#FFFFFF" opacity="0.8" material="" geometry="">
+</a-plane>
+
+<!-- Texto -->
+<a-entity id="text4" rotation="12 -50 0" position="-0.7 3 13" visible="false">
+    <a-plane position="0 0 0" width="5" height="2" color="#FFFFFF"
+    opacity="0.8" material="" geometry="">
+    </a-plane>
+ <a-text value="Espais públics revitalitzats
+ Durant l’estiu, el programa Estiu a la Fresca va dinamitzar les nits a espais públics, promovent la participació comunitària i un ús segur i inclusiu d’aquests llocs."
+    color="#555555" 
+    align="center" 
+    scale="0.5 0.5 0.5"
+    position="0 0 0.1">  
+ </a-text>
+</a-entity>
+
+
+
+    
+    <!--taller gamming-->
+    <a-box position="15 3 7" rotation="0 0 0" 
+    width="2" height="2" depth="2"
+    material="src: #tallergame; repeat: 1 1; shader: flat"
+    toggle-text="groupId: #text5"
+    clickhandler="groupId: #text5">
+   </a-box>
+
+<!--caja transparente debajo de gamming-->
+<a-box position="15 3 7" rotation="0 0 0" 
+width="2" height="2" depth="2"
+material="opacity: 0; color: #ffffff; shader: flat"
+visible="true">
+</a-box>
+
+<!-- Plano blanco de fondo -->
+<a-plane position="0 0 -0.3205" width="5" height="2" color="#FFFFFF" opacity="0.8" material="" geometry="">
+</a-plane>
+
+<!-- Texto -->
+<a-entity id="text5" rotation="12 -50 0" position="13 3 9" visible="false">
+    <a-plane position="0 0 0" width="5" height="2" color="#FFFFFF"
+    opacity="0.8" material="" geometry="">
+    </a-plane>
+ <a-text value="Connectivitat laboral
+ Es van realitzar tallers innovadors com les sessions d’autodefensa femenina i activitats específiques per facilitar l’accés al mercat laboral a través d’IntegraJOBes i programes de recerca activa de feina amb una participació sostinguda."
+    color="#555555" 
+    align="center" 
+    scale="0.5 0.5 0.5"
+    position="0 0 0.1">  
+ </a-text>
+</a-entity>
+
+
+   <!--intera jobs-->
+   <a-box position="-2 3 -10" rotation="0 0 0" 
+   width="2" height="2" depth="2"
+   material="src: #jobs ; repeat: 1 1; shader: flat"
+   toggle-text="groupId: #text6"
+    clickhandler="groupId: #text6">
+  </a-box>
+
+<!--caja transparente debajo de jobs-->
+<a-box position="-2 3 -10" rotation="0 0 0" 
+width="2" height="2" depth="2"
+material="opacity: 0; color: #ffffff; shader: flat"
+visible="true">
+</a-box>
+
+<!-- Plano blanco de fondo -->
+<a-plane position="0 0 -0.3205" width="5" height="2" color="#FFFFFF" opacity="0.8" material="" geometry="">
+</a-plane>
+
+<!-- Texto -->
+<a-entity id="text6" rotation="12 -50 0" position="1 3 -8" visible="false">
+    <a-plane position="0 0 0" width="5" height="2" color="#FFFFFF"
+    opacity="0.8" material="" geometry="">
+    </a-plane>
+ <a-text value=" Impuls tecnològic i social
+ El programa Joves+ va fomentar l’ús responsable de la tecnologia amb activitats pràctiques com tallers de gaming i suport socioeducatiu, contribuint a la inclusió digital i al creixement personal dels participants."
+    color="#555555" 
+    align="center" 
+    scale="0.5 0.5 0.5"
+    position="0 0 0.1">  
+ </a-text>
+</a-entity>
+
+
+
+  <!--ravaleando-->
+  <a-box position="0.7 3 0.2" rotation="0 0 0" 
+  width="2" height="2" depth="2"
+  material="src: #raval; repeat: 1 1; shader: flat"
+  toggle-text="groupId: #text7"
+    clickhandler="groupId: #text7">
+ </a-box>
+
+<!--caja transparente debajo de ravaleando-->
+<a-box position="0.7 3 0.2" rotation="0 0 0" 
+width="2" height="2" depth="2"
+material="opacity: 0; color: #ffffff; shader: flat"
+visible="true">
+</a-box>
+
+<!-- Plano blanco de fondo -->
+<a-plane position="0 0 -0.3205" width="5" height="2" color="#FFFFFF" opacity="0.8" material="" geometry="">
+</a-plane>
+
+<!-- Texto -->
+<a-entity id="text7" rotation="12 -50 0" position="-2 3 -2.5" visible="false">
+    <a-plane position="0 0 0" width="5" height="2" color="#FFFFFF"
+    opacity="0.8" material="" geometry="">
+    </a-plane>
+ <a-text value="Coordinació estratègica comunitària
+ Lideratge en 102 reunions i 9 espais compartits. Iniciatives com la Taula Jove i l’ecosistema contra l’abandonament escolar han consolidat l’enfortiment de xarxes locals."
+    color="#555555" 
+    align="center" 
+    scale="0.5 00.5 0.5" 
+    position="0 0 0.1">  
+ </a-text>
+</a-entity>
+
+
+
+
+
+                                        <!--sillas-->
+</a-entity>
+<a-entity gltf-model="../assets/sala_alba/blockbench_park_bench/scene.gltf" position="-0.1 -0.2179 18.737" rotation="1 2.567 -2" scale="" id="kursi1"></a-entity>
+<a-entity gltf-model="../assets/sala_alba/blockbench_park_bench/scene.gltf" position="-0.03535 -0.25387 -20.01813" rotation="1.0061138882497256 179.76119217408265 0.01948056503444799" scale="" id="kursi2"></a-entity>
+<a-entity gltf-model="../assets/sala_alba/blockbench_park_bench/scene.gltf" position="-18.845 -0.21677 -1.031" rotation="0.9757471251077919 -92.56992617031146 0.041252961249419275" scale="" id="kursi3"></a-entity>
+<a-entity gltf-model="../assets/sala_alba/blockbench_park_bench/scene.gltf" position="17.587 -0.23948 -0.375" rotation="1.0192919175377346 90.39383246440458 -0.5397262430132355" scale="" id="kursi4"></a-entity>
+
+                                                 <!--people-->
+    <a-entity gltf-model="../assets/sala_alba/low_poly_people_free_sample_pack/scene.gltf" position="31.19682 0.061 13.78355" rotation="0.9998113525032866 90.49581895193788 -2.000195662801704" animation-mixer="repeat" id="people1"></a-entity>
+    <a-entity gltf-model="../assets/sala_alba/low_poly_people_free_sample_pack/scene.gltf" position="-24.86621 0.06975 -14.58227" rotation="1 90.496 -2" animation-mixer="repeat" id="people2"></a-entity>
+
+    <a-entity gltf-model="../assets/sala_alba/pedestal/scene.gltf" position="6.86655 0.07 11.88374" rotation="1 90.496 -2" scale="0.2 0.2 0.2" animation-mixer="repeat" id="pedestal"></a-entity>
+
+    <a-entity gltf-model="../assets/sala_alba/ImageToStl.com_model+(1)/ImageToStl.com_model (1).glb" position="7.001 3.27509 11.79073" rotation="1 90.496 -2" scale="4.3 6 6" animation-mixer="repeat" id="avatar" sound="src: #avatar-sound; on: click"></a-entity>
+
+
+
+    
+</a-scene>
+
+    <!-- <script type="module" src="../js/sala_luisa.js"></script> -->
+
+</body>
+</html>

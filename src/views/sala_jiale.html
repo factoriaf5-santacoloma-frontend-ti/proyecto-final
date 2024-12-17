@@ -25,14 +25,15 @@
     
       </a-assets>
     
-    <audio id="background-music" src="../assets/sala_jiale/musica/AbChoiceUi_BGM.mp3" preload="auto" loop></audio>
     
-    <a-camera position="0 5 10">
-        <a-entity laser-controls="hand: left"></a-entity>
-        <a-entity laser-controls="hand: right"></a-entity>
-        <a-cursor scale="1 1 1" color="#fff"></a-cursor>
-    </a-camera>
-      
+    <audio id="background-music" src="../assets/sala_jiale/musica/AbChoiceUi_BGM.mp3" preload="auto" loop></audio>
+    <a-entity id="camera-rig" position="0 6 10" movement-controls="speed: 0.5">
+        <a-entity camera look-controls></a-entity>
+        <!-- Controladores VR (Meta Quest) -->
+        <a-entity oculus-touch-controls="hand: left" laser-controls raycaster="lineColor:#fff; lineOpacity: 0.5; far: 10"></a-entity>
+        <a-entity oculus-touch-controls="hand: right"></a-entity>
+        
+    </a-entity>
     <a-box src="../assets/sala_jiale/imagen/ParedyPiso_baseColor_pader.png" scale="10 25 1" position=" 10 5 0 " metalness="0.5"></a-box>
       
     <a-box src="../assets/sala_jiale/imagen/ParedyPiso_baseColor_pader.png" scale="10 25 1" position=" -10 5 0 " metalness="0.5"></a-box>
