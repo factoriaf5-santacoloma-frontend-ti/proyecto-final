@@ -8,66 +8,64 @@
     <title>Práctica con Aframe</title>
 
     <!-- Carga de la biblioteca A-Frame para realidad virtual -->
-    <!-- <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>-->
+    <!-- <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script> -->
     
-  <script type="module" crossorigin src="/proyecto-final/assets/sala_juan-B83zEqU3.js"></script>
+  <script type="module" crossorigin src="/proyecto-final/assets/sala_juan-D4J2KKHA.js"></script>
+  <link rel="modulepreload" crossorigin href="/proyecto-final/assets/aframe-master-BqMUpO3Y.js">
+  <link rel="modulepreload" crossorigin href="/proyecto-final/assets/index-D66LEcnl.js">
 </head>
 
 
 <body>
     <a-scene>
         <a-assets>
-            <img id="espacio1" src="../assets/textura/espacio1.jpg" alt="fondo de espacio">
-            <img id="piedra-caliza" src="../assets/textura/fondo-textura-muro-hormigon-piedra_890365-140.avif" alt="textura de piedra caliza">
-            <img id="piso" src="../assets/textura/piso4.jpg" alt="piso de piedra caliza">
-            <img id="peru" src="../assets/textura/peru.png" alt="orgullosa bandera peruana">
-            <img id="piso-peru" src="/proyecto-final/assets/piso-peru-ClFmxizY.jpg" alt="meme de peru">
+            <img id="espacio1" src="../assets/sala_juan/fondo1.jpg" alt="fondo de espacio">
+            <img id="piedra-caliza" src="../assets/sala_juan/fondo-sala_juan-muro-hormigon-piedra_890365-140.avif" alt="sala_juan de piedra caliza">
+            <img id="piso" src="../assets/sala_juan/piso4.jpg" alt="piso de piedra caliza">
+            <img id="peru" src="../assets/sala_juan/peru.png" alt="orgullosa bandera peruana">
+            <img id="piso-peru" src="../assets/sala_juan/piso-peru.jpg" alt="meme de peru">
 
-            <a-asset-item id="creador" src="../assets/textura/juan-creador.glb" alt="una persona en 3d"></a-asset-item>
-            <a-asset-item id="jorge" src="../assets/textura/jorge.glb" alt="una persona en 3d"></a-asset-item>
-            <a-asset-item id="hassan" src="../assets/textura/hassan.glb" alt="una persona en 3d"></a-asset-item>
-            <a-asset-item id="raul" src="../assets/textura/raul.glb" alt="una persona en 3d"></a-asset-item>
-            <a-asset-item id="david" src="../assets/textura/david.glb" alt="una persona en 3d"></a-asset-item>
-            <a-asset-item id="jiale" src="../assets/textura/jiale.glb" alt="una persona en 3d"></a-asset-item>
-            <a-asset-item id="faryal" src="../assets/textura/faryal.glb" alt="una persona en 3d"></a-asset-item>
-            <a-asset-item id="lola" src="../assets/textura/lola.glb" alt="una persona en 3d"></a-asset-item>
-            <a-asset-item id="luisa" src="../assets/textura/luisa.glb" alt="una persona en 3d"></a-asset-item>
-            <a-asset-item id="has" src="../assets/textura/hash.glb" alt="una persona en 3d"></a-asset-item>
-            <a-asset-item id="lucia" src="../assets/textura/lucia.glb" alt="una persona en 3d"></a-asset-item>
+            <a-asset-item id="creador" src="../assets/sala_juan/juan-creador.glb" alt="una persona en 3d"></a-asset-item>
+            <a-asset-item id="jorge" src="../assets/sala_juan/jorge.glb" alt="una persona en 3d"></a-asset-item>
+            <a-asset-item id="hassan" src="../assets/sala_juan/hassan.glb" alt="una persona en 3d"></a-asset-item>
+            <a-asset-item id="raul" src="../assets/sala_juan/raul.glb" alt="una persona en 3d"></a-asset-item>
+            <a-asset-item id="david" src="../assets/sala_juan/david.glb" alt="una persona en 3d"></a-asset-item>
+            <a-asset-item id="jiale" src="../assets/sala_juan/jiale.glb" alt="una persona en 3d"></a-asset-item>
+            <a-asset-item id="faryal" src="../assets/sala_juan/faryal.glb" alt="una persona en 3d"></a-asset-item>
+            <a-asset-item id="lola" src="../assets/sala_juan/lola.glb" alt="una persona en 3d"></a-asset-item>
+            <a-asset-item id="luisa" src="../assets/sala_juan/luisa.glb" alt="una persona en 3d"></a-asset-item>
+            <a-asset-item id="has" src="../assets/sala_juan/hash.glb" alt="una persona en 3d"></a-asset-item>
+            <a-asset-item id="lucia" src="../assets/sala_juan/lucia.glb" alt="una persona en 3d"></a-asset-item>
             
-            <a-asset-item id="columna1" src="../assets/textura/columna2.glb" alt="una columna"></a-asset-item>
-            <a-asset-item id="altar" src="../assets/textura/altar.glb" alt="altar"></a-asset-item>
-            <a-asset-item id="altar1" src="../assets/textura/altar_lowpoly_concept.glb" alt="poste de libro"></a-asset-item>
-            <a-asset-item id="libro" src="../assets/textura/libro.glb" alt="libro"></a-asset-item>
-            <a-asset-item id="objeto-peruano1" src="../assets/textura/objeto-peruano1.glb" alt="un objeto de la cultura peruana"></a-asset-item>
-            <a-asset-item id="alfombra" src="../assets/textura/alfombra.glb" alt="alfombra"></a-asset-item>
-            <a-asset-item id="inka-kola" src="../assets/textura/inca_kola_peru.glb" alt="una bebida inka kola"></a-asset-item>
-            <a-asset-item id="puerta" src="../assets/textura/puerta.glb" alt="puerta"></a-asset-item>
+            <a-asset-item id="columna1" src="../assets/sala_juan/columna2.glb" alt="una columna"></a-asset-item>
+            <a-asset-item id="altar" src="../assets/sala_juan/altar.glb" alt="altar"></a-asset-item>
+            <a-asset-item id="altar1" src="../assets/sala_juan/altar_lowpoly_concept.glb" alt="poste de libro"></a-asset-item>
+            <a-asset-item id="libro" src="../assets/sala_juan/libro.glb" alt="libro"></a-asset-item>
+            <a-asset-item id="objeto-peruano1" src="../assets/sala_juan/objeto-peruano1.glb" alt="un objeto de la cultura peruana"></a-asset-item>
+            <a-asset-item id="alfombra" src="../assets/sala_juan/alfombra.glb" alt="alfombra"></a-asset-item>
+            <a-asset-item id="inka-kola" src="../assets/sala_juan/inca_kola_peru.glb" alt="una bebida inka kola"></a-asset-item>
+            <a-asset-item id="puerta" src="../assets/sala_juan/puerta.glb" alt="puerta"></a-asset-item>
 
-            <audio id="background-music" src="../assets/textura/_Sudemos la camiseta_ version completa [-f0Jgpom9YU].mp3" alt="musica de peru"  loop></audio>
+            <audio id="background-music" src="../assets/sala_juan/_Sudemos la camiseta_ version completa [-f0Jgpom9YU].mp3" alt="musica de peru"  loop></audio>
             
         </a-assets>
+
+     <a-entity 
+         id="sound-entity" 
+         sound="src: #background-music; autoplay: true; loop: true; volume: 1.0; positional: true; distanceModel: linear; maxDistance: 1000; refDistance: 10;">
+     </a-entity>
+
+
+
+        <a-sky src="#espacio1"></a-sky>
+
+        <a-entity id="camera-rig" position="-60 8 0" rotation="0 -90 0" movement-controls="speed: 0.5">
+            <a-entity camera look-controls></a-entity>
         
-        
-        <a-sky src="#espacio1" rotation="0 -90 0" ></a-sky>
-
-
-
-        <a-entity id="camera-rig" position="-40 7 0" rotation="0 -90 0">
-            <!-- Cámara -->
-            <a-camera>
-                <a-cursor id="cursor" cursor="fuse: true; fuseTimeout: 100" 
-                        raycaster="objects: .interactable"
-                        geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" 
-                        material="shader: flat"></a-cursor>
-            </a-camera>
-            
-            <!-- Controladores -->
-            <a-entity oculus-touch-controls="hand: left"></a-entity>
+            <!-- Controladores VR con rayos láser -->
+            <a-entity oculus-touch-controls="hand: left" laser-controls  raycaster="lineColor: white; lineOpacity: 5; far:10, object: .interactable "></a-entity>
             <a-entity oculus-touch-controls="hand: right"></a-entity>
-        </a-entity>
-
-        <a-entity id="camera-rg" joystick-movement="speed: 0.1"></a-entity>
+            </a-entity>
         
 
 
@@ -449,15 +447,12 @@
 
 
 
-        <a-box class="interactable"  scale="3 0.7 0.1" position="-24.8 12.5 0" rotation="0 90 0"  color="#ffff" event-set__click="_event: click; color: red"
-           onclick="window.location.href='index.html'">
-            <a-text value="volver al inicio" scale="0.7 2 1" position="-0.5 0 0.5" color="#555555"></a-text>     
-        </a-box>
+            <a-box class="burbuja" scale="3 0.7 0.1" position="-25 6 7" rotation="0 -90 0"  color="#009276
+                " metalness="1" event-set__click="_event: click; color: red"
+                onclick="window.location.href='../'">
+                <a-text value="volver al inicio" scale="0.7 2 1" position="-0.5 0 0.7" color="#fff"></a-text>
+            </a-box>
 
-        <a-box class="interactable" scale="3 0.7 0.1" position="-25 12.5 0" rotation="0 -90 0"  color="#ffff" event-set__click="_event: click; color: red"
-        onclick="window.location.href='index.html'">
-         <a-text value="volver al inicio" scale="0.7 2 1" position="-0.5 0 0.5" color="#555555"></a-text>     
-     </a-box>
 
 
 

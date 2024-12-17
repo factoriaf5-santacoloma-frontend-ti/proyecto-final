@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELSA</title>
+  <script type="module" crossorigin src="/proyecto-final/assets/sala_elsa-DMhFdpp1.js"></script>
+  <link rel="modulepreload" crossorigin href="/proyecto-final/assets/aframe-master-BqMUpO3Y.js">
+  <link rel="modulepreload" crossorigin href="/proyecto-final/assets/index-D66LEcnl.js">
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+            <audio id="avatar-sound" src="../assets/sala-elsa/audio-elsa.mp3"></audio>
+            <img id="fondo" src="../assets/sala-elsa/fondo-espacio.jpg" alt="fondo de galaxia">
+            <img id="piso" src="../assets/sala-elsa/piso1.jpg" alt="piso de piedra oscura">
+            <img id="pared" src="../assets/sala-elsa/pared1.jpg" alt="pared de mayolica negra">
+            <img id="grupo1" src="../assets/sala-elsa/bloc1CT(1).jpg" alt="imagen de los chicos del curso">
+            <img id="grupo2" src="../assets/sala-elsa/bloc3CT(1).jpg" alt="imagen de los chicos del curso">
+            <img id="grupo3" src="../assets/sala-elsa/imagen1-sala(C).webp" alt="foto de un grupo trabajando en la empresa">
+            <img id="texto1" src="../assets/sala-elsa/texto1-sala(A).png" alt="texto1-sala(A)">
+            <img id="texto2" src="../assets/sala-elsa/texto2-sala(A).png" alt="texto2-sala(A)">
+            <img id="texto3" src="../assets/sala-elsa/texto3-sala(A).png" alt="texto3-sala(A)">
+            <img id="texto4" src="../assets/sala-elsa/texto1-sala(B).png" alt="texto1-sala(B)">
+            <img id="texto5" src="../assets/sala-elsa/texto2-sala(B).png" alt="texto2-sala(B)">
+            <img id="texto6" src="../assets/sala-elsa/texto1-sala(C).png" alt="texto1-sala(C)">
+            <img id="texto7" src="../assets/sala-elsa/texto2-sala(C).png" alt="texto2-sala(C)">
+            <a-asset-item id="elsa" src="../assets/sala-elsa/ImageToStl.com_model(9).glb" alt="avatar de elsa"></a-asset-item>
+            <a-asset-item id="pedestal" src="../assets/sala-elsa/pedestal.glb" alt="pedestal"></a-asset-item>
+            <a-asset-item id="panda1" src="../assets/sala-elsa/panda-saludar.glb" alt="panda saludando"></a-asset-item>
+            <a-asset-item id="panda2" src="../assets/sala-elsa/panda-boca-abajo.glb" alt="panda-boca-abajo" ></a-asset-item>
+            <a-asset-item id="panda3" src="../assets/sala-elsa/panda3-vigotes.glb" alt="panda con bigotes" ></a-asset-item>
+            <a-asset-item id="panda4" src="../assets/sala-elsa/panda4-grupo-de-pandas.glb" alt="un grupo de pandas bebe" ></a-asset-item>
+            <a-asset-item id="panda5" src="../assets/sala-elsa/panda4-panda-tronco.glb" alt="panda en un tronco" ></a-asset-item>
+            <a-asset-item id="tigre1" src="../assets/sala-elsa/tigre-peluche.glb" alt="tigre-peluche" ></a-asset-item>
+            <a-asset-item id="tigre2" src="../assets/sala-elsa/tigre3-corazon-pansa.glb" alt="tigre con un corazon en la barriga" ></a-asset-item>
+            <a-asset-item id="" src="" alt="" ></a-asset-item>
+
+
+
+
+        </a-assets>
+        
+
+        <a-sky src="#fondo"></a-sky>
+
+        <a-entity id="camera-rig" position="0 5 2" movement-controls="speed: 0.5">
+            <a-entity camera look-controls></a-entity>
+        
+            <!-- Controladores VR con rayos láser -->
+            <a-entity oculus-touch-controls="hand: left" laser-controls  raycaster="lineColor: white; lineOpacity: 5; far:10, object: .interactable "></a-entity>
+            <a-entity oculus-touch-controls="hand: right"></a-entity>
+            </a-entity>
+
+
+        <a-entity gltf-model=""></a-entity>
+
+
+
+        <a-plane  color="black" scale="1000 1000 1000" rotation="-90 0 0" position="0 -1 0"></a-plane>
+
+        
+        <!-- ----------------------------piso abajo sala(0)    --------------------------------------- -->
+        <a-plane src="#piso" scale="30 40 0" rotation="-90 0 0"></a-plane>        
+
+        <!-- ----------------------------pared alfrente-------------------------------------- 
+        <a-plane src=""  scale="50 15 50" rotation="0 0 0" position="0 7.5 -20" ></a-plane>
+        <a-plane src=""  scale="50 15 50" rotation="0 -180 0" position="0 7.5 -20" ></a-plane> -->
+       
+        <!-- ----------------------------pared atras sala(0) --------------------------------------- -->
+        <a-plane src="#pared" color="#bababa" scale="30 15 50" rotation="0 -180 0" position="0 7.5 20" ></a-plane>
+        <a-plane src="#pared" color="#bababa" scale="30 15 50" rotation="0 0 0" position="0 7.5 20" ></a-plane>
+         
+
+        <!-- ----------------------------pared derecha sala(0) --------------------------------------- -->
+        <a-plane src="#pared" color="#bababa" scale="40 15 50" rotation="0 -90 0" position="15 7.5 0" ></a-plane>
+        <a-plane src="#pared" color="#bababa" scale="40 15 50" rotation="0 90 0" position="15 7.5 0" ></a-plane>
+        
+        <!-- ----------------------------pared izquierda sala(0) --------------------------------------- -->
+        <a-plane src="#pared" color="#bababa"  scale="40 15 50" rotation="0 90 0" position="-15 7.5 0" ></a-plane>
+        <a-plane src="#pared" color="#bababa" scale="40 15 50" rotation="0 -90 0" position="-15 7.5 0" ></a-plane>
+        
+        <!-- ----------------------------panda sala(0) --------------------------------------- -->
+        <a-entity gltf-model="#panda5" position="12 10 -19"></a-entity>
+
+        
+        
+        
+        
+        <!-- ----------------------------piso abajo sala(A)  --------------------------------------- -->
+        <a-plane src="#piso" scale="30 30 0" rotation="-90 0 0" position="-30 0 -35"></a-plane>
+  
+        <!-- ----------------------------pared izquierda sala(A) --------------------------------------- -->
+        <a-plane src="#pared" scale="30 15 50" position="-30 7.5 -50"></a-plane>
+        <a-plane src="#pared" scale="30 15 50" rotation="0 -180 0" position="-30 7.5 -50"></a-plane>
+
+        <!-- ----------------------------pared derecha sala(A) --------------------------------------- -->
+        <a-plane src="#pared" scale="30 15 50" position="-30 7.5 -20"></a-plane>
+        <a-plane src="#pared" scale="30 15 50" rotation="0 -180 0" position="-30 7.5 -20"></a-plane>
+
+        <!-- ----------------------------pared atras sala(A) --------------------------------------- -->
+        <a-plane src="#pared" scale="30 15 50" rotation="0 90 0" position="-45 7.5 -35"></a-plane>
+        <a-plane src="#pared" scale="30 15 50" rotation="0 -90 0" position="-45 7.5 -35"></a-plane>
+        
+        <!-- ----------------------------pared transparente sala(A) --------------------------------------- -->
+        <a-plane opacity="0.7" material="transparent: true" color="black"  scale="30 15 50" rotation="0 90 0" position="-15 7.5 -35"></a-plane>
+
+        <!-- ----------------------------panda sala(A) --------------------------------------- -->
+        <a-entity gltf-model="#panda3" position="-45 0 -23" rotation="0 50 0" scale="10 10 10" ></a-entity>
+
+        <!-- ----------------------------tigre sala(A) --------------------------------------- -->
+        <a-entity gltf-model="#tigre1" position="-43 0 -47.5" rotation="0 50 0" scale="2 2 2"></a-entity>
+
+
+        <!-- ----------------------------foto pared sala(A) --------------------------------------- -->
+        <a-plane src="#grupo1" scale="20 10 20" rotation="0 90 0" position="-44 7 -35" ></a-plane>
+        
+        
+        <!-- ----------------------------titulo pared sala(A) --------------------------------------- -->   
+        <a-text value="AUTONOMIA EMOCIONAL" color="white" align="center" rotation="0 90 0" scale="6 4 4" position="-44.9 13.5 -35" ></a-text>
+
+
+        <!-- ---------------------------------------Caja 1 sala( A)---------------------------- -->
+        <a-box class="interactable" opacity="0.4" material="transparent: true" position="-30 2 -25" rotation="0 90 0" color="#CCCCCC" scale="5.5 2 0.1" toggle-text="groupId: #text1">
+            <a-text value="Responsabilitat" color="black" align="center" position="0 0 1" scale="0.6 1 1"></a-text>
+        </a-box>
+
+        <a-entity id="text1" rotation="0 90 0" position="-30 8 -25" visible="false">
+            <a-plane scale="10 10 0" color="#D3D3D3" rotation="0 0 0" position="0 0 -0.1"></a-plane>
+            <a-plane src="#texto1" opacity="1" material="transparent: true" scale="15 10 5" position="0 0 0" ></a-plane>
+        </a-entity>
+
+        <!-- ----------------------------------------Caja 2 sala( A)-------------------------------------- -->
+        <a-box class="interactable" opacity="0.4" material="transparent: true" position="-30 2 -35" rotation="0 90 0" color="#CCCCCC" scale="5 2 0.1" toggle-text="groupId: #text2">
+            <a-text value="Consciencia" color="black" align="center" position="0 0 1" scale="0.7 1 1"></a-text>
+        </a-box>
+
+        <a-entity id="text2" rotation="0 90 0" position="-30 8 -35" visible="false">
+           <a-plane scale="10 10 0" color="#D3D3D3" rotation="0 0 0" position="0 0 -0.1"></a-plane>
+           <a-plane src="#texto2"  scale="15 10 5"  position="0 0 0.1" opacity="1" material="transparent: true"></a-plane>
+        </a-entity>
+
+        <!-- -----------------------------------------------Caja 3 sala( A)--------------------------------- -->
+        <a-box class="interactable" opacity="0.4" material="transparent: true" position="-30 2 -45" rotation="0 90 0" color="#CCCCCC" scale="5.5 2 0.1" toggle-text="groupId: #text3">
+            <a-text value="Gestió de l'estrès" color="black" align="center" position="0 0 1" scale="0.6 1 1"></a-text>
+        </a-box>
+
+        <a-entity id="text3" rotation="0 90 0" position="-30 8 -45" visible="false">
+            <a-plane scale="10 10 0" color="#D3D3D3" rotation="0 0 0" position="0 0 -0.1"></a-plane>
+            <a-plane src="#texto3" scale="15 10 0" position="0 0 0.1" opacity="1" material="transparent: true"></a-plane>
+        </a-entity>
+
+
+
+
+        <!-- ----------------------------piso abajo sala(B)  --------------------------------------- -->
+        <a-plane src="#piso" scale="30 30 0" rotation="-90 0 0" position="30 0 -35"></a-plane>
+ 
+        <!-- ----------------------------pared izquierda sala(B) --------------------------------------- -->
+        <a-plane src="#pared" scale="30 15 50" position="30 7.5 -50"></a-plane>
+        <a-plane src="#pared" scale="30 15 50" rotation="0 -180 0" position="30 7.5 -50"></a-plane>
+ 
+        <!-- ----------------------------pared derecha sala(B) --------------------------------------- -->
+        <a-plane src="#pared" scale="30 15 50" position="30 7.5 -20"></a-plane>
+        <a-plane src="#pared" scale="30 15 50" rotation="0 -180 0" position="30 7.5 -20"></a-plane>
+
+        <!-- ----------------------------pared atras sala(B) --------------------------------------- -->
+       <a-plane src="#pared" scale="30 15 50" rotation="0 90 0" position="45 7.5 -35"></a-plane>
+       <a-plane src="#pared" scale="30 15 50" rotation="0 -90 0" position="45 7.5 -35"></a-plane>
+        
+       <!-- ----------------------------pared transparente sala(B) --------------------------------------- -->
+        <a-plane opacity="0.7" material="transparent: true" color="black"  scale="30 15 50" rotation="0 -90 0" position="15 7.5 -35"></a-plane>
+
+        <!-- ----------------------------panda sala(B) --------------------------------------- -->    
+        <a-entity gltf-model="#panda4" position="43.5 0 -35" rotation="0 180 0" scale="2 2 2" ></a-entity>
+
+
+        <!-- ----------------------------foto pared sala(B) --------------------------------------- -->
+        <a-plane src="#grupo2" scale="20 10 20" rotation="0 -90 0" position="44 7 -35"></a-plane>
+
+        <!-- ----------------------------titulo pared sala(A) --------------------------------------- -->   
+        <a-text value="COMPETENCIES SOCIALS" color="white" align="center" scale="6 4 4" rotation="0 -90 0" position="44.9 13.5 -35" ></a-text>
+
+
+      <!-- -----------------------------------------------Caja 1 sala(B)--------------------------------- -->
+        <a-box class="interactable" opacity="0.4" material="transparent: true" position="30 2 -40" rotation="0 -90 0" color="#CCCCCC" scale="6 2 0.1" toggle-text="groupId: #text4">
+        <a-text value="Els Drets Humans" color="black" align="center" position="0 0 1" scale="0.5 1 1"></a-text>
+        </a-box>
+
+        <a-entity id="text4" rotation="0 -90 0" position="30 8 -40" visible="false">
+            <a-plane scale="10 10 0" color="#D3D3D3" rotation="0 0 0" position="0 0 -0.1"></a-plane>
+            <a-plane  src="#texto4" scale="8 10 0" position="0 1 0.1" opacity="1" material="transparent: true"></a-plane>
+        </a-entity>
+
+
+        <!-- -----------------------------------------------Caja 2 sala(B)--------------------------------- -->
+        <a-box class="interactable" opacity="0.4" material="transparent: true" position="30 2 -30" rotation="0 -90 0" color="#CCCCCC" scale="6 2 0.1" toggle-text="groupId: #text5">
+        <a-text value="Gestio de Violencies" color="black" align="center" position="0 0 1" scale="0.4 1 1"></a-text>
+        </a-box>
+
+        <a-entity id="text5" rotation="0 -90 0" position="30 8 -30" visible="false">
+            <a-plane scale="10 10 0" color="#D3D3D3" rotation="0 0 0" position="0 0 -0.1"></a-plane>
+            <a-plane src="#texto5" scale="8 10 0" position="0 0.5 0.2" opacity="1" material="transparent: true"></a-plane>
+        </a-entity>
+
+
+
+
+        <!-- ----------------------------piso abajo sala(C)  --------------------------------------- -->
+       <a-plane src="#piso" scale="30 30 0" rotation="-90 0 0" position="0 0 -65"></a-plane>
+       
+        <!-- ----------------------------pared derecha sala(C) --------------------------------------- -->
+       <a-plane src="#pared" scale="30 15 50" rotation="0 -90 0" position="15 7.5 -65"></a-plane>
+       <a-plane src="#pared" scale="30 15 50" rotation="0 90 0" position="15 7.5 -65"></a-plane>
+       
+       <!-- ----------------------------pared izquierda(C) --------------------------------------- -->
+       <a-plane src="#pared"  scale="30 15 50" rotation="0 90 0" position="-15 7.5 -65"></a-plane>
+        <a-plane src="#pared"  scale="30 15 50" rotation="0 -90 0" position="-15 7.5 -65"></a-plane>
+ 
+        <!-- ---------------------------pared atras sala(C) --------------------------------------- -->
+       <a-plane src="#pared" scale="30 15 50" position="0 7.5 -80"  ></a-plane>
+       <a-plane src="#pared" scale="30 15 50" rotation="0 -180 0" position="0 7.5 -80"  ></a-plane>
+       
+        <!-- ----------------------------pared transparente sala(C) --------------------------------------- -->
+        <a-plane opacity="0.7" material="transparent: true" color="black"  scale="30 15 50" rotation="0 0 0" position="0 7.5 -50"></a-plane>
+
+        <!-- -----------------------------------------------panda sala(C)--------------------------------- -->
+        <a-entity gltf-model="#panda2" position="-11 0 -75" rotation="0 90 0" scale="7 7 7"></a-entity>
+
+        <!-- -----------------------------------------------panda sala(C)--------------------------------- -->
+        <a-entity gltf-model="#tigre2" position="11 0 -77" rotation="0 -20 0" scale="2.5 2.5 2.5" ></a-entity>
+
+
+        <!-- ----------------------------foto pared sala(C) --------------------------------------- -->
+        <a-plane src="#grupo3" scale="20 10 20" rotation="0 0 0" position="0 7 -79"></a-plane>
+
+        <!-- ----------------------------titulo pared sala(C) --------------------------------------- -->   
+        <a-text value="Habilitats de vida i benestar aplicades al mon laboral" color="white" align="center" scale="6 4 4" rotation="0 0 0" position="0 13.5 -79.9" ></a-text>
+
+
+        <!-- -----------------------------------------------Caja 1 sala(C)--------------------------------- -->
+        <a-box class="interactable" opacity="0.4" material="transparent: true" position="-3.5 2 -65" rotation="0 0 0" color="#CCCCCC" scale="6 2 0.1" toggle-text="groupId: #text6">
+        <a-text value="Part 1" color="black" align="center" position="0 0 1" scale="1 2 1"></a-text>
+        </a-box>
+
+        <a-entity id="text6" rotation="0 40 0" position="-10 7 -61.5" visible="false">
+            <a-plane scale="10 10 0" color="#D3D3D3" rotation="0 0 0" position="0 0 -0.1"></a-plane>
+            <a-plane src="#texto6" scale="8 10 0" position="0 -.5 0.2" opacity="1" material="transparent: true"></a-plane>
+        </a-entity>
+
+
+
+        <!-- -----------------------------------------------Caja 2 sala(C)--------------------------------- -->
+        <a-box class="interactable" opacity="0.4" material="transparent: true" position="3.5 2 -65" rotation="0 0 0" color="#CCCCCC" scale="6 2 0.1" toggle-text="groupId: #text7">
+            <a-text value="Part 2" color="black" align="center" position="0 0 1" scale="1 2 1"></a-text>
+        </a-box>
+
+        <a-entity id="text7" rotation="0 -40 0" position="10 7 -61.5" visible="false">
+            <a-plane scale="10 10 0" color="#D3D3D3" rotation="0 0 0" position="0 0 -0.1"></a-plane>
+            <a-plane src="#texto7" scale="8 12 0" position="0 1 0.2" opacity="1" material="transparent: true"></a-plane>
+        </a-entity>
+
+       
+       
+        <!-- ----------------------------el centro piso--------------------------------------- -->
+        <a-plane src="#piso" color="#bababa" scale="30 30 30" rotation="-90 0 0" position="0 0 -35"></a-plane>
+
+        <!-- ----------------------------el centro  avatar y pedestal   audio --------------------------------------- -->
+        <a-entity gltf-model="#pedestal" scale=".4 .5 .6" position="0 0 -35" rotation="0 90 0"></a-entity>
+
+        <!-- ----------------------------panda centro-------------------------------------- -->
+        <a-entity gltf-model="#panda1" scale="1 1 1" position="0 0 -32" animation-mixer="loop: repeat"></a-entity>
+
+
+        <a-entity class="interactable" gltf-model="../assets/sala-elsa/ImageToStl.com_model(9).glb" 
+            position="0 7 -35"  scale="9 9 9" animation-mixer="repeat"
+            sound="src: #avatar-sound; on: click;  volume: 2.0; positional: true; distanceModel: linear; maxDistance: 1000; refDistance: 10; "></a-entity>
+
+
+            <a-box class="burbuja" scale="6 1.4 0.4" position="14.5 6 -15" rotation="0 -90 0"  color="#009276
+                " metalness="1" event-set__click="_event: click; color: red"
+                onclick="window.location.href='../'">
+                <a-text value="volver al inicio" scale="0.7 2 1" position="-0.5 0 0.7" color="#fff"></a-text>
+            </a-box>
+
+
+
+    </a-scene>
+</body>
+</html>
