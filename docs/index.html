@@ -20,7 +20,7 @@
       </a-assets>
       
       <a-entity id="camera-rig" position="-0.4 3 13"  movement-controls="speed: 0.2">
-        <a-entity camera look-controls></a-entity>
+        <a-entity camera look-controls wasd-controls="acceleration: 150"></a-entity>
         <!-- Controladores VR (Meta Quest) -->
         <a-entity oculus-touch-controls="hand: left" laser-controls raycaster="lineColor: red; lineOpacity: 0.5; far:10"></a-entity>
         <a-entity oculus-touch-controls="hand: right"></a-entity>
