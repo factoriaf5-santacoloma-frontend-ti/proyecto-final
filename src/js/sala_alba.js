@@ -1,9 +1,9 @@
-import AFRAME from 'aframe';
-import './sala_luisa.js' ;
+ import AFRAME from 'aframe';
+// import * as luisa from './sala_luisa.js' ;
+import 'aframe-extras';
 
-
-// const boxes = document.querySelectorAll('a-box'); // Selecciona todas las a-box
-// let angles = Array(boxes.length).fill(0); // Crea un array para almacenar los ángulos de cada caja
+const boxes = document.querySelectorAll('a-box'); // Selecciona todas las a-box
+let angles = Array(boxes.length).fill(0); // Crea un array para almacenar los ángulos de cada caja
 
 // function rotateBoxes() {
 //   boxes.forEach((box, index) => {

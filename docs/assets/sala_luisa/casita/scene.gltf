@@ -1,0 +1,662 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 280,
+      "max": [
+        1.5936540365219116,
+        2.239480972290039,
+        15.76494026184082
+      ],
+      "min": [
+        -1.358991026878357,
+        -0.0029720000457018614,
+        12.55762767791748
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 3360,
+      "componentType": 5126,
+      "count": 280,
+      "max": [
+        0.9958280920982361,
+        0.4800383746623993,
+        0.9997947812080383
+      ],
+      "min": [
+        -0.9999760389328003,
+        -0.9871745109558105,
+        -0.9997141361236572
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 280,
+      "max": [
+        0.7277889847755432,
+        0.3829360008239746
+      ],
+      "min": [
+        0.01979999989271164,
+        0.02309500053524971
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 1416,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 6720,
+      "componentType": 5126,
+      "count": 140,
+      "max": [
+        1.7874300479888916,
+        2.811307907104492,
+        15.880986213684082
+      ],
+      "min": [
+        -1.465021014213562,
+        1.5640250444412231,
+        12.473858833312988
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 8400,
+      "componentType": 5126,
+      "count": 140,
+      "max": [
+        0.977378249168396,
+        0.9867920279502869,
+        0.9809533953666687
+      ],
+      "min": [
+        -0.9591501951217651,
+        -0.9981896877288818,
+        -0.9948524832725525
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 2240,
+      "componentType": 5126,
+      "count": 140,
+      "max": [
+        1.0110975503921509,
+        0.9923423528671265
+      ],
+      "min": [
+        -0.0031586582772433758,
+        0.4672754406929016
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 5664,
+      "componentType": 5125,
+      "count": 675,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 10080,
+      "componentType": 5126,
+      "count": 512,
+      "max": [
+        -0.7371870279312134,
+        1.635241985321045,
+        15.223006248474121
+      ],
+      "min": [
+        -1.3317660093307495,
+        0.8819339871406555,
+        13.022412300109863
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 16224,
+      "componentType": 5126,
+      "count": 512,
+      "max": [
+        0.587073802947998,
+        0.9969474077224731,
+        0.9226958155632019
+      ],
+      "min": [
+        -0.9540756940841675,
+        -0.954850435256958,
+        -0.933708667755127
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 3360,
+      "componentType": 5126,
+      "count": 512,
+      "max": [
+        0.775937020778656,
+        0.5552970170974731
+      ],
+      "min": [
+        0.3359380066394806,
+        0.0559919998049736
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 8364,
+      "componentType": 5125,
+      "count": 1572,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 22368,
+      "componentType": 5126,
+      "count": 265,
+      "max": [
+        1.5751429796218872,
+        1.2511379718780518,
+        14.693476676940918
+      ],
+      "min": [
+        1.332947015762329,
+        0.03061099909245968,
+        13.711132049560547
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 25548,
+      "componentType": 5126,
+      "count": 265,
+      "max": [
+        0.9993751645088196,
+        0.9999601244926453,
+        0.9980116486549377
+      ],
+      "min": [
+        -0.9132319688796997,
+        -0.9999600648880005,
+        -0.9870944619178772
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 7456,
+      "componentType": 5126,
+      "count": 265,
+      "max": [
+        0.9787520170211792,
+        0.9828349947929382
+      ],
+      "min": [
+        0.5552440285682678,
+        0.0755079984664917
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 14652,
+      "componentType": 5125,
+      "count": 924,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 28728,
+      "componentType": 5126,
+      "count": 265,
+      "max": [
+        -1.0678149461746216,
+        1.2007269859313965,
+        14.591031074523926
+      ],
+      "min": [
+        -1.3130680322647095,
+        0.00711200013756752,
+        13.605375289916992
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 31908,
+      "componentType": 5126,
+      "count": 265,
+      "max": [
+        0.9096953272819519,
+        0.99996018409729,
+        0.9862675666809082
+      ],
+      "min": [
+        -0.9991507530212402,
+        -0.9999601244926453,
+        -0.998324990272522
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 9576,
+      "componentType": 5126,
+      "count": 265,
+      "max": [
+        0.9787520170211792,
+        0.9828349947929382
+      ],
+      "min": [
+        0.5552440285682678,
+        0.0755079984664917
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 18348,
+      "componentType": 5125,
+      "count": 924,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Quirell (https://sketchfab.com/quirell)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/casita-de-seta-con-ventanas-y-sombrero-rojo-931e5790bc9147d99970e221b42a6176",
+      "title": "Casita de seta con ventanas y sombrero rojo"
+    },
+    "generator": "Sketchfab-13.68.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 22044,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 11696,
+      "byteOffset": 22044,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 35088,
+      "byteOffset": 33740,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 68828,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/mat_casita_baja_ventanas_baseColor.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "mat_casita_baja_ventanas",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "paredes_Mesh_mat_casita_baja_ventanas_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "tejado_mat_casita_baja_ventanas_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "ventanas_mat_casita_baja_ventanas_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 9,
+            "POSITION": 8,
+            "TEXCOORD_0": 10
+          },
+          "indices": 11,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "PUERTA_trasera_Mesh_mat_casita_baja_ventanas_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 13,
+            "POSITION": 12,
+            "TEXCOORD_0": 14
+          },
+          "indices": 15,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "PUERTA_delantera_Mesh_mat_casita_baja_ventanas_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 17,
+            "POSITION": 16,
+            "TEXCOORD_0": 18
+          },
+          "indices": 19,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        -0.1213943213224411,
+        2.2040244626832163e-16,
+        -0.9926043748855591,
+        0.0,
+        -0.9926043748855591,
+        -2.6954954118183738e-17,
+        0.1213943213224411,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "85726355b4804116a24db9f5fc798e76.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        6,
+        8,
+        10,
+        12
+      ],
+      "matrix": [
+        -0.9991897141011904,
+        -0.0,
+        -0.040248170571859275,
+        -0.0,
+        -4.9289793262364156e-18,
+        1.0,
+        1.223654485114982e-16,
+        -0.0,
+        -0.040248170571859275,
+        -1.2246467991473535e-16,
+        0.9991897141011905,
+        -0.0,
+        -0.19336426258087158,
+        0.0,
+        4.314496040344238,
+        1.0
+      ],
+      "name": "casita_baja_ventanas"
+    },
+    {
+      "children": [
+        5
+      ],
+      "matrix": [
+        -0.9991897141011904,
+        -0.0,
+        -0.040248170571859275,
+        -0.0,
+        4.9289793262364156e-18,
+        1.0,
+        -1.223654485114982e-16,
+        -0.0,
+        -0.040248170571859275,
+        1.2246467991473535e-16,
+        0.9991897141011905,
+        -0.0,
+        0.5439173579216003,
+        0.0,
+        -18.307437896728516,
+        1.0
+      ],
+      "name": "paredes_Mesh"
+    },
+    {
+      "mesh": 0,
+      "name": "paredes_Mesh_mat_casita_baja_ventanas_0"
+    },
+    {
+      "children": [
+        7
+      ],
+      "matrix": [
+        -0.9991897141011904,
+        -0.0,
+        -0.040248170571859275,
+        -0.0,
+        4.9289793262364156e-18,
+        1.0,
+        -1.223654485114982e-16,
+        -0.0,
+        -0.040248170571859275,
+        1.2246467991473535e-16,
+        0.9991897141011905,
+        -0.0,
+        0.5439173579216003,
+        0.0,
+        -18.307437896728516,
+        1.0
+      ],
+      "name": "tejado"
+    },
+    {
+      "mesh": 1,
+      "name": "tejado_mat_casita_baja_ventanas_0"
+    },
+    {
+      "children": [
+        9
+      ],
+      "matrix": [
+        -0.9991897141011904,
+        -0.0,
+        -0.040248170571859275,
+        -0.0,
+        4.9289793262364156e-18,
+        1.0,
+        -1.223654485114982e-16,
+        -0.0,
+        -0.040248170571859275,
+        1.2246467991473535e-16,
+        0.9991897141011905,
+        -0.0,
+        0.5439173579216003,
+        0.0,
+        -18.307437896728516,
+        1.0
+      ],
+      "name": "ventanas"
+    },
+    {
+      "mesh": 2,
+      "name": "ventanas_mat_casita_baja_ventanas_0"
+    },
+    {
+      "children": [
+        11
+      ],
+      "matrix": [
+        -0.9991897141011904,
+        -0.0,
+        -0.040248170571859275,
+        -0.0,
+        4.9289793262364156e-18,
+        1.0,
+        -1.223654485114982e-16,
+        -0.0,
+        -0.040248170571859275,
+        1.2246467991473535e-16,
+        0.9991897141011905,
+        -0.0,
+        0.5439173579216003,
+        0.0,
+        -18.307437896728516,
+        1.0
+      ],
+      "name": "PUERTA_trasera_Mesh"
+    },
+    {
+      "mesh": 3,
+      "name": "PUERTA_trasera_Mesh_mat_casita_baja_ventanas_0"
+    },
+    {
+      "children": [
+        13
+      ],
+      "matrix": [
+        -0.9991897141011904,
+        -0.0,
+        -0.040248170571859275,
+        -0.0,
+        4.9289793262364156e-18,
+        1.0,
+        -1.223654485114982e-16,
+        -0.0,
+        -0.040248170571859275,
+        1.2246467991473535e-16,
+        0.9991897141011905,
+        -0.0,
+        0.5439173579216003,
+        0.0,
+        -18.307437896728516,
+        1.0
+      ],
+      "name": "PUERTA_delantera_Mesh"
+    },
+    {
+      "mesh": 4,
+      "name": "PUERTA_delantera_Mesh_mat_casita_baja_ventanas_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}

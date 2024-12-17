@@ -1,126 +1,92 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="ISO-8859-1">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Document</title>
-
-    <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/aframe-extras/dist/aframe-extras.min.js"></script>
-
-
-
 </head>
 <body>
-    <div id="app">
-        <a-scene>
-            <a-camera  position="-1.717 21 20"> <a-cursor></a-cursor></a-camera>
-            <a-scene bloom="threshold: 0.5; intensity: 1.5; radius: 0.5">
-                
-            </a-scene>
-             <!-- FONDO -->
-             <a-sky id="fondo" src="../assets/sala_paola/uhd_img3219pv2_cc_eq.jpg"></a-sky>
+    <a-scene>
+        <a-assets>
+           <img id="fondo" src="../assets/sala_paola/fondo-baja-calidad.jpg" alt="">
+           <img id="banner" src="../assets/sala_paola/banner-welcome.png" alt="">
+           <img id="bandera" src="../assets/sala_paola/pngtree-brazil-flag-wall-texture-background-picture-image_1920098.png" alt="">
+           <img id="lol" src="../assets/sala_paola/paola-foto.jpg" alt="">
+           <img id="inicio" src="../assets/sala_paola/Volver al início.png" alt="">
+           <a-asset-item id="claqueta" src="../assets/sala_paola/claqueta.glb"></a-asset-item>
+           <a-asset-item id="musica" src="../assets/sala_paola/toca-discos.glb"></a-asset-item>
+           <a-asset-item id="pulpo" src="../assets/sala_paola/pulpo.glb"></a-asset-item>
+           <a-asset-item id="lola" src="../assets/sala_paola/lola.glb"></a-asset-item>
+        </a-assets>
+
+        <a-sky src="#fondo"></a-sky>
+
+        <a-plane color="black" scale="90 90 90" rotation="-90 0 0" position="0 0 0"  ></a-plane>
+ 
+
+        <a-plane src="#banner" opacity="1" material="transparent: true" scale="20 20 20" position="0 10 -15"></a-plane>
+
+        <a-entity>
+            <a-entity gltf-model="#musica" scale="2 2 2" rotation="0 50 0" position="-10 0 -10" animation-mixer="loop: repeat"></a-entity>
             
-
-    
-
-            <a-image id="banner-welcome" src="../assets/sala_paola/banner-welcome.png" position="0.5 22 14"  scale="0 0 0" height="12" width="10"
-            animation__scale="property: scale; to: 1 1 1; dur: 10000; easing: easeInOutQuad"> </a-image>
-
-            <a-assets>
-                <a-asset-item id ="doby" src="../assets/sala_paola/dobby_the_free_house_elf_-_harry_potter/scene.gltf"></a-asset-item>
-                <a-asset-item id="sombrero" src="../assets/sala_paola/sombrero.glb"></a-asset-item>
-                <a-asset-item id="bandera-brasil" src="../assets/sala_paola/bandeira_do_brasil/scene.gltf" > </a-asset-item>
-                <a-asset-item id="pulpo" src="../assets/sala_paola//animacion_corazon_pulpo/scene.gltf"></a-asset-item>
-                <a-asset-item id="piano" src="../assets/sala_paola/grand_piano/scene.gltf"></a-asset-item>
-                <a-asset-item id="claqueta" src="../assets/sala_paola/movie_clipper/scene.gltf"></a-asset-item>
-                
-            </a-assets>
-            
-            <a-entity
-            gltf-model="#claqueta"
-            position="-28 25 70"
-            scale="2 2 2"
-            class="clickable"
-            href="../index.html"
-            animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"
-            material="color: #ffffff; emissive: #ff0000; emissiveIntensity: 1"
-        ></a-entity>
-
-            <a-entity
-            gltf-model="#pulpo"
-            position="14.3 25 70"
-            scale="2 2 2"
-            class="clickable"
-            href="https://factoriaf5-santacoloma-frontend-ti.github.io/bubble-game-los-justicieros/"
-            animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"
-            material="color: #ffffff; emissive: #ff0000; emissiveIntensity: 1"
-        ></a-entity>
-
-            <a-entity
-            gltf-model="#piano"
-            position="-4.5 25 70"
-            scale="2 2 2"
-            class="clickable"
-            href="../index.html"
-            animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"
-            material="color: #ffffff; emissive: #ff0000; emissiveIntensity: 2"
-        ></a-entity>
-
-            <a-entity
-            gltf-model="#bandera-brasil" 
-            position="-40 20 37" 
-            scale="0.02 0.02 0.02"
-            rotation="0 -90 0">
-            </a-entity>
-            
-            <a-entity 
-            id="clickable-sombrero" 
-            gltf-model="#sombrero" 
-            position="20 22 35" 
-            scale="10 10 10" 
-            rotation="0 -95 0"
-            class="clickable">
-          </a-entity>
-          
-          
-          <a-entity 
-            id="info-container" 
-            position="20 22 30"
-            visible="false">
-
-            <a-plane 
-              id="info-box" 
-              height="0.8" 
-              width="1.5" 
-              color="#D3D3D3" 
-              opacity="0.6">
-            </a-plane>
-
-            
-            <!---boton de volver al inicio-->
-        
-                     
-
-
-          <!-- texto del sombrero -->
-        <a-box opacity="0" material="transparent: true" position="33.2 21.5 35.5" rotation="0 0 0" color="#CCCCCC" scale="4.5 7 7" toggle-text="groupId: #text-group12">
-        </a-box>
-        <a-entity id="text-group12" position="33.2 21.5 45" rotation="0 -90 0" visible="false">
-        <a-text value="Soy Paola, una brasileña de 26 años apasionada por la tecnología y el aprendizaje. Actualmente estoy finalizando un bootcamp de front-end, un paso clave en mi transicion hacia una carrera en un campo que me emociona y al que ahora puedo dedicarme.
-        A lo largo de mi trayectoria profesional he trabajado en diversos sectores, ahora, en el mundo tecnologico, siento que he encontrado mi lugar, un espacio donde mi curiosidad y entusiasmo por aprender se alinean con mis objetivos.
-        Mis valores fundamentales son la justicia, el feminismo y la igualdad. Creo firmemente en construir un mundo mas equitativo y en la importancia de llevar esos principios a mi vida personal y profesional. "
-            color="#fffff" align="center"
-            position="0 0 0" scale="2.4 2 2">
-        </a-text>
+            <a-box class="interactable" opacity="0" material="transparent: true" scale="2 2.3 2" position="-10 1 -10" rotation="0 50 0" event-set__click="_event: click;"
+                link-on-click="https://factoriaf5-santacoloma-frontend-ti.github.io/ding-dom-digital-world/">
+         </a-box>
+         
         </a-entity>
 
+        <a-entity>
+            <a-entity gltf-model="#claqueta" scale="1 1 1" rotation="0 90 0" position="-5 -.8 -7.5" animation-mixer="loop: repeat"></a-entity>
+
+            <a-box class="interactable" opacity="0" material="transparent: true" scale="2.8 2 .5" position="-4.6 1 -9.7" rotation="0 0 0" event-set__click="_event: click;"
+                link-on-click="https://factoriaf5-santacoloma-frontend-ti.github.io/movies-piolino2-0/">
+            </a-box>
+        </a-entity>
+
+        <a-entity>
+            <a-entity gltf-model="#pulpo" scale="2 2 2" rotation="0 -30 0" position="2 0 -11" animation-mixer="loop: repeat"></a-entity>
+
+            <a-box class="interactable" opacity="0" material="transparent: true" scale="4 5 3" position="3.3 1 -10" rotation="0 0 0" event-set__click="_event: click;"
+                link-on-click="https://factoriaf5-santacoloma-frontend-ti.github.io/bubble-game-los-justicieros/">
+            </a-box>
+
+        </a-entity>
+
+            <a-entity>
+                <a-entity gltf-model="#lola" scale="7 7 7" position="10 3 -10"></a-entity>
+                
+                
+                <a-box class="interactable" opacity="0" material="transparent: true" position="10 3 -10" rotation="0 0 0" color="#CCCCCC" scale="4 4.5 3" toggle-text="groupId: #text-group120">
+                </a-box>
+        
+                <a-entity  id="text-group120" position="15 4 -8" rotation="0 -50 0" visible="false">
+                <a-plane width="13" height="14" color="#D3D3D3" position="0 0 -0.3"></a-plane>
+                <a-text value="Soy Paola, una brasileña de 26 años apasionada por la tecnología y el aprendizaje. Actualmente estoy finalizando un bootcamp de front-end, un paso clave en mi transicion hacia una carrera en un campo que me emociona y al que ahora puedo dedicarme.
+                A lo largo de mi trayectoria profesional he trabajado en diversos sectores, ahora, en el mundo tecnologico, siento que he encontrado mi lugar, un espacio donde mi curiosidad y entusiasmo por aprender se alinean con mis objetivos.
+                Mis valores fundamentales son la justicia, el feminismo y la igualdad. Creo firmemente en construir un mundo mas equitativo y en la importancia de llevar esos principios a mi vida personal y profesional."
+                    color="black" align="center" 
+                    position="0 1.5 0" scale="2.4 2 2">
+                </a-text>
+                </a-entity>
+            </a-entity>
 
 
-            </a-scene>
-        </div>
+
+            <a-plane src="#inicio" class="interactable" opacity="1" material="transparent: true" scale="3 3 3" position="0 3 3" rotation="0 180 0" event-set__click="_event: click;"
+            link-on-click="https://factoriaf5-santacoloma-frontend-ti.github.io/proyecto-final/">
+            </a-plane>
+   
+
+            <a-entity id="camera-rig" position="0 3 2" movement-controls="speed: 0.5">
+                <a-entity camera look-controls></a-entity>
+            
+                <!-- Controladores VR con rayos láser -->
+                <a-entity oculus-touch-controls="hand: left" laser-controls  raycaster="lineColor: white; lineOpacity: 5; far:10, object: .interactable "></a-entity>
+                <a-entity oculus-touch-controls="hand: right"></a-entity>
+                </a-entity>
+        
+    </a-scene>
+
     <script type="module" src="../js/sala_paola.js"></script>
 </body>
 </html>
