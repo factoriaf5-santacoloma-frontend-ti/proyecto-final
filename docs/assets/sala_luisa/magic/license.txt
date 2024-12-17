@@ -1,0 +1,11 @@
+Model Information:
+* title:	XYZ_Magic table_Darft
+* source:	https://sketchfab.com/3d-models/xyz-magic-table-darft-6b9abdcd67d840299201992210471cb9
+* author:	pipchanski (https://sketchfab.com/pipchanski)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "XYZ_Magic table_Darft" (https://sketchfab.com/3d-models/xyz-magic-table-darft-6b9abdcd67d840299201992210471cb9) by pipchanski (https://sketchfab.com/pipchanski) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
