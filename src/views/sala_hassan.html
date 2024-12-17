@@ -23,7 +23,8 @@
       <a-entity id="camera-rig" position="0 0 15" movement-controls="speed: 0.2">
         <a-entity camera look-controls></a-entity>
         <!-- Controladores VR (Meta Quest) -->
-        <a-entity oculus-touch-controls="hand: left"></a-entity>
+        <!-- <a-entity oculus-touch-controls="hand: left"></a-entity> -->
+        <a-entity oculus-touch-controls="hand: left" laser-controls  raycaster="lineColor: white; lineOpacity: 5; far:10, object: .interactable "></a-entity>
         <a-entity oculus-touch-controls="hand: right"></a-entity>
         <a-camera wasd-controls="acceleration: 50">
         </a-camera>
@@ -42,7 +43,7 @@
       <a-image src="../assets/sala_hassan/photos/IMG_20200627_224120_445_Original.jpg" position="8.92492 -2.20621 14.64064" rotation="0.03265859432245692 6.038975160678876 1.7492401485344033" width="2.5" height="2" id="sawir-darbi2" scale="0.47573 0.48523 -0.00319"></a-image>
 
       
-      <a-image src="../assets/sala_hassan/photos/familia-viendo-smart-TV (1).jpg" position="0.50559 1.24532 9.185" rotation="0.010886198107485642 0.02119943841984046 0.25095551426730056" width="2.5" height="2" sound="on: click; src: ../assets/sala_hassan/sound/relaxing-piano-music-248868.mp3" scale="0.96765 0.65288 -1.616" id="tv"></a-image>
+      <a-image class="interactable" src="../assets/sala_hassan/photos/familia-viendo-smart-TV (1).jpg" position="0.50559 1.24532 9.185" rotation="0.010886198107485642 0.02119943841984046 0.25095551426730056" width="2.5" height="2" sound="on: click; src: ../assets/sala_hassan/sound/relaxing-piano-music-248868.mp3" scale="0.96765 0.65288 -1.616" id="tv"></a-image>
       
     
 
@@ -57,7 +58,7 @@
       
       <a-entity gltf-model="../assets/sala_hassan/gltf/lion_lowpoly.glb" position="0.39864 -2.96984 37.74471" rotation="-1.5762068944048946 3.919031318694831 2.1823962416533056" animation-mixer="" id="wardiye" scale="1.48079 1 1"> </a-entity>
 
-      <a-entity gltf-model="../assets/sala_hassan/gltf/lamborghini_centenario_lp-770_baby_blue_sdc.glb"  position="8.18762 -3.03698 -12.4531"  rotation="2.12 179.64 -1.65"  animation-mixer="repeat" sound="src: #car-sound; on: click" > </a-entity>
+      <a-entity class="interactable" gltf-model="../assets/sala_hassan/gltf/lamborghini_centenario_lp-770_baby_blue_sdc.glb"  position="8.18762 -3.03698 -12.4531"  rotation="2.12 179.64 -1.65"  animation-mixer="repeat" sound="src: #car-sound; on: click" > </a-entity>
 
       <a-entity  gltf-model="../assets/sala_hassan/gltf/ImageToStl.com_model.glb"  position="7.77905 -2.19622 -12.39519"  rotation="0 -180 10"  width="2.5"  height="3"></a-entity>
 
