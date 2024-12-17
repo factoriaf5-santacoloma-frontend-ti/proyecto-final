@@ -10,15 +10,16 @@
     <!-- Carga de la biblioteca A-Frame para realidad virtual -->
     <!-- <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script> -->
     
-  <script type="module" crossorigin src="/proyecto-final/assets/sala_juan-D_7RG-n8.js"></script>
+  <script type="module" crossorigin src="/proyecto-final/assets/sala_juan-D4J2KKHA.js"></script>
   <link rel="modulepreload" crossorigin href="/proyecto-final/assets/aframe-master-BqMUpO3Y.js">
+  <link rel="modulepreload" crossorigin href="/proyecto-final/assets/index-D66LEcnl.js">
 </head>
 
 
 <body>
     <a-scene>
         <a-assets>
-            <img id="espacio1" src="../assets/sala_juan/espacio1.jpg" alt="fondo de espacio">
+            <img id="espacio1" src="../assets/sala_juan/fondo1.jpg" alt="fondo de espacio">
             <img id="piedra-caliza" src="../assets/sala_juan/fondo-sala_juan-muro-hormigon-piedra_890365-140.avif" alt="sala_juan de piedra caliza">
             <img id="piso" src="../assets/sala_juan/piso4.jpg" alt="piso de piedra caliza">
             <img id="peru" src="../assets/sala_juan/peru.png" alt="orgullosa bandera peruana">
@@ -48,16 +49,23 @@
             <audio id="background-music" src="../assets/sala_juan/_Sudemos la camiseta_ version completa [-f0Jgpom9YU].mp3" alt="musica de peru"  loop></audio>
             
         </a-assets>
-        
-        
-        <a-sky src="#espacio1" rotation="0 -90 0" ></a-sky>
 
-        <a-entity id="camera-rig" position="-60 3 6" movement-controls="speed: 0.2">
-            <a-entity camera look-controls wasd-controls></a-entity>
-            <!-- Controladores VR (Meta Quest) -->
-            <a-entity oculus-touch-controls="hand: left"></a-entity>
+     <a-entity 
+         id="sound-entity" 
+         sound="src: #background-music; autoplay: true; loop: true; volume: 1.0; positional: true; distanceModel: linear; maxDistance: 1000; refDistance: 10;">
+     </a-entity>
+
+
+
+        <a-sky src="#espacio1"></a-sky>
+
+        <a-entity id="camera-rig" position="-60 8 0" rotation="0 -90 0" movement-controls="speed: 0.5">
+            <a-entity camera look-controls></a-entity>
+        
+            <!-- Controladores VR con rayos láser -->
+            <a-entity oculus-touch-controls="hand: left" laser-controls  raycaster="lineColor: white; lineOpacity: 5; far:10, object: .interactable "></a-entity>
             <a-entity oculus-touch-controls="hand: right"></a-entity>
-          </a-entity>
+            </a-entity>
         
 
 
@@ -439,15 +447,12 @@
 
 
 
-        <a-box class="interactable"  scale="3 0.7 0.1" position="-24.8 12.5 0" rotation="0 90 0"  color="#ffffff" event-set__click="_event: click; color: red"
-           onclick="window.location.href='index.html'">
-            <a-text value="volver al inicio" scale="0.7 2 1" position="-0.5 0 0.5" color="#555555"></a-text>     
-        </a-box>
+            <a-box class="burbuja" scale="3 0.7 0.1" position="-25 6 7" rotation="0 -90 0"  color="#009276
+                " metalness="1" event-set__click="_event: click; color: red"
+                onclick="window.location.href='../'">
+                <a-text value="volver al inicio" scale="0.7 2 1" position="-0.5 0 0.7" color="#fff"></a-text>
+            </a-box>
 
-        <a-box class="interactable" scale="3 0.7 0.1" position="-25 12.5 0" rotation="0 -90 0"  color="#ffffff" event-set__click="_event: click; color: red"
-        onclick="window.location.href='index.html'">
-         <a-text value="volver al inicio" scale="0.7 2 1" position="-0.5 0 0.5" color="#555555"></a-text>     
-     </a-box>
 
 
 
