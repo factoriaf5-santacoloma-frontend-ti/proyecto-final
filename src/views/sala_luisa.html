@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sala Luisa</title>
+    <!-- <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.2/dist/aframe-extras.min.js"></script> -->
+</head>
+<body>
+    <a-scene cursor="rayOrigin: mouse" vr-mode-ui="enabled: true" xrwebgl="enabled: true">
+        <a-assets>
+            <img id="grass" src="../assets/sala_luisa/grass.jpg" crossorigin="anonymous" />
+            <img id="sky" src="../assets/sala_luisa/sky_fantasia_tileable.jpg" crossorigin="anonymous" />
+            <img id="spai" src="../assets/sala_luisa/thumbnail_logo-espai_de_les_oportunitats.png" crossorigin="anonymous" />
+            <a-asset-item id="cat" src="../assets/sala_luisa/toon_cat_free/scene.gltf"></a-asset-item>
+            <a-asset-item id="welcome" src="../assets/sala_luisa/lit_welcome_sign_planter_prop/scene.gltf"></a-asset-item>
+            <a-asset-item id="flowers" src="../assets/sala_luisa/flowers/scene.gltf"></a-asset-item>
+            <a-asset-item id="tree" src="../assets/sala_luisa/stylized_tree/scene.gltf"></a-asset-item>
+            <a-asset-item id="mushrooms" src="../public/assets/sala_luisa/mushrooms/scene.gltf"></a-asset-item>
+            <a-asset-item id="piano" src="../assets/sala_luisa/piano/scene.gltf"></a-asset-item>
+            <a-asset-item id="cartelera" src="../assets/sala_luisa/clapperboard/scene.gltf"></a-asset-item>
+            <a-asset-item id="medusa" src="../assets/sala_luisa/jellyfish/scene.gltf"></a-asset-item>
+            <a-asset-item id="instagram" src="../assets/sala_luisa/instagram/scene.gltf"></a-asset-item>
+            <a-asset-item id="linkedin" src="../assets/sala_luisa/linked/scene.gltf"></a-asset-item>
+            <a-asset-item id="github" src="../assets/sala_luisa/github/scene.gltf"></a-asset-item>
+            <a-asset-item id="house" src="../assets/sala_luisa/casita/scene.gltf"></a-asset-item>
+            <a-asset-item id="planet" src="../assets/sala_luisa/planet/scene.gltf"></a-asset-item>
+            <a-asset-item id="girl" src="../assets/sala_luisa/girl/scene.gltf"></a-asset-item>
+            <a-asset-item id="sign" src="../assets/sala_luisa/sign/scene.gltf"></a-asset-item>
+            <a-asset-item id="magic" src="../assets/sala_luisa/magic/scene.gltf"></a-asset-item>
+        </a-assets>
+        <audio id="background-music" src="../assets/sala_luisa/music.mp3" preload="auto" loop></audio>
+
+        <!-- Cielo y Suelo del escenario -->
+        <a-sky src="#sky"></a-sky>
+        <a-plane width="80" height="80" position="0.00 0.00 0.00" rotation="-90 0 0"  material="src: #grass; repeat:10 10;" shadow="cast: false; receive: true"></a-plane>
+        
+        <!-- Camara y controles -->
+        <a-entity id="camera-rig" position="0 1.6 2" movement-controls="speed: 0.2">
+            <a-entity camera look-controls></a-entity>
+        
+            <!-- Controladores VR con rayos láser -->
+            <a-entity oculus-touch-controls="hand: left" laser-controls raycaster="lineColor: #FFFb; lineOpacity: 0.5; far:10"></a-entity>
+            <a-entity oculus-touch-controls="hand: right"></a-entity>
+            </a-entity>
+        </a-entity>
+
+        <a-light type="ambient" color="#fff" intensity="1.0"></a-light>
+
+        <a-entity sound="src: #background-music; autoplay: true; loop: true; volume: 1"></a-entity>
+        <!-- Objetos en la escena -->
+        <a-entity gltf-model="#cat" position="-17.64302 -0.045 20" scale="0.004 0.004 0.004" animation-mixer="" rotation="0 112 0"></a-entity>
+        <a-entity gltf-model="#welcome"  position="0 -0.045 -3" scale="2 2 2" class="clickable" onclick="window.location.href='../';"></a-entity>
+        <a-entity gltf-model="#piano" position="23 5 -30" scale="1 1 1" class="clickable" href="https://factoriaf5-santacoloma-frontend-ti.github.io/bubble-game-ballenas/" animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"></a-entity>
+        <a-entity gltf-model="#cartelera" position="27 4 -30" rotation="0 -90 0" scale="0.10 0.10 0.10" class="clickable" href="https://factoriaf5-santacoloma-frontend-ti.github.io/bubble-game-ballenas/" animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"></a-entity>
+        <a-entity gltf-model="#medusa" position="30 5 -30" scale="1 1 1" class="clickable" href="https://factoriaf5-santacoloma-frontend-ti.github.io/bubble-game-ballenas/" animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"></a-entity>
+        <a-entity gltf-model="#instagram" position="-26.487 6.1 -30" scale="1.3 1.3 1.3" class="clickable" events="click: console.log('Objeto clicado');" href="https://www.instagram.com/luisa.moreno3/?hl=es"></a-entity>
+        <a-entity gltf-model="#linkedin" position="-21 7.8 -30" scale="18 18 18" ></a-entity>
+        <a-entity gltf-model="#github" position="-23 4.3 -36.8" scale="1 1 1" class="clickable" events="click: console.log('Objeto clicado');" href="https://github.com/LuMorenoM"></a-entity>
+        <a-text value="¡Mis Proyectos!" position="27 9 -30" color="#FFFFFF" align="center" font="https://cdn.aframe.io/fonts/mozillavr.fnt" scale="5 5 5"></a-text>
+        <a-text value="¡Mis Redes Sociales!" position="-23 10 -30" color="#FFFFFF" align="center" font="https://cdn.aframe.io/fonts/mozillavr.fnt" scale="5 5 5"></a-text>
+        <a-entity gltf-model="#house" position="-21 0 27.9416" scale="230 230 230" rotation="0 119.2863751994666 0"></a-entity>
+        <a-entity id="magic" gltf-model="#magic" position="-20.4 0.5 27.5" scale="0.28 0.28 0.28" rotation="0 125 0"></a-entity>
+        <a-entity gltf-model="#planet" position="15.52842 23.81114 29.1145" scale="150 150 150" rotation="0 119.286 0"></a-entity>
+        <a-entity gltf-model="#girl" position="-13.5 1.5 24" scale="1.5 1.5 1.5" rotation="0 142 0"></a-entity>
+        <a-entity gltf-model="#sign" position="-12.08524 -0.36317 26.11452" scale="1.5 1.5 1.5" rotation="0 142 0">
+            <a-text value="Hola soy Luisa! Soy de Colombia, me gustan los gatos, viajar, programar y la fotografia. Amo tomar cafe y comer chocolates" position="0 2.2 0.2" rotation="0 -0.52196455136418 0" color="#FFFFFF" align="center" scale="0.8 0.8 0.8" text="font: mozillavr; side: double; tabSize: 3; width: 2.5; wrapCount: 26"></a-text>
+        </a-entity>
+        
+        <a-entity id="trees">
+            <a-entity gltf-model="#tree" scale="15 15 15" position="-5.409 0.1 -24.38833"></a-entity>
+            <a-entity gltf-model="#tree" scale="15 15 15" position="-24 0.1 10"></a-entity>
+            <a-entity gltf-model="#tree" scale="15 15 15" position="25 0.1 -14.60665"></a-entity>
+            <a-entity gltf-model="#tree" scale="15 15 15" position="15 0.1 30.57533"></a-entity>
+            <a-entity gltf-model="#tree" scale="15 15 15" position="-26.58571 0.1 23.26063"></a-entity>
+            <a-entity gltf-model="#tree" scale="15 15 15" position="6.93379 0.1 -29.64087"></a-entity>
+            <a-entity gltf-model="#tree" scale="15 15 15" position="13.6307 0.1 13.59098"></a-entity>
+            <a-entity gltf-model="#tree" scale="15 15 15" position="-36.44621 0.1 -27.84055"></a-entity>
+            <a-entity gltf-model="#tree" scale="15 15 15" position="-6 -0.1 22.08442"></a-entity>
+        </a-entity>
+        
+    </a-scene>
+    
+    <script type="module" src="../js/sala_luisa.js"></script>
+</body>
+</html>

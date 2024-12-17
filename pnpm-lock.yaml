@@ -14,13 +14,16 @@ importers:
       aframe-effects:
         specifier: ^0.9.1
         version: 0.9.1
+      aframe-environment-component:
+        specifier: ^1.4.0
+        version: 1.4.0
       aframe-extras:
         specifier: ^7.5.2
         version: 7.5.2
     devDependencies:
       vite:
-        specifier: ^6.0.1
-        version: 6.0.2(@types/node@22.10.1)
+        specifier: ^6.0.3
+        version: 6.0.3(@types/node@22.10.1)
 
 packages:
 
@@ -280,6 +283,9 @@ packages:
 
   aframe-effects@0.9.1:
     resolution: {integrity: sha512-HicRWqlttT1LBumMEKOdYCP/w16k2zWsyLVhBoRMHnA28/zA6s1i4EztWPtC1F6Jk0WF+F+HKrjP37atz8yMwg==}
+
+  aframe-environment-component@1.4.0:
+    resolution: {integrity: sha512-7TgXnMi/GZREIzrdta2laGKpB3bRLr8HvH4PMD4yZwPxD76LIRQFxtYpeq2YeWZqMLjonCUI55yt7sAzzClOcw==}
 
   aframe-extras@7.5.2:
     resolution: {integrity: sha512-rLjKZTMDVt+ial6/S8IH1lnKAQQgPclMNjuImh80nC67OTUT9yOEOZh79IqSOQD2YGs1DEwkl9hAkUSiPkUKCQ==}
@@ -561,8 +567,8 @@ packages:
     resolution: {integrity: sha512-NjFKA0DidqPa5ciFcSrXnAltTtzz84ogy+NebPvfEgAck0+TNg4UJ4IN+fB7zRZfbgUf0syOo9MDxFkDSMuFaQ==}
     engines: {node: '>=4'}
 
-  vite@6.0.2:
-    resolution: {integrity: sha512-XdQ+VsY2tJpBsKGs0wf3U/+azx8BBpYRHFAyKm5VeEZNOJZRB63q7Sc8Iup3k0TrN3KO6QgyzFf+opSbfY1y0g==}
+  vite@6.0.3:
+    resolution: {integrity: sha512-Cmuo5P0ENTN6HxLSo6IHsjCLn/81Vgrp81oaiFFMRa8gGDj5xEjIcEpf2ZymZtZR8oU0P2JX5WuUp/rlXcHkAw==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
@@ -780,6 +786,8 @@ snapshots:
       '@types/node': 22.10.1
 
   aframe-effects@0.9.1: {}
+
+  aframe-environment-component@1.4.0: {}
 
   aframe-extras@7.5.2:
     dependencies:
@@ -1109,7 +1117,7 @@ snapshots:
     dependencies:
       prepend-http: 2.0.0
 
-  vite@6.0.2(@types/node@22.10.1):
+  vite@6.0.3(@types/node@22.10.1):
     dependencies:
       esbuild: 0.24.0
       postcss: 8.4.49
