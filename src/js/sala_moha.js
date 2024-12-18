@@ -1,5 +1,6 @@
 import AFRAME from "aframe";
 import 'aframe-extras';
+import 'aframe-event-set-component';
 
 AFRAME.registerComponent('message-handler', {
   schema: {
