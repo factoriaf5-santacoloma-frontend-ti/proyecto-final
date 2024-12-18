@@ -43,15 +43,11 @@
             <a-asset-item id="inka-kola" src="../assets/sala_juan/inca_kola_peru.glb" alt="una bebida inka kola"></a-asset-item>
             <a-asset-item id="puerta" src="../assets/sala_juan/puerta.glb" alt="puerta"></a-asset-item>
 
-            <audio id="background-music" src="../assets/sala_juan/_Sudemos la camiseta_ version completa [-f0Jgpom9YU].mp3" alt="musica de peru"  loop></audio>
+            <audio id="background-music" src="../assets/sala_juan/_Sudemos la camiseta_ version completa [-f0Jgpom9YU].mp3" loop></audio>
             
         </a-assets>
 
-     <a-entity 
-         id="sound-entity" 
-         sound="src: #background-music; autoplay: true; loop: true; volume: 1.0; positional: true; distanceModel: linear; maxDistance: 1000; refDistance: 10;">
-     </a-entity>
-
+        <a-entity sound="src: #background-music; autoplay: true; loop: true; volume: 1"></a-entity>
 
 
         <a-sky src="#espacio1"></a-sky>

@@ -10,9 +10,9 @@
     <!-- Carga de la biblioteca A-Frame para realidad virtual -->
     <!-- <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script> -->
     
-  <script type="module" crossorigin src="/proyecto-final/assets/sala_juan-D4J2KKHA.js"></script>
+  <script type="module" crossorigin src="/proyecto-final/assets/sala_juan-DOzvlg7K.js"></script>
   <link rel="modulepreload" crossorigin href="/proyecto-final/assets/aframe-master-BqMUpO3Y.js">
-  <link rel="modulepreload" crossorigin href="/proyecto-final/assets/index-D66LEcnl.js">
+  <link rel="modulepreload" crossorigin href="/proyecto-final/assets/index-BnbecTj_.js">
 </head>
 
 
@@ -46,15 +46,11 @@
             <a-asset-item id="inka-kola" src="../assets/sala_juan/inca_kola_peru.glb" alt="una bebida inka kola"></a-asset-item>
             <a-asset-item id="puerta" src="../assets/sala_juan/puerta.glb" alt="puerta"></a-asset-item>
 
-            <audio id="background-music" src="../assets/sala_juan/_Sudemos la camiseta_ version completa [-f0Jgpom9YU].mp3" alt="musica de peru"  loop></audio>
+            <audio id="background-music" src="../assets/sala_juan/_Sudemos la camiseta_ version completa [-f0Jgpom9YU].mp3" loop></audio>
             
         </a-assets>
 
-     <a-entity 
-         id="sound-entity" 
-         sound="src: #background-music; autoplay: true; loop: true; volume: 1.0; positional: true; distanceModel: linear; maxDistance: 1000; refDistance: 10;">
-     </a-entity>
-
+        <a-entity sound="src: #background-music; autoplay: true; loop: true; volume: 1"></a-entity>
 
 
         <a-sky src="#espacio1"></a-sky>

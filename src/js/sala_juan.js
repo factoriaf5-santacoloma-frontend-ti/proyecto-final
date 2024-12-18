@@ -25,10 +25,6 @@ AFRAME.registerComponent('toggle-text', {
         console.log(`Grupo ahora es ${!isVisible ? 'visible' : 'oculto'}`);
       }
 
-      if (soundEl && soundEl.components.sound) {
-        soundEl.components.sound.playSound();
-        console.log('Sonido reproducido.');
-      }
     });
   },
 });
@@ -52,12 +48,4 @@ AFRAME.registerComponent('joystick-movement', {
             event.stopPropagation();  
         });
     });
-    if (soundEl && soundEl.components.sound) {
-      if (!soundEl.components.sound.isPlaying) {
-          soundEl.components.sound.playSound();
-          console.log('Sonido reproducido.');
-      }
-  }
   
-  const soundEl = document.querySelector('[sound]');
-soundEl.components.sound.setVolume(1.0);
