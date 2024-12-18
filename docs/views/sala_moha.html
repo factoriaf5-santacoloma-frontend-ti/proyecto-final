@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,17 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
 <script src="../js/sala_moha.js"></script> -->
 
-    
-    
-  <script type="module" crossorigin src="/proyecto-final/assets/sala_moha-BbdOfggS.js"></script>
+
+
+  <script type="module" crossorigin src="/proyecto-final/assets/sala_moha-B32bhBOY.js"></script>
   <link rel="modulepreload" crossorigin href="/proyecto-final/assets/aframe-master-BqMUpO3Y.js">
   <link rel="modulepreload" crossorigin href="/proyecto-final/assets/index-D66LEcnl.js">
+  <link rel="modulepreload" crossorigin href="/proyecto-final/assets/aframe-event-set-component-DHGj5HhW.js">
 </head>
+
 <body>
 
-    <a-scene physics="debug: true; gravity: -9.8;">
+    <a-scene cursor="rayOrigin:mouse;" physics="debug: true; gravity: -9.8;">
 
         <!-- Assets -->
         <a-assets>
@@ -32,316 +35,251 @@
             <audio id="background-music" src="../assets/sala_moha/music.mp3" preload="auto"></audio>
         </a-assets>
         <!-- Luz -->
-        <a-light type="ambient" color="#ffffff" intensity="4" light="angle: 60.14; color: #bdf4ff; intensity: 0.89" visible=""></a-light>
-        <a-light 
-  light="type: point; color: #2ec0ff; intensity: 2.5; angle: 60.14" 
-  position="0.08125 2.57114 -2.17845">
-</a-light>
+        <a-light type="ambient" color="#ffffff" intensity="4" light="angle: 60.14; color: #bdf4ff; intensity: 0.89"
+            visible=""></a-light>
+        <a-light light="type: point; color: #2ec0ff; intensity: 2.5; angle: 60.14" position="0.08125 2.57114 -2.17845">
+        </a-light>
         <!-- Imagen -->
-        <a-plane 
-            src="#mohaaa-image" 
-            position="0 1.66151 -1.54269" 
-            width="1.7" 
-            height="1.3" 
-            scale="1.08 0.65 1.28" 
+        <a-plane src="#mohaaa-image" position="0 1.66151 -1.54269" width="1.7" height="1.3" scale="1.08 0.65 1.28"
             material="shader: standard">
         </a-plane>
 
         <!-- Cielo -->
         <a-sky color="#000000"></a-sky>
-    
+
         <!-- Suelo -->
-        <a-plane 
-            position="0 0 0" 
-            rotation="-90 0 0" 
-            width="10" 
-            height="10" 
-            color="#7CFC00">
+        <a-plane position="0 0 0" rotation="-90 0 0" width="10" height="10" color="#7CFC00">
         </a-plane>
-    
+
         <!-- Techo -->
-        <a-box 
-            position="0 2.5 0" 
-            width="10" 
-            height="10" 
-            depth="10" 
-            color="#D3D3D3">
+        <a-box position="0 2.5 0" width="10" height="10" depth="10" color="#D3D3D3">
         </a-box>
 
         <!-- Textos -->
-        <a-text value="ARTIFICIAL INTELLIGENCE" position="0.093 2.445 2.305" width="6" align="center" color="#000000" rotation="32.9 173.113 -0.09" t="" text="color: #b3e2ff; letterSpacing: 2.89; lineHeight: 0.03; opacity: 0.91; width: 6.28" scale="0.55 0.48 0.69"></a-text>
-        <a-text value="CYBERSECURITY" position="3.949 2.48596 1.301" width="6" align="center" color="#000000" rotation="36.30489773066948 -101.5378615796991 -2.003633409572489" t="" text="color: #b3e2ff; letterSpacing: 2.89; lineHeight: 0.03; opacity: 0.91; width: 6.28" scale="0.77 0.6 1"></a-text>
-        <a-text value="METAVERSE" position="-3.27327 2.47462 0.84863" width="6" align="center" color="#000000" rotation="32.879756031377426 92.96526704895172 0.2647065013504403" t="" text="color: #b3e2ff; letterSpacing: 2.89; lineHeight: 0.03; opacity: 0.91; value: METAVERSE; width: 6.28"></a-text>
+        <a-text value="ARTIFICIAL INTELLIGENCE" position="0.093 2.445 2.305" width="6" align="center" color="#000000"
+            rotation="32.9 173.113 -0.09" t=""
+            text="color: #b3e2ff; letterSpacing: 2.89; lineHeight: 0.03; opacity: 0.91; width: 6.28"
+            scale="0.55 0.48 0.69"></a-text>
+        <a-text value="CYBERSECURITY" position="3.949 2.48596 1.301" width="6" align="center" color="#000000"
+            rotation="36.30489773066948 -101.5378615796991 -2.003633409572489" t=""
+            text="color: #b3e2ff; letterSpacing: 2.89; lineHeight: 0.03; opacity: 0.91; width: 6.28"
+            scale="0.77 0.6 1"></a-text>
+        <a-text value="METAVERSE" position="-3.27327 2.47462 0.84863" width="6" align="center" color="#000000"
+            rotation="32.879756031377426 92.96526704895172 0.2647065013504403" t=""
+            text="color: #b3e2ff; letterSpacing: 2.89; lineHeight: 0.03; opacity: 0.91; value: METAVERSE; width: 6.28"></a-text>
 
         <!-- Modelo: Science (No clickeable) -->
-        <a-entity 
-            gltf-model="#science-model" 
-            position="0 1.07037 -1.27469" 
-            scale="0.1 0.1 0.1" 
+        <a-entity gltf-model="#science-model" position="0 1.07037 -1.27469" scale="0.1 0.1 0.1"
             class="ignore-raycaster">
         </a-entity>
 
-       <!-- Modelo: Robot -->
-<a-entity 
-gltf-model="#robot-model" 
-position="0.04236 1.088 1.90769" 
-scale="0.5 0.5 0.5" 
-rotation="0 -167.6199488811126 0" 
-animation-mixer 
-class="clickable" 
-toggle-text="target: #text-robot">
-</a-entity>
-<a-entity id="text-robot" position="1.33431 2.22673 3.02366" visible="false" rotation="0 179.6096637020202 0" scale="0.42509 0.45019 1">
-    <a-plane scale="4.64006 1.75976 0.975" color="black" position="-0.048 -0.779 0.085"></a-plane>
-<a-text value="La inteligencia artificial es la mente digital que aprende, razona y crea a partir de datos. Es como un cerebro tecnologico que transforma tareas complejas en soluciones inteligentes, desde hablar con maquinas hasta predecir el futuro. Imagina un asistente incansable que analiza patrones y toma decisiones sin descanso. Es el puente entre la imaginacion humana y la innovacion automatizada." color="white" align="center" position="-0.03912 -0.81692 0.09986" width="3.5" scale="1.36433 1 1"></a-text>
-</a-entity>
+        <!-- Modelo: Robot -->
+        <a-entity gltf-model="#robot-model" position="0.04236 1.088 1.90769" scale="0.5 0.5 0.5"
+            rotation="0 -167.6199488811126 0" animation-mixer class="clickable" toggle-text="target: #text-robot">
+        </a-entity>
+        <a-entity id="text-robot" position="1.33431 2.22673 3.02366" visible="false" rotation="0 179.6096637020202 0"
+            scale="0.42509 0.45019 1">
+            <a-plane scale="4.64006 1.75976 0.975" color="black" position="-0.048 -0.779 0.085"></a-plane>
+            <a-text
+                value="La inteligencia artificial es la mente digital que aprende, razona y crea a partir de datos. Es como un cerebro tecnologico que transforma tareas complejas en soluciones inteligentes, desde hablar con maquinas hasta predecir el futuro. Imagina un asistente incansable que analiza patrones y toma decisiones sin descanso. Es el puente entre la imaginacion humana y la innovacion automatizada."
+                color="white" align="center" position="-0.03912 -0.81692 0.09986" width="3.5"
+                scale="1.36433 1 1"></a-text>
+        </a-entity>
 
-<!-- Modelo: Old PC -->
-<a-entity 
-gltf-model="#oldpc-model" 
-position="-3.08418 1.03927 0.86894" 
-scale="0.2377 0.22704 0.23" 
-rotation="0 84.57430013926081 0" 
-animation-mixer 
-class="clickable" 
-toggle-text="target: #text-oldpc">
-</a-entity>
-<a-entity id="text-oldpc" position="-3.08418 2.22673 0.86894" visible="false" rotation="0 179.6096637020202 0" scale="0.42509 0.45019 1">
-</a-entity>
+        <!-- Modelo: Old PC -->
+        <a-entity gltf-model="#oldpc-model" position="-3.08418 1.03927 0.86894" scale="0.2377 0.22704 0.23"
+            rotation="0 84.57430013926081 0" animation-mixer class="clickable" toggle-text="target: #text-oldpc">
+        </a-entity>
+        <a-entity id="text-oldpc" position="-3.08418 2.22673 0.86894" visible="false" rotation="0 179.6096637020202 0"
+            scale="0.42509 0.45019 1">
+        </a-entity>
 
-<!-- Modelo: Hacker -->
-<a-entity 
-gltf-model="#hacker-model" 
-position="3.82 1.2277 1.774" 
-scale="0.02 0.02 0.02" 
-rotation="0 -13.54 0" 
-class="clickable" 
-toggle-text="target: #text-cybersecurity">
-</a-entity>
-<a-entity id="text-cybersecurity" position="3.55189 1.85241 -0.89519" visible="false" rotation="2.517003594009706 -39.64409576069192 -0.3552338329811104" scale="0.2845 0.32238 2.01509">
-    <!-- Primer plano y texto -->
-    <a-plane scale="4.936 2.40103 0.88002" color="black" position="-0.118 0 0.085"></a-plane>
-    <a-text value="La ciberseguridad es el arte de proteger el universo digital de amenazas invisibles. Es un escudo que resguarda datos, sistemas y redes frente a hackers, malware y riesgos tecnologicos. Imagina un guardian constante que anticipa ataques, repara vulnerabilidades y asegura la confianza en cada clic. Es la barrera entre el caos digital y la tranquilidad conectada." color="white" align="center" position="0 0 0.1" width="4.5" scale="1 1 0.56783">
-    </a-text>
-  
-  </a-entity>
-  
+        <!-- Modelo: Hacker -->
+        <a-entity gltf-model="#hacker-model" position="3.82 1.2277 1.774" scale="0.02 0.02 0.02" rotation="0 -13.54 0"
+            class="clickable" toggle-text="target: #text-cybersecurity">
+        </a-entity>
+        <a-entity id="text-cybersecurity" position="3.55189 1.85241 -0.89519" visible="false"
+            rotation="2.517003594009706 -39.64409576069192 -0.3552338329811104" scale="0.2845 0.32238 2.01509">
+            <!-- Primer plano y texto -->
+            <a-plane scale="4.936 2.40103 0.88002" color="black" position="-0.118 0 0.085"></a-plane>
+            <a-text
+                value="La ciberseguridad es el arte de proteger el universo digital de amenazas invisibles. Es un escudo que resguarda datos, sistemas y redes frente a hackers, malware y riesgos tecnologicos. Imagina un guardian constante que anticipa ataques, repara vulnerabilidades y asegura la confianza en cada clic. Es la barrera entre el caos digital y la tranquilidad conectada."
+                color="white" align="center" position="0 0 0.1" width="4.5" scale="1 1 0.56783">
+            </a-text>
 
-<!-- Modelo: Metaverse -->
-<a-entity 
-gltf-model="#man-in-vr-model" 
-position="-2.11934 0.908 0.19925" 
-scale="0.02 0.01 0.01" 
-rotation="-0.1 34.218 0" 
-animation-mixer 
-class="clickable" 
-toggle-text="target: #text-metaverse">
-</a-entity>
-<a-entity id="text-metaverse" position="-2.09945 1 73014 1.86405" visible="false" rotation="0.505921733100517 150.50111587819384 -0.33403439456126993" scale="0.26948 0.38323 0.87345">
-<a-plane scale="4.93598 3.99017 0.97474" color="black" position="-0.14033 0 0.08504"></a-plane>
-<a-text value="El metaverso es com una versio evolucionada d'internet..." color="white" align="center" position="0 0 0.1" width="4.5" scale="1 0.8833 1" rotation="0.521 0 0"></a-text>
-</a-entity>
+        </a-entity>
 
-<!-- Modelo: Candado -->
-<a-entity 
-    gltf-model="#candado-model" 
-    position="7.288 1.467 -13.71085" 
-    scale="5 5 10" 
-    rotation="1.12 -102.27 0" 
-    animation-mixer 
-    class="clickable" 
-    toggle-text="target: #text-candado">
-</a-entity>
+
+        <!-- Modelo: Metaverse -->
+        <a-entity gltf-model="#man-in-vr-model" position="-2.11934 0.908 0.19925" scale="0.02 0.01 0.01"
+            rotation="-0.1 34.218 0" animation-mixer class="clickable" toggle-text="target: #text-metaverse">
+        </a-entity>
+        <a-entity id="text-metaverse" position="-2.09945 1 73014 1.86405" visible="false"
+            rotation="0.505921733100517 150.50111587819384 -0.33403439456126993" scale="0.26948 0.38323 0.87345">
+            <a-plane scale="4.93598 3.99017 0.97474" color="black" position="-0.14033 0 0.08504"></a-plane>
+            <a-text value="El metaverso es com una versio evolucionada d'internet..." color="white" align="center"
+                position="0 0 0.1" width="4.5" scale="1 0.8833 1" rotation="0.521 0 0"></a-text>
+        </a-entity>
+
+        <!-- Modelo: Candado -->
+        <a-entity gltf-model="#candado-model" position="7.288 1.467 -13.71085" scale="5 5 10" rotation="1.12 -102.27 0"
+            animation-mixer class="clickable" toggle-text="target: #text-candado">
+        </a-entity>
 
 
 
-<!-- Texto asociado al candado -->
-<a-entity id="text-candado" position="7.288 2.467 -13.71085" visible="false" rotation="0 0 0" scale="0.5 0.5 0.5">
-    <a-plane scale="4 2 0.1" color="black" position="0 0 0.05"></a-plane>
-    <a-text value="El candado es un dispositivo de seguridad que se utiliza para asegurar objetos, como puertas o cajas, evitando su apertura no autorizada." color="white" align="center" position="0 0 0.1" width="4" scale="1 1 1"></a-text>
-</a-entity>
+        <!-- Texto asociado al candado -->
+        <a-entity id="text-candado" position="7.288 2.467 -13.71085" visible="false" rotation="0 0 0"
+            scale="0.5 0.5 0.5">
+            <a-plane scale="4 2 0.1" color="black" position="0 0 0.05"></a-plane>
+            <a-text
+                value="El candado es un dispositivo de seguridad que se utiliza para asegurar objetos, como puertas o cajas, evitando su apertura no autorizada."
+                color="white" align="center" position="0 0 0.1" width="4" scale="1 1 1"></a-text>
+        </a-entity>
 
-<!-- Modelo: Man in VR -->
-<a-entity 
-    gltf-model="#man-in-vr-model" 
-    position="-2.11934 0.908 0.19925" 
-    scale="0.02 0.01 0.01" 
-    rotation="-0.1 34.218 0" 
-    animation-mixer 
-    class="clickable" 
-    toggle-text="target: #text-man-in-vr">
-</a-entity>
-<a-entity id="text-man-in-vr" position="-2.11934 1.5 0.19925" visible="false" rotation="0 0 0" scale="0.5 0.5 0.5">
-    <a-plane scale="4 2 0.1" color="black" position="0 0 0.05"></a-plane>
-    <a-text value="Texto sobre el modelo Man in VR..." color="white" align="center" position="0 0 0.1" width="4" scale="1 1 1"></a-text>
-</a-entity>
+        <!-- Modelo: Man in VR -->
+        <a-entity gltf-model="#man-in-vr-model" position="-2.11934 0.908 0.19925" scale="0.02 0.01 0.01"
+            rotation="-0.1 34.218 0" animation-mixer class="clickable" toggle-text="target: #text-man-in-vr">
+        </a-entity>
+        <a-entity id="text-man-in-vr" position="-2.11934 1.5 0.19925" visible="false" rotation="0 0 0"
+            scale="0.5 0.5 0.5">
+            <a-plane scale="4 2 0.1" color="black" position="0 0 0.05"></a-plane>
+            <a-text value="Texto sobre el modelo Man in VR..." color="white" align="center" position="0 0 0.1" width="4"
+                scale="1 1 1"></a-text>
+        </a-entity>
 
-<!-- Modelo: Man in VR -->
-<a-entity 
-    gltf-model="#man-in-vr-model" 
-    position="-2.11934 0.908 0.19925" 
-    scale="0.02 0.01 0.01" 
-    rotation="-0.1 34.218 0" 
-    animation-mixer 
-    class="clickable" 
-    toggle-text="target: #text-man-in-vr">
-</a-entity>
-<a-entity id="text-man-in-vr" position="-2.11934 1.5 0.19925" visible="false" rotation="0 0 0" scale="0.5 0.5 0.5">
-    <a-plane scale="4 2 0.1" color="black" position="0 0 0.05"></a-plane>
-    <a-text value="Texto sobre el modelo Man in VR..." color="white" align="center" position="0 0 0.1" width="4" scale="1 1 1"></a-text>
-</a-entity>
+        <!-- Modelo: Man in VR -->
+        <a-entity gltf-model="#man-in-vr-model" position="-2.11934 0.908 0.19925" scale="0.02 0.01 0.01"
+            rotation="-0.1 34.218 0" animation-mixer class="clickable" toggle-text="target: #text-man-in-vr">
+        </a-entity>
+        <a-entity id="text-man-in-vr" position="-2.11934 1.5 0.19925" visible="false" rotation="0 0 0"
+            scale="0.5 0.5 0.5">
+            <a-plane scale="4 2 0.1" color="black" position="0 0 0.05"></a-plane>
+            <a-text value="Texto sobre el modelo Man in VR..." color="white" align="center" position="0 0 0.1" width="4"
+                scale="1 1 1"></a-text>
+        </a-entity>
 
-<!-- Modelo: VR Thinker -->
-<a-entity 
-    gltf-model="#vr-thinker-model" 
-    position="-2.88579 1.073 0.88872" 
-    scale="0.01 0.01 0.01" 
-    rotation="0 -84.78744043904948 0" 
-    animation-mixer 
-    class="clickable" 
-    toggle-text="target: #text-vr-thinker">
-</a-entity>
+        <!-- Modelo: VR Thinker -->
+        <a-entity gltf-model="#vr-thinker-model" position="-2.88579 1.073 0.88872" scale="0.01 0.01 0.01"
+            rotation="0 -84.78744043904948 0" animation-mixer class="clickable" toggle-text="target: #text-vr-thinker">
+        </a-entity>
 
-<!-- Texto asociado al VR Thinker -->
-<a-entity id="text-vr-thinker" position="-2.88579 1.5 0.88872" visible="false" rotation="0 0 0" scale="0.5 0.5 0.5">
-    <a-plane scale="2.98263 1.98634 0.45956" color="black" position="2.78 0.704 2.291" rotation="0 179.457 0"></a-plane>
-    <a-text value="El metaverso es como un universo digital paralelo donde la realidad fisica y virtual se entrelazan. Es un espacio interactivo, inmersivo y persistente, habitado por avatares, donde puedes trabajar, jugar, socializar o crear. Imagina caminar por ciudades hechas de pixeles, asistir a conciertos en mundos fantasticos o construir tu propio cosmos. Es la fusion de tecnologia, creatividad y comunidad en una nueva dimension." color="white" align="center" anchor="align" position="2.78 0.704 2.291" rotation="0 179.457 0" width="4" scale="0.68659 1 0.74688">
-    </a-text>
-</a-entity>
+        <!-- Texto asociado al VR Thinker -->
+        <a-entity id="text-vr-thinker" position="-2.88579 1.5 0.88872" visible="false" rotation="0 0 0"
+            scale="0.5 0.5 0.5">
+            <a-plane scale="2.98263 1.98634 0.45956" color="black" position="2.78 0.704 2.291"
+                rotation="0 179.457 0"></a-plane>
+            <a-text
+                value="El metaverso es como un universo digital paralelo donde la realidad fisica y virtual se entrelazan. Es un espacio interactivo, inmersivo y persistente, habitado por avatares, donde puedes trabajar, jugar, socializar o crear. Imagina caminar por ciudades hechas de pixeles, asistir a conciertos en mundos fantasticos o construir tu propio cosmos. Es la fusion de tecnologia, creatividad y comunidad en una nueva dimension."
+                color="white" align="center" anchor="align" position="2.78 0.704 2.291" rotation="0 179.457 0" width="4"
+                scale="0.68659 1 0.74688">
+            </a-text>
+        </a-entity>
 
 
-<!-- Modelo: Old PC -->
-<a-entity 
-    gltf-model="#oldpc-model" 
-    position="-3.08418 1.03927 0.86894" 
-    scale="0.2377 0.22704 0.23" 
-    rotation="0 84.57430013926081 0" 
-    animation-mixer 
-    class="clickable" 
-    toggle-text="target: #text-oldpc">
-</a-entity>
-<a-entity id="text-oldpc" position="-3.08418 1.5 0.86894" visible="false" rotation="0 0 0" scale="0.5 0.5 0.5">
-    
-</a-entity>
+        <!-- Modelo: Old PC -->
+        <a-entity gltf-model="#oldpc-model" position="-3.08418 1.03927 0.86894" scale="0.2377 0.22704 0.23"
+            rotation="0 84.57430013926081 0" animation-mixer class="clickable" toggle-text="target: #text-oldpc">
+        </a-entity>
+        <a-entity id="text-oldpc" position="-3.08418 1.5 0.86894" visible="false" rotation="0 0 0" scale="0.5 0.5 0.5">
 
-<!-- Modelo: Computer -->
-<a-entity 
-    gltf-model="#computer-model" 
-    position="4.15356 1.31373 0.423" 
-    scale="0.19 0.18 0.148" 
-    rotation="0 -100.0097831400852 0" 
-    animation-mixer 
-    >
-</a-entity>
-<a-entity id="text-computer" position="4.15356 1.5 0.423" visible="false" rotation="0 0 0" scale="0.5 0.5 0.5">
-    <a-plane scale="4 2 0.1" color="black" position="0 0 0.05"></a-plane>
-    <a-text value="Texto sobre el modelo Computer..." color="white" align="center" position="0 0 0.1" width="4" scale="1 1 1"></a-text>
-</a-entity>
-<!-- ROBOT DANCE -->
-<a-entity gltf-model="../assets/sala_moha/robotpiano/scene.gltf" position="0.30885 1.10907 -2.63202" scale="0.0006 0.0006 0.0006" rotation="0 180 0" animation-mixer="loop: pingpong; timeScale: 5" class="clickable" dancing-robot-message="" material="color: #0000ff; opacity: 0.9">
-</a-entity>
-<a-entity 
-  id="dancing-robot-text" 
-  text="value: Bip, bip. Asi que esto era a lo que Moha se referia con tener el animometro al maximo! ; color: #FFFFFF; align: center; width: 6" 
-  position="-0.26358 2.00324 -3.01153"  
-  visible="true" rotation="0 177.4960223957826 0" scale="0.13253 0.19812 1">
-</a-entity>
+        </a-entity>
 
-      
-         <!-- Música de fondo -->
-         <a-entity 
-         sound="src: #background-music; autoplay: true; loop: true; volume: 0.5;">
-     </a-entity>
-
- 
-       <!-- Player -->
-<a-entity 
-id="player" 
-position="0 0.5 0"
-movement-controls="speed: 0.1;">
-<a-camera>
-    <a-cursor color="white" raycaster="objects: .clickable;"></a-cursor>
-
-</a-camera>
-</a-entity>
+        <!-- Modelo: Computer -->
+        <a-entity gltf-model="#computer-model" position="4.15356 1.31373 0.423" scale="0.19 0.18 0.148"
+            rotation="0 -100.0097831400852 0" animation-mixer>
+        </a-entity>
+        <a-entity id="text-computer" position="4.15356 1.5 0.423" visible="false" rotation="0 0 0" scale="0.5 0.5 0.5">
+            <a-plane scale="4 2 0.1" color="black" position="0 0 0.05"></a-plane>
+            <a-text value="Texto sobre el modelo Computer..." color="white" align="center" position="0 0 0.1" width="4"
+                scale="1 1 1"></a-text>
+        </a-entity>
+        <!-- ROBOT DANCE -->
+        <a-entity gltf-model="../assets/sala_moha/robotpiano/scene.gltf" position="0.30885 1.10907 -2.63202"
+            scale="0.0006 0.0006 0.0006" rotation="0 180 0" animation-mixer="loop: pingpong; timeScale: 5"
+            class="clickable" dancing-robot-message="" material="color: #0000ff; opacity: 0.9">
+        </a-entity>
+        <a-entity id="dancing-robot-text"
+            text="value: Bip, bip. Asi que esto era a lo que Moha se referia con tener el animometro al maximo! ; color: #FFFFFF; align: center; width: 6"
+            position="-0.26358 2.00324 -3.01153" visible="true" rotation="0 177.4960223957826 0"
+            scale="0.13253 0.19812 1">
+        </a-entity>
 
 
-<!-- Sonido de fondo -->
-<a-entity 
-sound="src: #background-music; autoplay: true; loop: true; positional: false; volume: 0.5;">
-</a-entity>
+        <!-- Música de fondo -->
+        <a-entity sound="src: #background-music; autoplay: true; loop: true; volume: 0.5;">
+        </a-entity>
+
+
+        <!-- Player -->
+        <a-entity id="player" position="0 0.5 0" movement-controls="speed: 0.1;">
+            <a-camera>
+                <a-cursor color="white" raycaster="objects: .clickable;"></a-cursor>
+
+            </a-camera>
+        </a-entity>
+
+
+        <!-- Sonido de fondo -->
+        <a-entity sound="src: #background-music; autoplay: true; loop: true; positional: false; volume: 0.5;">
+        </a-entity>
 
 
 
 
-         <!-- Pared detrás de "ARTIFICIAL INTELLIGENCE" -->
-         <a-box position="0 1.5 3.15747" width="10" height="3" depth="0.1" color="red"  collidable material="opacity: 0.0; transparent: true;" static-body>
+        <!-- Pared detrás de "ARTIFICIAL INTELLIGENCE" -->
+        <a-box position="0 1.5 3.15747" width="10" height="3" depth="0.1" color="red" collidable
+            material="opacity: 0.0; transparent: true;" static-body>
         </a-box>
 
-    
-
-    <!-- Pared detrás de "METAVERSE" -->
-    <a-box 
-        position="-4 1.5 0.5" 
-        rotation="0 90 0" 
-        width="10" 
-        height="3" 
-        depth="0.1" 
-        color="red" 
-        collidable material="opacity: 0.0; transparent: true;" static-body>
-    </a-box>
-
-    <!-- Pared al frente de "ARTIFICIAL INTELLIGENCE" -->
-    <a-box 
-        position="0 1.5 -5" 
-        width="10" 
-        height="3" 
-        depth="0.1" 
-        color="red" 
-        collidable material="opacity: 0.0; transparent: true;" static-body>
-    </a-box>
-    <a-plane 
-    position="1.552 1.314 -0.805" 
-    width="1.5" 
-    height="0.5" 
-    color="#9beeed" 
-    class="clickable" 
-    event-set__mouseenter="material.color: #FF5555" 
-    event-set__mouseleave="material.color: #FF0000" 
-    onclick="history.back();" 
-    scale="0.272 0.441 0.263" 
-    rotation="-47.983 -74.347 -1.9769999999999999">
-    <a-text 
-        value="SORTIDA" 
-        color="#FFFFFF" 
-        align="center" 
-        position="-0.05 0.05 0" 
-        width="1.2" 
-        scale="5.81018 3.83707 0.77">
-    </a-text>
-</a-plane>
-        
-    </a-plane>
 
 
-    <!-- Cuadro 1 -->
-    <a-plane position="0.08372 2.22327 1.86109" width="0.5" height="0.2" color="transparent" class="clickable" material="color: #ff0000" geometry="primitive: triangle" rotation="15.080822125638399 178.18529062332496 -179.1449949301691" scale="0.1112 0.08867 0.8938">
-    
+        <!-- Pared detrás de "METAVERSE" -->
+        <a-box position="-4 1.5 0.5" rotation="0 90 0" width="10" height="3" depth="0.1" color="red" collidable
+            material="opacity: 0.0; transparent: true;" static-body>
+        </a-box>
+
+        <!-- Pared al frente de "ARTIFICIAL INTELLIGENCE" -->
+        <a-box position="0 1.5 -5" width="10" height="3" depth="0.1" color="red" collidable
+            material="opacity: 0.0; transparent: true;" static-body>
+        </a-box>
+        <!-- <a-plane position="1.552 1.314 -0.805" width="1.5" height="0.5" color="#9beeed" class="clickable"
+            event-set__mouseenter="material.color: #FF5555" event-set__mouseleave="material.color: #FF0000"
+            onclick="history.back();" scale="0.272 0.441 0.263" rotation="-47.983 -74.347 -1.9769999999999999">
+            <a-text value="SORTIDA" color="#FFFFFF" align="center" position="-0.05 0.05 0" width="1.2"
+                scale="5.81018 3.83707 0.77">
+            </a-text>
         </a-plane>
 
-<!-- Cuadro 2 -->
-<a-plane position="3.90344 1.96023 1.5465" width="0.5" height="0.2" color="transparent" class="clickable" material="color: #ff0000" geometry="primitive: triangle" rotation="15.080822125638399 -99.4763594328184 -179.1449949301691" scale="0.1112 0.08867 0.8938">
+        </a-plane> -->
 
-    </a-plane>
 
-<a-plane position="-2.80474 1.655 0.86808" width="0.5" height="0.2" color="transparent" class="clickable" material="color: #ff0000" geometry="primitive: triangle" rotation="15.081000000000001 90.556 -179.145" scale="0.111 0.089 0.894">
- 
-    </a-plane>
-    
+        <!-- Cuadro 1 -->
+        <a-plane position="0.08372 2.22327 1.86109" width="0.5" height="0.2" color="transparent" class="clickable"
+            material="color: #ff0000" geometry="primitive: triangle"
+            rotation="15.080822125638399 178.18529062332496 -179.1449949301691" scale="0.1112 0.08867 0.8938">
+
+        </a-plane>
+
+        <!-- Cuadro 2 -->
+        <a-plane position="3.90344 1.96023 1.5465" width="0.5" height="0.2" color="transparent" class="clickable"
+            material="color: #ff0000" geometry="primitive: triangle"
+            rotation="15.080822125638399 -99.4763594328184 -179.1449949301691" scale="0.1112 0.08867 0.8938">
+
+        </a-plane>
+
+        <a-plane position="-2.80474 1.655 0.86808" width="0.5" height="0.2" color="transparent" class="clickable"
+            material="color: #ff0000" geometry="primitive: triangle" rotation="15.081000000000001 90.556 -179.145"
+            scale="0.111 0.089 0.894">
+
+        </a-plane>
+
+        <a-plane id="volver" src="../assets/sala_moha/boton_inicio.png" class="interactable" opacity="1" material="side: double; transparent: true" scale="0.5 0.5 0.5" position="1.51794 1.3003 -0.76994" rotation="-37.02739751032945 -65.36589005749997 -2.2391190633712568" class="clickable" onclick="window.location.href='../';"></a-plane>
 
     </a-scene>
     <script>
     </script>
 
 </body>
+
 </html>
