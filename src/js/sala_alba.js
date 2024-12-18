@@ -51,3 +51,17 @@ const cameraRig = document.querySelector("#cameraRig");
         });
       }
     });
+
+    export function addRandomTree(numTree) {
+      for (let i = 0; i < numTree; i++) {
+          const tree = document.createElement('a-entity');
+  
+          tree.setAttribute('gltf-model', '#tree');
+          tree.setAttribute('scale', '15 15 15');
+  
+          const { x, y, z } = getRandomValidPositionOnPlane(plane, 5);
+          tree.setAttribute('position', `${x} ${y + 0.1} ${z}`);
+  
+          scene.appendChild(tree);
+      }
+  }
